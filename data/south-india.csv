@@ -2,17 +2,17 @@ canto_coding_id,place,region
 758,Andhra Pradesh,South India
 759,Madras,South India
 760,Madras,South India
-844,Gond,South India
-845,Toda,South India
-846,Gond,South India
-847,Gond,South India
-848,Gond,South India
-849,Gond,South India
-850,Gond,South India
-851,Gond,South India
-852,Gond,South India
-972,Tamil People,South India
-973,Tamil People,South India
+844,"Toda, Gond",South India
+845,"Toda, Gond",South India
+846,"Toda, Gond",South India
+847,"Toda, Gond",South India
+848,"Toda, Gond",South India
+849,"Toda, Gond",South India
+850,"Toda, Gond",South India
+851,"Toda, Gond",South India
+852,"Toda, Gond",South India
+972,Madras,South India
+973,Madras,South India
 974,Madras,South India
 1843,Kerala,South India
 1844,Kerala,South India
@@ -43,8 +43,8 @@ canto_coding_id,place,region
 3844,Kolam,South India
 3845,Kolam,South India
 3846,Kolam,South India
-3853,Gond,South India
-3854,Gond,South India
+3853,"Toda, Gond",South India
+3854,"Toda, Gond",South India
 3784,Dorla,South India
 3802,Korku,Central India
 3803,Korku,Central India
