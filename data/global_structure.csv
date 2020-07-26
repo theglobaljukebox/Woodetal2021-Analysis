@@ -1,0 +1,768 @@
+,region
+0,Oceania
+1,Southeast Asia
+2,Oceania
+3,Southeast Asia
+4,South America
+5,South America
+6,Europe
+7,Africa
+8,Southeast Asia
+9,Southeast Asia
+10,North Eurasia
+11,Africa
+12,North Eurasia
+13,North America
+14,Africa
+15,Africa
+16,Southeast Asia
+17,Africa
+18,North America
+19,Africa
+20,Oceania
+21,South Asia
+22,Central America
+23,Southeast Asia
+24,Oceania
+25,North Eurasia
+26,Africa
+27,South America
+28,Europe
+29,Southeast Asia
+30,South America
+31,South America
+32,South America
+33,Southeast Asia
+34,Southeast Asia
+35,North America
+36,Oceania
+37,North Eurasia
+38,Southeast Asia
+39,Africa
+40,South America
+41,South America
+42,North America
+43,Europe
+44,Southeast Asia
+45,Oceania
+46,Southeast Asia
+47,Southeast Asia
+48,Southeast Asia
+49,Southeast Asia
+50,North America
+51,Africa
+52,Oceania
+53,North America
+54,North America
+55,North America
+56,Southeast Asia
+57,Southeast Asia
+58,Southeast Asia
+59,North Eurasia
+60,Europe
+61,Southeast Asia
+62,Southeast Asia
+63,South Asia
+64,Southeast Asia
+65,South America
+66,South America
+67,Southeast Asia
+68,Southeast Asia
+69,South America
+70,South Asia
+71,Southeast Asia
+72,Western Asia
+73,Central America
+74,South America
+75,Southeast Asia
+76,South Asia
+77,Europe
+78,Africa
+79,South Asia
+80,South Asia
+81,South America
+82,Africa
+83,North America
+84,North America
+85,East Asia
+86,South America
+87,South America
+88,Southeast Asia
+89,South Asia
+90,Oceania
+91,South America
+92,Africa
+93,Southeast Asia
+94,South America
+95,South America
+96,South America
+97,Africa
+98,Southeast Asia
+99,North America
+100,Europe
+101,Australia
+102,Europe
+103,North America
+104,North America
+105,East Asia
+106,Europe
+107,Central America
+108,Central America
+109,Europe
+110,Southeast Asia
+111,Central America
+112,North America
+113,Europe
+114,South America
+115,Southeast Asia
+116,Southeast Asia
+117,North America
+118,Oceania
+119,Europe
+120,North America
+121,Oceania
+122,Europe
+123,South Asia
+124,Oceania
+125,Europe
+126,Southeast Asia
+127,North America
+128,Southeast Asia
+129,North America
+130,Europe
+131,Africa
+132,South America
+133,Southeast Asia
+134,North America
+135,South America
+136,South America
+137,Europe
+138,South America
+139,East Asia
+140,Southeast Asia
+141,Central America
+142,Oceania
+143,Southeast Asia
+144,Africa
+145,South Asia
+146,Southeast Asia
+147,Oceania
+148,Southeast Asia
+149,Central America
+150,South Asia
+151,North America
+152,Africa
+153,South Asia
+154,North Eurasia
+155,Europe
+156,Central America
+157,Oceania
+158,Africa
+159,Central America
+160,Oceania
+161,North America
+162,Southeast Asia
+163,Europe
+164,South America
+165,South Asia
+166,North America
+167,Western Asia
+168,Oceania
+169,North Eurasia
+170,Central America
+171,Africa
+172,Africa
+173,Europe
+174,Africa
+175,Southeast Asia
+176,Oceania
+177,Southeast Asia
+178,Southeast Asia
+179,Southeast Asia
+180,South America
+181,North America
+182,East Asia
+183,South Asia
+184,Europe
+185,Africa
+186,Southeast Asia
+187,South Asia
+188,South America
+189,Central America
+190,South America
+191,South America
+192,South Asia
+193,North America
+194,South America
+195,Europe
+196,North America
+197,South Asia
+198,Europe
+199,Oceania
+200,East Asia
+201,East Asia
+202,South America
+203,North America
+204,South Asia
+205,South Asia
+206,North America
+207,Oceania
+208,Southeast Asia
+209,Africa
+210,South Asia
+211,North America
+212,Southeast Asia
+213,Oceania
+214,South America
+215,North America
+216,North America
+217,Southeast Asia
+218,Oceania
+219,Southeast Asia
+220,Southeast Asia
+221,Oceania
+222,Southeast Asia
+223,North America
+224,South Asia
+225,South America
+226,South America
+227,Central America
+228,Europe
+229,Southeast Asia
+230,South Asia
+231,Southeast Asia
+232,Southeast Asia
+233,South Asia
+234,South America
+235,South America
+236,Oceania
+237,South America
+238,North America
+239,East Asia
+240,North America
+241,Europe
+242,Southeast Asia
+243,South Asia
+244,Southeast Asia
+245,South America
+246,Europe
+247,South America
+248,Southeast Asia
+249,South America
+250,Oceania
+251,Southeast Asia
+252,Europe
+253,South America
+254,Oceania
+255,Southeast Asia
+256,Oceania
+257,Oceania
+258,Oceania
+259,Oceania
+260,Southeast Asia
+261,Europe
+262,Europe
+263,North America
+264,South Asia
+265,North America
+266,Southeast Asia
+267,South America
+268,South America
+269,South America
+270,Africa
+271,Africa
+272,South Asia
+273,Southeast Asia
+274,South Asia
+275,Central America
+276,Australia
+277,South America
+278,South America
+279,South America
+280,South Asia
+281,Southeast Asia
+282,South America
+283,Southeast Asia
+284,Southeast Asia
+285,South America
+286,Southeast Asia
+287,South America
+288,North America
+289,Southeast Asia
+290,South America
+291,South America
+292,South America
+293,Southeast Asia
+294,East Asia
+295,Africa
+296,North America
+297,South Asia
+298,South Asia
+299,Southeast Asia
+300,South America
+301,Southeast Asia
+302,South America
+303,Africa
+304,Southeast Asia
+305,South America
+306,Southeast Asia
+307,South America
+308,Southeast Asia
+309,North America
+310,South America
+311,North America
+312,Southeast Asia
+313,South Asia
+314,Oceania
+315,South America
+316,Oceania
+317,South America
+318,North America
+319,North America
+320,Europe
+321,East Asia
+322,South America
+323,South America
+324,South Asia
+325,South America
+326,Southeast Asia
+327,Southeast Asia
+328,North America
+329,Africa
+330,South Asia
+331,Southeast Asia
+332,North Eurasia
+333,Oceania
+334,South America
+335,Europe
+336,South Asia
+337,Central America
+338,South America
+339,South America
+340,Oceania
+341,Southeast Asia
+342,Oceania
+343,Western Asia
+344,Oceania
+345,South Asia
+346,Oceania
+347,South America
+348,Central America
+349,South Asia
+350,Central America
+351,Southeast Asia
+352,South Asia
+353,Southeast Asia
+354,North Eurasia
+355,Southeast Asia
+356,South Asia
+357,East Asia
+358,Europe
+359,South Asia
+360,Africa
+361,Southeast Asia
+362,Southeast Asia
+363,South America
+364,South America
+365,Europe
+366,South Asia
+367,Southeast Asia
+368,South Asia
+369,Southeast Asia
+370,South America
+371,Southeast Asia
+372,Southeast Asia
+373,North America
+374,Southeast Asia
+375,South America
+376,South America
+377,Europe
+378,Southeast Asia
+379,Southeast Asia
+380,Western Asia
+381,Central America
+382,Southeast Asia
+383,Southeast Asia
+384,Central America
+385,Central America
+386,Southeast Asia
+387,Oceania
+388,Southeast Asia
+389,Central America
+390,Southeast Asia
+391,Europe
+392,Oceania
+393,Southeast Asia
+394,Oceania
+395,Southeast Asia
+396,Southeast Asia
+397,Oceania
+398,Central America
+399,Central America
+400,Southeast Asia
+401,Europe
+402,Oceania
+403,South America
+404,Western Asia
+405,Western Asia
+406,South America
+407,North America
+408,Southeast Asia
+409,North America
+410,Europe
+411,Oceania
+412,Europe
+413,South Asia
+414,Southeast Asia
+415,Central America
+416,Western Asia
+417,Oceania
+418,Oceania
+419,Southeast Asia
+420,South Asia
+421,Southeast Asia
+422,South Asia
+423,Oceania
+424,Oceania
+425,South America
+426,North America
+427,Southeast Asia
+428,North America
+429,Southeast Asia
+430,South America
+431,Southeast Asia
+432,North America
+433,Southeast Asia
+434,North Eurasia
+435,North America
+436,Southeast Asia
+437,North America
+438,Southeast Asia
+439,Europe
+440,Southeast Asia
+441,Oceania
+442,Southeast Asia
+443,Oceania
+444,Europe
+445,North Eurasia
+446,South Asia
+447,North America
+448,Southeast Asia
+449,Southeast Asia
+450,South Asia
+451,Oceania
+452,North America
+453,Oceania
+454,South Asia
+455,Southeast Asia
+456,South Asia
+457,Southeast Asia
+458,South Asia
+459,Oceania
+460,South America
+461,North Eurasia
+462,North Eurasia
+463,Southeast Asia
+464,Central America
+465,South Asia
+466,Oceania
+467,Oceania
+468,Oceania
+469,Oceania
+470,Oceania
+471,South America
+472,North America
+473,Oceania
+474,Europe
+475,Europe
+476,South Asia
+477,Southeast Asia
+478,Europe
+479,South America
+480,Europe
+481,South America
+482,Oceania
+483,Southeast Asia
+484,Southeast Asia
+485,Southeast Asia
+486,North America
+487,Central Asia
+488,South America
+489,Western Asia
+490,South Asia
+491,South America
+492,Oceania
+493,Southeast Asia
+494,Southeast Asia
+495,South America
+496,South America
+497,Southeast Asia
+498,Southeast Asia
+499,Southeast Asia
+500,South America
+501,South Asia
+502,Europe
+503,Europe
+504,Southeast Asia
+505,Oceania
+506,Southeast Asia
+507,Western Asia
+508,Europe
+509,Europe
+510,Oceania
+511,North America
+512,Southeast Asia
+513,Oceania
+514,South America
+515,Southeast Asia
+516,Oceania
+517,South Asia
+518,Southeast Asia
+519,Southeast Asia
+520,Oceania
+521,Southeast Asia
+522,Southeast Asia
+523,Southeast Asia
+524,Southeast Asia
+525,Oceania
+526,South Asia
+527,South America
+528,Southeast Asia
+529,Southeast Asia
+530,Oceania
+531,Oceania
+532,Southeast Asia
+533,South America
+534,Oceania
+535,Southeast Asia
+536,South America
+537,Southeast Asia
+538,Southeast Asia
+539,South Asia
+540,Southeast Asia
+541,South Asia
+542,Europe
+543,Southeast Asia
+544,South America
+545,Oceania
+546,Southeast Asia
+547,Europe
+548,Southeast Asia
+549,Southeast Asia
+550,Oceania
+551,Southeast Asia
+552,South America
+553,Southeast Asia
+554,Europe
+555,South America
+556,Southeast Asia
+557,Southeast Asia
+558,Southeast Asia
+559,North America
+560,Southeast Asia
+561,South America
+562,Southeast Asia
+563,South America
+564,Oceania
+565,North America
+566,Southeast Asia
+567,Europe
+568,Southeast Asia
+569,South America
+570,South America
+571,Western Asia
+572,Southeast Asia
+573,Oceania
+574,North America
+575,Southeast Asia
+576,Western Asia
+577,Western Asia
+578,North America
+579,South America
+580,North America
+581,South America
+582,Southeast Asia
+583,South America
+584,North America
+585,South America
+586,South Asia
+587,South America
+588,Southeast Asia
+589,South America
+590,Southeast Asia
+591,Southeast Asia
+592,South America
+593,North America
+594,Southeast Asia
+595,Southeast Asia
+596,South America
+597,Southeast Asia
+598,North America
+599,Oceania
+600,South America
+601,South America
+602,North America
+603,Southeast Asia
+604,South Asia
+605,Southeast Asia
+606,South America
+607,Southeast Asia
+608,North America
+609,Southeast Asia
+610,Oceania
+611,Southeast Asia
+612,Southeast Asia
+613,North America
+614,Southeast Asia
+615,Southeast Asia
+616,Southeast Asia
+617,North America
+618,Southeast Asia
+619,Southeast Asia
+620,Southeast Asia
+621,Oceania
+622,South America
+623,South Asia
+624,Southeast Asia
+625,South America
+626,Western Asia
+627,Southeast Asia
+628,Southeast Asia
+629,South Asia
+630,Southeast Asia
+631,Southeast Asia
+632,Southeast Asia
+633,South America
+634,Oceania
+635,Western Asia
+636,South America
+637,North America
+638,Southeast Asia
+639,Southeast Asia
+640,Western Asia
+641,Western Asia
+642,Oceania
+643,Southeast Asia
+644,South Asia
+645,Southeast Asia
+646,Oceania
+647,South America
+648,North America
+649,South America
+650,South Asia
+651,South Asia
+652,North Eurasia
+653,North Eurasia
+654,Western Asia
+655,Southeast Asia
+656,Oceania
+657,South Asia
+658,Southeast Asia
+659,Oceania
+660,North Eurasia
+661,Southeast Asia
+662,Southeast Asia
+663,Southeast Asia
+664,South America
+665,South America
+666,Oceania
+667,South America
+668,North Eurasia
+669,South Asia
+670,South Asia
+671,Oceania
+672,Southeast Asia
+673,Southeast Asia
+674,Oceania
+675,South Asia
+676,Oceania
+677,South Asia
+678,Southeast Asia
+679,Southeast Asia
+680,Southeast Asia
+681,South America
+682,Southeast Asia
+683,Southeast Asia
+684,Southeast Asia
+685,Southeast Asia
+686,South Asia
+687,Oceania
+688,Southeast Asia
+689,Southeast Asia
+690,South Asia
+691,Southeast Asia
+692,Southeast Asia
+693,Southeast Asia
+694,South America
+695,Southeast Asia
+696,Southeast Asia
+697,South Asia
+698,Oceania
+699,Southeast Asia
+700,Southeast Asia
+701,Southeast Asia
+702,Western Asia
+703,Southeast Asia
+704,Southeast Asia
+705,Oceania
+706,Southeast Asia
+707,Southeast Asia
+708,South America
+709,South Asia
+710,Southeast Asia
+711,Southeast Asia
+712,Southeast Asia
+713,Southeast Asia
+714,Southeast Asia
+715,South Asia
+716,Southeast Asia
+717,South Asia
+718,Southeast Asia
+719,Western Asia
+720,Western Asia
+721,Southeast Asia
+722,South Asia
+723,Southeast Asia
+724,South Asia
+725,Southeast Asia
+726,Southeast Asia
+727,South Asia
+728,Southeast Asia
+729,Western Asia
+730,Southeast Asia
+731,Southeast Asia
+732,Southeast Asia
+733,Southeast Asia
+734,Western Asia
+735,Southeast Asia
+736,Western Asia
+737,Southeast Asia
+738,Southeast Asia
+739,Southeast Asia
+740,Southeast Asia
+741,Western Asia
+742,Western Asia
+743,Western Asia
+744,Western Asia
+745,Southeast Asia
+746,Southeast Asia
+747,Southeast Asia
+748,Southeast Asia
+749,Southeast Asia
+750,Southeast Asia
+751,Southeast Asia
+752,Western Asia
+753,Southeast Asia
+754,Southeast Asia
+755,Southeast Asia
+756,Southeast Asia
+757,Southeast Asia
+758,Southeast Asia
+759,Southeast Asia
+760,Western Asia
+761,Southeast Asia
+762,Western Asia
+763,Western Asia
+764,Southeast Asia
+765,Southeast Asia
+766,Western Asia
