@@ -1,0 +1,7 @@
+Code is still very untidy...
+
+The main code for cantometrics is 'validating_methods.py' and 'parse_globaljukebox.py'.
+
+If you wanted to run this, you would need the pitch traces and result of Matija's segmentation algorithm. Which I have not yet provided.
+
+But you can read it! And play with it!
