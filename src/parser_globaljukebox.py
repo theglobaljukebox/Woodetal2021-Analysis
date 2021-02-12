@@ -2,6 +2,12 @@
 
 Parse Global Jukebox data
 
+Requires:
+    'codings.json' file
+    results from Matija Marolt's classification algorithm
+
+ John M. McBride 02/2021
+
 """
 import json
 import os
@@ -13,28 +19,14 @@ from multiprocessing import Pool
 import numpy as np
 import pandas as pd
 
-import audio_tools
-import bss_io
-import bss_utils as utils
+import errors_io
+import errors_utils as utils
 
 N_PROC = 20
 
 
-PATH_BASE = bss_io.PATH_BASE
-PATH_FIG  = PATH_BASE.joinpath('Figures')
-
-PATH_BIRD_DISC = PATH_BASE.joinpath("Data/Recordings/Sub_sample/Bird songs (17+13)/discrete (17)")
-PATH_BIRD_NONDISC = Path("/home/jmcbride/projects/BirdSongSpeech/Data/Recordings/Sub_sample/Bird songs (17+13)/non-discrete (13)")
-
-PATH_HMN = Path("/home/jmcbride/projects/BirdSongSpeech/Data/Recordings/Sub_sample/Human songs (11)")
-PATH_SPE = Path("/home/jmcbride/projects/BirdSongSpeech/Data/Recordings/Sub_sample/Speech (12)")
-
-PATH_HPB = Path("/home/jmcbride/projects/BirdSongSpeech/Data/Recordings/birthday_poor-pitch_singers")
-PATH_INST = Path("/home/jmcbride/projects/BirdSongSpeech/Data/Recordings/Inst_test")
-
+PATH_BASE = errors_io.PATH_BASE
 PATH_GLOBJUK = PATH_BASE.joinpath('Data', 'GlobalJukebox')
-PATH_NHS = PATH_BASE.joinpath('Data', 'NHS')
-
 
 AUDIO_LIST = [a.stem for a in PATH_GLOBJUK.glob("audio/*mp3")]
 
@@ -44,10 +36,7 @@ AUDIO_LIST = [a.stem for a in PATH_GLOBJUK.glob("audio/*mp3")]
 #---#
 
 def load_pitch_trace_all(db='GJ'):
-    if db == 'GJ':
-        base = PATH_GLOBJUK.joinpath("pitch_trace")
-    elif db == 'NHS':
-        base = PATH_NHS.joinpath("pitch_trace")
+    base = PATH_GLOBJUK.joinpath("pitch_trace")
     out = {}
     for f in base.glob("*npy"):
         try:
@@ -129,16 +118,11 @@ def check_audio_exists(ID):
 
 def process_GJ_codings(df):
     df = df.copy()
-#   old_df = pd.read_pickle(PATH_GLOBJUK.joinpath("codings.pickle"))
-#   df = old_df.loc[:, ["audio_file_id", "culture_id"]]
     df.rename(columns={"audio_file_id":"ID"})
-#   df['duration'] = old_df.duration.apply(parse_duration)
     df['duration_min'] = df.duration.apply(parse_duration)
 
     vocal_codings = {0:"random", 3:"mono", 6:"unison", 9:"hetero", 12:"poly"}
     inst_codings = {0:"none", 3:"mono", 6:"unison", 9:"hetero", 12:"poly"}
-#   df['vocal'] = old_df.CV_4.apply(lambda x: ';'.join([vocal_codings[i] for i in np.where(x)[0]]))
-#   df['inst'] = old_df.CV_7.apply(lambda x: ';'.join([inst_codings[i] for i in np.where(x)[0]]))
     df['vocal'] = df.CV_4.apply(lambda x: ';'.join([vocal_codings[i] for i in np.where(x)[0]]))
     df['inst'] = df.CV_7.apply(lambda x: ';'.join([inst_codings[i] for i in np.where(x)[0]]))
     df['no_inst1'] = df.CV_2.apply(lambda x: x[0])
@@ -147,8 +131,14 @@ def process_GJ_codings(df):
     return df
 
 
+#--------------------------------------------------#
+#   Marolt et al. segmentation results
+#---#
+
+
+# Load results from NN classification algorithm
 def add_segmentation_labels(df):
-    seg_gj = bss_io.load_all_matija(bss_io.PATH_GLOBJUK_AUDIO)
+    seg_gj = errors_io.load_all_matija(errors_io.PATH_GLOBJUK_AUDIO)
     seg_ave = df.audio_file_id.apply(lambda x: np.array(seg_gj.get(x, [[0,0,0,0]])).mean(axis=0))
     seg_ave = np.array([[x for x in y] for y in seg_ave])
 
@@ -159,29 +149,6 @@ def add_segmentation_labels(df):
     df['pitch_extracted'] = df.loc[:, lbls].sum(axis=1).astype(bool)
 
     return df
-
-
-
-
-#--------------------------------------------------#
-#   Natural History of Song
-#---#
-
-
-def load_nhs_transcriptions():
-    base = PATH_NHS.joinpath("Transcriptions_all", "Transcriptions", "ngrams")
-    out = {}
-    for i in range(1, 119):
-        pitch_file = base.joinpath(f"NHSDiscography-{i:03d}-pitches.txt") 
-        pitches = [int(x) for y in open(pitch_file, 'r') for x in y.split() if x!='.' and x]
-        rhythm_file = base.joinpath(f"NHSDiscography-{i:03d}-rhythms.txt") 
-        rhythms = [x for y in open(rhythm_file, 'r') for x in y.split() if x!='.' and x]
-        out.update({i:{'rhythm':rhythms, 'pitch':pitches}})
-    return out
-
-        
-
-
 
 
 if __name__ == "__main__":

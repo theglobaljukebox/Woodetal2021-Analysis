@@ -1,7 +1,15 @@
-Code is still very untidy...
+Error checking:
+    Main code is in "validating_methods.py"
 
-The main code for cantometrics is 'validating_methods.py' and 'parse_globaljukebox.py'.
+Notes:
 
-If you wanted to run this, you would need the pitch traces and result of Matija's segmentation algorithm. Which I have not yet provided.
+    I haven't tested the code yet, but it's probably close-to if not completely ready
+    The path names need to be changed, but I guess that one person should be in charge of
+    deciding on the directory layout
 
-But you can read it! And play with it!
+    The code cannot be run without three sets of files:
+        codings.json
+        ".npy" for each recording (pYIN)
+        ".score.csv" for each recording (Marolt)
+
+
