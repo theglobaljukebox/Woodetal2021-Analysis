@@ -254,6 +254,48 @@ def more_codings_check_rubato(df):
 
 
 #-----------------------#
+# Polyphony guide
+
+def more_codings_check_poly(df):
+    # The presence or absence of polyphony necessarily affects
+    # some codings. 
+    # POLYPHONIC TYPE
+    # CV22-1: No polyphony
+    # MUSICAL ORGANIZATION OF THE VOCAL PART
+    # CV4-13: Polyphony
+    #         If CV22-1 is true, this must be false
+    #         If CV22-1 is false, either this or CV7-13 must be true
+    # MUSICAL ORGANIZATION OF THE ORCHESTRA
+    # CV7-13: Polyphony or polyrhythm
+    #         If CV22-1 is true, ignore this (since it can mean polyrhythm)
+    #         If CV22-1 is false, either this or CV4-13 must be true
+    # MELODIC FORM
+    # CV16-13: Canonic or round form (found only in polyphonic singing)
+    #         If CV22-1 is true, this must be false
+
+    df = df.loc[df.pitch_extracted]
+    idx_to_drop = get_already_checked(df)
+    df = df.drop(index=list(idx_to_drop))
+
+    BASE = PATH_VAL.joinpath("automatic_screening")
+    cols2print = ['audio_file_id'] + [f"CV{i}-{j+1}" for i, j in zip([22,4,7,16], [0, 12, 12, 12])]
+    df_out = pd.DataFrame(columns=cols2print)
+
+    for i in df.index:
+        all_true = np.array([df.loc[i, f"CV_{j}"][k] for j, k in zip([22,4,7,16], [0, 12, 0, 12])])
+        if all_true[0] and np.all(all_true[[1,3]]==False):
+            continue
+        elif not all_true[0] and np.any(all_true[1:3]):
+            continue
+        df_out.loc[len(df_out)] = [df.loc[i, 'audio_file_id']] + list(all_true)
+
+    path_out = BASE.joinpath("poly_coding_conflict.csv")
+    df_out.to_csv(path_out)
+
+    return df_out
+
+
+#-----------------------#
 # Plot results
 
 def plot_coding_error_rates():
