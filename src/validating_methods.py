@@ -1,285 +1,84 @@
 """
 Contains code for:
-    Creating PDFs for visual inspection to validate automated analyses
-    Estimating how many GJ samples need to be manually checked, 
-        given the variance in the sample
+    Comparing Cantometrics codings with computational analyses
+    Checking Cantometrics codings for consistency
 
+Requires:
+    f0 estimation using pYIN to be saved in numpy binary files (.npy)
 
+ John M. McBride 02/2021
 
 """
-from fractions import Fraction
-from itertools import product
+
 from pathlib import Path
 import os
 import sys
-import time
 
 
-from matplotlib.gridspec import GridSpec
 import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
-from multiprocessing import Pool
 import numpy as np
-from palettable.colorbrewer.qualitative import Paired_12, Set2_8
 import pandas as pd
-from scipy.signal import spectrogram
-import seaborn as sns
 
 
-import audio_tools
+import errors_io
 import parser_globaljukebox as GJ
 
 
 
 N_PROC = 25
 
-PATH_BASE = Path("INSERT_PATH_HERE")
+PATH_BASE = errors_io.PATH_BASE
 PATH_VAL  = PATH_BASE.joinpath('Validation')
 PATH_DATA = PATH_BASE.joinpath('Data')
 PATH_GJ   = PATH_DATA.joinpath('GlobalJukebox', 'audio')
 
 
 #-----------------------------------------------------------#
-#  Creating PDFs for visual inspection
+# Algorithm to ignore recordings that have already been
+# checked
 
-
-def load_sample_list(filename="GJ_samples.csv"):
-    return pd.read_csv(PATH_VAL.joinpath(filename))
-
-
-def load_file(f_id):
-    path = PATH_GJ.joinpath(f"{f_id}.mp3")
-    return audio_tools.load_mp3file(str(path))
-
-
-def export_to_pdf(f_id, fr, wav, tm, mel, dt=10, tmax=60, fmax=1000, window=2048, hop=256):
-    N = int(min(tmax/dt, tm[-1]/dt+1))
-    h_ratio = ([1,1,1,.7]*N)[:-1]
-    fig = plt.figure(figsize=(20,6*N))
-    gs  = GridSpec(N*4-1,1, hspace=0.0, height_ratios=h_ratio)
-    ax = [fig.add_subplot(gs[i + int(i/3),0]) for i in range(N*3)] 
-
-    f, t, spec = spectrogram(wav, fr, nperseg=window, noverlap=hop)
-#   fig, ax = plt.subplots(3,1, sharex=True)
-    for i in range(N):
-        xidx = (t>=i*dt) & (t<(i+1)*dt)
-        yidx = (f>=0) & (f<fmax)
-        spec_slice = spec[yidx]
-        spec_slice = spec_slice[:,xidx]
-        ax[3*i].imshow(np.log(spec_slice), cmap='Greys', extent=[i*dt, (i+1)*dt, fmax, 0], aspect='auto')
-        ax[3*i].invert_yaxis()
-
-        idx = (tm>=i*dt) & (tm<(i+1)*dt)
-        ax[3*i+1].plot(tm[idx], mel[idx], 'o', ms=2)
-        Y3 = np.log(mel[idx]/mel[0])/np.log(2)*1200.
-        Y3 = np.array(Y3/100, dtype=int)
-        ax[3*i+2].plot(tm[idx], Y3, 'o', ms=2)
-
-        ymin, ymax = int(min(Y3)), int(max(Y3))
-        for y in range(ymin, ymax):
-            if abs(y)%12==0:
-                ax[3*i+2].plot([i*dt, (i+1)*dt], [y]*2, '-', lw=0.2, color='k', alpha=0.7)
-            else:
-                ax[3*i+2].plot([i*dt, (i+1)*dt], [y]*2, '-', lw=0.2, color='grey', alpha=0.5)
-
-        ax[3*i+1].set_xlim(i*dt, (i+1)*dt)
-        ax[3*i+2].set_xlim(i*dt, (i+1)*dt)
-        ax[3*i].set_xticks([])
-        ax[3*i+1].set_xticks([])
-        ax[3*i+2].set_xticks(np.arange(i*dt, (i+1)*dt+1, 1))
-    
-        ax[3*i].set_ylabel('frequency (Hz)')
-        ax[3*i+1].set_ylabel('frequency (Hz)')
-        ax[3*i+2].set_ylabel('note (semitones)')
-        ax[3*i+2].set_xlabel('time (seconds)')
-
-    fig.savefig(PATH_VAL.joinpath(f"{f_id}.pdf"), bbox_inches='tight')
-
-
-def load_data_and_export(f_id):
-    fr, wav = load_file(f_id)
-    tm, mel = audio_tools.extract_pitch_from_wav(fr, wav)
-    tm = tm[mel>0]
-    mel = mel[mel>0]
-
-    export_to_pdf(f_id, fr, wav, tm, mel)
-
-    return f_id, fr, wav, tm, mel
+def get_already_checked(df):
+    BASE = PATH_VAL.joinpath("automatic_screening")
+    path_excel = BASE.joinpath("Cantometrics_Coding_Errors.xlsx")
+    idx_already_checked = []
+    for sheet in ['SoloVocal', 'GroupVocal', 'Inst']:
+        xls = pd.read_excel(path_excel, sheet_name=sheet)
+        idx_already_checked.extend(list(xls.loc[xls['Correct Coding?'].notnull(), 'Unnamed: 0']))
+    return set(idx_already_checked).intersection(set(df.index))
     
 
-
-
-#-----------------------------------------------------------#
-#  Accuracy of estimated error rates for a given sample size
-
-
-def pick_codings_to_sample(df):
-    codings = [('CV_4', 3, 'Mono'),
-               ('CV_4', 6, 'Uni'),
-               ('CV_4', 9, 'Hetero'),
-               ('CV_4', 12, 'Poly'),
-               ('CV_5', 0, 'Solo'),
-               ('CV_5', 3, 'Blend 1'),
-               ('CV_5', 6, 'Blend 2'),
-               ('CV_5', 9, 'Blend 3'),
-               ('CV_5', 12, 'Blend max')]
-    for i, (code, name) in product(range(13), [['CV_3', 'MelForm'], ['CV_16', 'SocOrg']]):
-        codings.append((code, i, f"{name}_{i}"))
-    print(codings)
-    
-    data = {}
-    for code, idx, name in codings:
-        data[name] = df[code].apply(lambda x: x[idx])
-    return pd.DataFrame(data)
-
-
-### Simulation to estimate the observed error rate as a function of
-### sample size, when given a known error rate
-def estimating_error_rate_single_observable(S, err, n_samp=1000, plot=True, fig='', ax=''):
-    observable = np.zeros(S, bool)
-    observable[np.random.choice(range(S), size=int(S*err), replace=False)] = True
-#   N_arr = (S * np.array([0.0025, 0.005, 0.01, 0.025, 0.05])).astype(int)
-    N_arr = (S * np.array([0.002, 0.003, 0.005, 0.0075, 0.01, 0.02, 0.03, 0.04, 0.05])).astype(int)
-    quantiles = [0.05, 0.32, 0.68, 0.98]
-    CI = []
-    for n in N_arr:
-        hits = np.array([sum(observable[np.random.choice(range(S), size=n, replace=False)])/n for i in range(n_samp)])
-        CI.append(np.quantile(hits, quantiles))
-    CI = np.array(CI).T
-
-    if plot:
-        if isinstance(ax, str):
-            fig, ax = plt.subplots()
-        patt = [':', '--', '--', ':']
-        for i, p in enumerate(patt):
-            ax.plot(N_arr, CI[i], p, c='k')
-        ax.plot(N_arr, [err]*len(N_arr), '-k')
-        ax.set_xlabel('Sample size')
-        ax.set_ylabel('Error')
-        ax.set_title(f"Error rate: {err}")
-        handles = [Line2D([], [], ls=p, c='k') for p in ['-', '--', ':']]
-        ax.legend(handles, ['Actual Error', 'Est. 68% CI', 'Est. 95% CI'], frameon=False, loc='upper right')
-        ax.grid(which='both')
-
-    return N_arr, CI 
-
-
-def count_hits(inputs):
-    np.random.seed(int(str(time.time()).split('.')[1]))
-    observable, n = inputs
-    S, n_obs = observable.shape
-    return np.sum(observable[np.random.choice(range(S), size=n, replace=False)], axis=0)/n
-
-
-### Extending the simulation to multi-dimensional data
-def estimating_error_rate_multi_observable(S, n_obs, e_mean, e_var, n_samp=1000):
-    observable = np.zeros((S, n_obs), bool)
-    err = np.random.lognormal(e_mean, e_var, size=n_obs)
-    for i in range(n_obs):
-        observable[np.random.choice(range(S), size=int(S*err[i]), replace=False), i] = True
-    N_arr = (S * np.array([0.005, 0.01, 0.025, 0.05])).astype(int)
-    quantiles = [0.05, 0.32, 0.68, 0.98]
-    CI = []
-    for n in N_arr:
-        with Pool(min(N_PROC, n)) as pool:
-            hits = np.array(list(pool.imap_unordered(count_hits, [(observable, n)]*n_samp)))
-        CI.append(np.quantile(hits, quantiles, axis=0))
-        
-    CI = np.array(CI).T
-
-    return N_arr, err, CI 
-
-
-### Plotting simulation results
-def plot_error_estimates(S=6000, n_obs=40):
-    fig, ax = plt.subplots(2,2)
-    ax = ax.reshape(ax.size)
-    for i, e in enumerate([0.005, 0.01, 0.05, 0.1]):
-        N_arr, err = estimating_error_rate_single_observable(S, e, fig=fig, ax=ax[i])
-
-    fig, ax = plt.subplots()
-    N_arr, err, CI = estimating_error_rate_multi_observable(S, n_obs, -3, 0.5)
-    sns.distplot(err, ax=ax)
-    ax.set_xlabel("Error distribution")
-    ax.set_ylabel("Density")
-    ax.set_title(f"Actual errors for {n_obs} observables")
-
-    fig, ax = plt.subplots(2,2)
-    ax = ax.reshape(ax.size)
-    lbls = ['95%', '68%', '68%', '95%']
-    for i in range(4):
-        for j in range(4):
-            sns.distplot(CI[:,j,i]/err, ax=ax[i], label=lbls[j])
-        ax[i].legend(loc='best', frameon=False)
-        ax[i].set_xlabel("error CI / actual error")
-        ax[i].set_ylabel("Density")
-        ax[i].set_title(f"Sample size: {N_arr[i]}")
-
-
-# Analytical probability of obtaining an observed number of errors
-# S: full sample size; E: total errors; n: subsample size; e: observed errors
-def probability_of_observation(S, E, n, e):
-    err_term = Fraction(np.math.factorial(E), np.math.factorial(E-e)) 
-    nonerr_term = Fraction(np.math.factorial(S-E), np.math.factorial(S-E-n+e)) 
-    denom = Fraction(np.math.factorial(S), np.math.factorial(S-n))
-    return float(err_term * nonerr_term / denom * number_of_observations(e, n))
-
-
-def number_of_observations(e, n):
-    return Fraction(np.math.factorial(n), np.math.factorial(e)) / np.math.factorial(n-e)
-
-
-# Probability of inferred error rate as a function of sample size and observed errors
-def inferring_error_rate_from_observation(S=6000):
-    fig, ax = plt.subplots(3, 1)
-    fig.subplots_adjust(hspace=0.3)
-    all_prob = []
-    for i, (a, N) in enumerate(zip(ax, [30, 100, 300])):
-        for e_rate in [2/30., 0.1, 0.2]:
-            e = int(N * e_rate)
-            err_range = np.arange(e, S-N+e)
-            with Pool(N_PROC) as pool:
-                prob = np.array(pool.starmap(probability_of_observation, [(S, E, N, e) for E in err_range]))
-            a.plot(err_range/S, prob/prob.sum(), label=f"errors found: {e}")
-            all_prob.append((err_range/S, prob))
-        a.set_title(f"Sample size: {N}")
-        a.set_xlabel("Actual error rate")
-        a.set_ylabel("Probability")
-        a.legend(loc='best', frameon=False)
-        a.set_xlim(0, 0.5)
-        a.grid()
-#       a.set_ylim(0, 1)
-    return all_prob
-
-
-def error_rate_ci(err_range, prob, S=6000):
-    err_range = err_range / S
-    cum_prob = np.cumsum(prob / prob.sum())
-    return [err_range[np.argmin(np.abs(cum_prob-x))] for x in [0.025, 0.975]]
-    
-    
 #-----------------------------------------------------------#
 #  Automatic identification of coding errors in Global Jukebox
 
+#-----------------------#
+# NN Classifier
 
-def run_matija_checks(df, threshold=0.5, save=False):
+def run_checks(df, threshold=0.5, save=False):
     df = df.copy()
 
+    # Indices where: monophonic vocal; no instrument; algorithm was successful (pitch_extracted)
+    #                and estimated probability of solo singing is less than threshold
     mono_vocal = (df.vocal=='mono') & (df.no_inst1) & (df.no_inst2) & \
                  (df.pitch_extracted) & (df.inst=='none') & (df['Solo']<threshold)
 
+    # Indices where: not monophonic vocal; no instrument; algorithm was successful (pitch_extracted)
+    #                and estimated probability of group singing is less than threshold
     poly_vocal = (df.vocal.apply(lambda x: x in ['poly', 'hetero', 'random'])) & (df.no_inst1) & \
                  (df.no_inst2) & (df.pitch_extracted) & (df.inst=='none') & (df['Group']<threshold)
 
+    # Indices where: contains instrument; algorithm was successful (pitch_extracted)
+    #                and estimated probability of instrumental is less than threshold
     inst = (df.inst.apply(lambda x: 'none' not in x)) & (df.pitch_extracted) & (df['Inst']<threshold)
 
     lbls = ['SoloVocal', 'ChorusVocal', 'Inst']
     cols = ['Solo', 'Group', 'Inst', 'Speech']
     cols2print = ['audio_file_id', 'vocal', 'inst', 'no_inst1', 'no_inst2'] + cols
 
+    # Round data for easy viewing
     for c in cols:
         df[c] = df[c].apply(lambda x:round(x,2))
 
+    # Print to csv
     BASE = PATH_VAL.joinpath("automatic_screening")
     out_dict = {}
     for idx, lbl, c in zip([mono_vocal, poly_vocal, inst], lbls, cols):
@@ -291,7 +90,12 @@ def run_matija_checks(df, threshold=0.5, save=False):
     return out_dict
 
 
+#-----------------------#
+# pYIN f0 estimation
+
 def get_melodic_range(f_id):
+    # Data was previously extracted and stored as a binary numpy array 
+    # using numpy.save
     path = PATH_DATA.joinpath("GlobalJukebox", "pitch_trace", f"{f_id}.npy")
     try:
         data = np.load(path)
@@ -301,31 +105,215 @@ def get_melodic_range(f_id):
 
     except:
         return 0
-    
+
 
 def melodic_range_check(df):
+    BASE = PATH_VAL.joinpath("automatic_screening")
+    # Only work with recordings where the algorithm was successful
     df = df.loc[df.pitch_extracted]
-    cols2print = ['audio_file_id', 'vocal', 'inst', 'no_inst1', 'no_inst2', 'range']
+    # Get melodic range
     df['range'] = df.audio_file_id.apply(get_melodic_range)
 
-
-    BASE = PATH_VAL.joinpath("automatic_screening")
-    
-    path_excel = BASE.joinpath("Cantometrics_Coding_Errors.xlsx")
-    idx_already_checked = []
-    for sheet in ['SoloVocal', 'GroupVocal', 'Inst']:
-        xls = pd.read_excel(path_excel, sheet_name=sheet)
-        idx_already_checked.extend(list(xls.loc[xls['Correct Coding?'].notnull(), 'Unnamed: 0']))
-    idx_to_drop = set(idx_already_checked).intersection(set(df.index))
-
+    # Ignore recordings that were previously checked
+    idx_to_drop = get_already_checked(df)
     df = df.drop(index=list(idx_to_drop))
 
+    # Select recordings that have monophonic singing and no instruments
     mono_vocal = (df.vocal=='mono') & (df.no_inst1) & (df.no_inst2) & (df.inst=='none')
+    # Print to csv
+    cols2print = ['audio_file_id', 'vocal', 'inst', 'no_inst1', 'no_inst2', 'range']
     path_out = BASE.joinpath("melodic_range.csv")
     df.loc[mono_vocal, cols2print].sort_values(by='range', ascending=False).to_csv(path_out)
 
     return df
 
+
+#-----------------------------------------------------------#
+# Automatic identification of inconsistent codings
+
+#-----------------------#
+# Contains instrument?
+
+def more_codings_check_inst(df):
+    # CV2-1: No accompaniment (including clapping, stamping)
+    # CV3-1: No instrument (does not specifically say about clapping, but clapping
+    #                       usually results in a label that indicates presence of some instrument)
+    # CV7-1: No instruments OR "two or more instruments... asynchronous"
+    #        i.e., if other marks say 'no instruments', this should also say so.
+    # CV8-1: Non-occurrence (only one instrument, or no instruments)
+    #        i.e., same as CV7-1
+    # CV9-1: Non-occurrence (only one instrument, or no instruments)
+    #        i.e., same as CV7-1
+    # CV13-1: No instruments (does not specifically say about clapping)
+    # CV14-1: No orchestra or non-patterned
+    #        i.e., same as CV7-1
+
+    df = df.loc[df.pitch_extracted]
+    idx_to_drop = get_already_checked(df)
+    df = df.drop(index=list(idx_to_drop))
+
+    BASE = PATH_VAL.joinpath("automatic_screening")
+    cols2print = ['audio_file_id'] + [f"CV{i}-1" for i in [2,3,7,8,9,13,14]]
+    df_out = pd.DataFrame(columns=cols2print)
+
+    # If all true or all false ignore;
+    # Else flag as potential error
+    for i in df.index:
+        all_true = np.array([df.loc[i, f"CV_{j}"][0] for j in [2,3,7,8,9,13,14]])
+        all_false = all_true[[0,1,5]]
+        if np.all(all_true) or np.all(all_false==False):
+            continue
+        df_out.loc[len(df_out)] = [df.loc[i, 'audio_file_id']] + list(all_true)
+
+    path_out = BASE.joinpath("instrumental_coding_conflict.csv")
+    df_out.to_csv(path_out)
+
+    return df_out
+
+
+#-----------------------#
+# Monophonic singing?
+
+def more_codings_check_vocal(df):
+    # CV1-2: One solo singer ## DO NOT USE
+    # CV1-4: One solo singer after another ## DO NOT USE...
+    #        (note that this can also be used for chorus when double-coding)
+    # CV4-4: Monophony
+    # CV5-1: Solo
+    # CV6-1: Solo
+    # CV12-1: Non-patterned (No rhythmic codeherence of any sort... Also, a solo singer)
+    #         So, if the others say solo singer, this must also.
+
+    df = df.loc[df.pitch_extracted]
+    idx_to_drop = get_already_checked(df)
+    df = df.drop(index=list(idx_to_drop))
+
+    BASE = PATH_VAL.joinpath("automatic_screening")
+    cols2print = ['audio_file_id'] + [f"CV{i}-{j+1}" for i, j in zip([4,5,6,12], [3, 0, 0, 0])]
+    df_out = pd.DataFrame(columns=cols2print)
+
+    # If all true or all false ignore;
+    # Else flag as potential error
+    for i in df.index:
+        all_true = np.array([df.loc[i, f"CV_{j}"][k] for j, k in zip([4,5,6,12], [3, 0, 0, 0])])
+        all_false = all_true[[0,1,2]]
+        if np.all(all_true) or np.all(all_false==False):
+            continue
+        df_out.loc[len(df_out)] = [df.loc[i, 'audio_file_id']] + list(all_true)
+
+    path_out = BASE.joinpath("solo_vocal_coding_conflict.csv")
+    df_out.to_csv(path_out)
+
+    return df_out
+
+
+#-----------------------#
+# Rubato guide
+
+def more_codings_check_rubato(df):
+    # Rubato codings include some instuctions for labelling
+    # that depends on previous codings:
+    # Rubato: Vocal
+    # CV26-1: Extreme rubato (true if CV11-13)
+    # Rubato: Orchestra
+    # CV27-1: Extreme rubato (true if CV13-13)
+
+    df = df.loc[df.pitch_extracted]
+    idx_to_drop = get_already_checked(df)
+    df = df.drop(index=list(idx_to_drop))
+
+    BASE = PATH_VAL.joinpath("automatic_screening")
+    cols2print = ['audio_file_id'] + [f"CV{i}-{j+1}" for i, j in zip([26,11,27,13], [0, 12, 0, 12])]
+    df_out = pd.DataFrame(columns=cols2print)
+
+    # Look for codings that are inconsistent with the
+    # above logic
+    for i in df.index:
+        all_true = np.array([df.loc[i, f"CV_{j}"][k] for j, k in zip([26,11,27,13], [0, 12, 0, 12])])
+        no_problem = True
+        to_print = [df.loc[i, 'audio_file_id']]
+        if all_true[1] and not all_true[0]:
+            to_print.extend(list([str(x) for x in all_true[:2]]))
+            no_problem = False
+        else:
+            to_print.extend(['', ''])
+
+        if all_true[3] and not all_true[2]:
+            to_print.extend(list([str(x) for x in all_true[2:]]))
+            no_problem = False
+        else:
+            to_print.extend(['', ''])
+
+        if not no_problem:
+            df_out.loc[len(df_out)] = to_print
+
+    path_out = BASE.joinpath("rubato_coding_conflict.csv")
+    df_out.to_csv(path_out)
+
+    return df_out
+
+
+#-----------------------#
+# Polyphony guide
+
+def more_codings_check_poly(df):
+    # The presence or absence of polyphony necessarily affects
+    # some codings. 
+    # POLYPHONIC TYPE
+    # CV22-1: No polyphony
+    # MUSICAL ORGANIZATION OF THE VOCAL PART
+    # CV4-13: Polyphony
+    #         If CV22-1 is true, this must be false
+    #         If CV22-1 is false, either this or CV7-13 must be true
+    # MUSICAL ORGANIZATION OF THE ORCHESTRA
+    # CV7-13: Polyphony or polyrhythm
+    #         If CV22-1 is true, ignore this (since it can mean polyrhythm)
+    #         If CV22-1 is false, either this or CV4-13 must be true
+    # MELODIC FORM
+    # CV16-13: Canonic or round form (found only in polyphonic singing)
+    #         If CV22-1 is true, this must be false
+
+    df = df.loc[df.pitch_extracted]
+    idx_to_drop = get_already_checked(df)
+    df = df.drop(index=list(idx_to_drop))
+
+    BASE = PATH_VAL.joinpath("automatic_screening")
+    cols2print = ['audio_file_id'] + [f"CV{i}-{j+1}" for i, j in zip([22,4,7,16], [0, 12, 12, 12])]
+    df_out = pd.DataFrame(columns=cols2print)
+
+    for i in df.index:
+        all_true = np.array([df.loc[i, f"CV_{j}"][k] for j, k in zip([22,4,7,16], [0, 12, 0, 12])])
+        if all_true[0] and np.all(all_true[[1,3]]==False):
+            continue
+        elif not all_true[0] and np.any(all_true[1:3]):
+            continue
+        df_out.loc[len(df_out)] = [df.loc[i, 'audio_file_id']] + list(all_true)
+
+    path_out = BASE.joinpath("poly_coding_conflict.csv")
+    df_out.to_csv(path_out)
+
+    return df_out
+
+
+#-----------------------#
+# Plot results
+
+def plot_coding_error_rates():
+    path_excel = PATH_VAL.joinpath("automatic_screening", "Cantometrics_Coding_Errors.xlsx")
+    idx_already_checked = []
+    fig, ax = plt.subplots()
+    for sheet in ['SoloVocal', 'GroupVocal', 'Inst', 'MelodicRange']:
+        xls = pd.read_excel(path_excel, sheet_name=sheet)
+        idx = xls.loc[xls['Correct Coding?'].str.len()>0].index
+        Y1 = np.array(xls.loc[idx, 'Correct Coding?']=='N', float)
+        Y2 = np.convolve(Y1, np.ones(20)/20, mode='valid')
+        X = np.arange(Y2.size)+20
+        ax.plot(X, Y2, label=sheet)
+    ax.legend(loc='best', frameon=False)
+    ax.set_xlabel("Number of recordings checked")
+    ax.set_ylabel("Fraction of errors found")
+
+    fig.savefig(PATH_VAL.joinpath(f"coding_errors.pdf"), bbox_inches='tight')
 
 
 if __name__ == "__main__":
@@ -334,9 +322,17 @@ if __name__ == "__main__":
     codings = GJ.process_GJ_codings(codings)
     codings = GJ.add_segmentation_labels(codings)
 
-    # Run checks
+    # Compare codings with computational analyses
     run_matija_checks(codings, threshold=0.5)
+    # Note that at this point, we checked the recordings that were
+    # flagged for errors; thus when checking melodic range, we could
+    # already exclude those recordings that were already checked
     melodic_range_check(codings)
+
+    # Check codings for consistency
+    more_codings_check_inst(codings)
+    more_codings_check_vocal(codings)
+    more_codings_check_rubato(codings)
 
 
 
