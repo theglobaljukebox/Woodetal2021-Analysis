@@ -1,0 +1,599 @@
+latitude,longitude,label,name
+-20,21,Precluded by early marriage,!Kung
+-14,33,Precluded by early marriage,Chewa
+-11,31,Precluded by early marriage,Bemba
+-9,34,Precluded by early marriage,Nyakyusa
+1,14,Precluded by early marriage,Kota
+6,11,Precluded by early marriage,Bamum
+4,11,Precluded by early marriage,Koko
+-8,26,Precluded by early marriage,Luba
+7,7,Precluded by early marriage,Igala
+9,12,Precluded by early marriage,Mumuye
+10,13,Precluded by early marriage,Hwana
+9,13,Precluded by early marriage,Namshi
+4,27,Precluded by early marriage,Abarambo
+12,31,Precluded by early marriage,Koalib
+5,37,Precluded by early marriage,Tsamai
+6,36,Precluded by early marriage,Banna
+12,13,Precluded by early marriage,Kanuri
+29,26,Precluded by early marriage,Siwans
+68,75,Precluded by early marriage,Yurak-Samoyeds
+31,120,Precluded by early marriage,Chekiang
+23,88,Precluded by early marriage,Bengali
+30,78,Precluded by early marriage,Pahari
+34,75,Precluded by early marriage,Kashmiri
+20,77,Precluded by early marriage,Gujarati
+-24,134,Precluded by early marriage,Northern Aranda
+-22,132,Precluded by early marriage,Walbiri
+-12.29,134.32,Precluded by early marriage,Gidjingali
+-13.99,136.6,Precluded by early marriage,Anindilyagwa
+-12.48,135.96,Precluded by early marriage,"Yolngu, Dhuwal"
+-11.56,130.81,Precluded by early marriage,Tiwi
+-4,144,Precluded by early marriage,Arapesh
+-9,142,Precluded by early marriage,Keraki
+63,219,Precluded by early marriage,Nabesna
+58,243,Precluded by early marriage,Beaver
+42,237,Precluded by early marriage,Takelma
+54,231,Precluded by early marriage,Haisla
+42,240,Precluded by early marriage,Kidutokado
+48.78,251.02000000000000,Precluded by early marriage,Gros Ventre
+33,276,Precluded by early marriage,Muscogee
+13,275,Precluded by early marriage,Miskito
+-11,308,Precluded by early marriage,Tapirapé
+-21,302,Precluded by early marriage,Terena
+-12,301,Precluded by early marriage,Nambikwara
+-14,308,Precluded by early marriage,Shavante
+-18,318,Precluded by early marriage,Aimoré
+-6,311,Precluded by early marriage,Apinaye
+-8,308,Precluded by early marriage,Kayapo
+-25,30,"Prohibited, strongly sanctioned",Pedi
+-1,35,"Prohibited, strongly sanctioned",Gusii
+-3,30,"Prohibited, strongly sanctioned",Kiga
+-3,36,"Prohibited, strongly sanctioned",Sonjo
+-2,30,"Prohibited, strongly sanctioned",Banyaruanda
+-3,28,"Prohibited, strongly sanctioned",Rega
+1,30,"Prohibited, strongly sanctioned",Plains Bira
+3.54,8.72,"Prohibited, strongly sanctioned",Bubi
+-3,30,"Prohibited, strongly sanctioned",Rundi
+7,2,"Prohibited, strongly sanctioned",Fon
+6,8,"Prohibited, strongly sanctioned",Afikpo
+10,10,"Prohibited, strongly sanctioned",Gbagyi
+7,-2,"Prohibited, strongly sanctioned",Ashanti
+6.89,-11.2,"Prohibited, strongly sanctioned",Vai
+9,6,"Prohibited, strongly sanctioned",Nupe
+15,10,"Prohibited, strongly sanctioned",Soninke
+12,-6,"Prohibited, strongly sanctioned",Minianka
+10,-12,"Prohibited, strongly sanctioned",Yalunka
+11,6,"Prohibited, strongly sanctioned",Kamuku
+10,12,"Prohibited, strongly sanctioned",Bura
+11,14,"Prohibited, strongly sanctioned",Podokwo
+7,14,"Prohibited, strongly sanctioned",Mbum
+2,30,"Prohibited, strongly sanctioned",Lendu
+7,29,"Prohibited, strongly sanctioned",Bongo
+9,35,"Prohibited, strongly sanctioned",Mao
+3,29,"Prohibited, strongly sanctioned",Mamvu
+2,31,"Prohibited, strongly sanctioned",Alur
+5,35,"Prohibited, strongly sanctioned",Bodi
+-5,35,"Prohibited, strongly sanctioned",Tatoga
+6,37,"Prohibited, strongly sanctioned",Konso
+8,40,"Prohibited, strongly sanctioned",Arusi
+8,37,"Prohibited, strongly sanctioned",Gibe
+5,38,"Prohibited, strongly sanctioned",Burji
+7,38,"Prohibited, strongly sanctioned",Sidama
+5,37,"Prohibited, strongly sanctioned",Arbore
+9,35,"Prohibited, strongly sanctioned",Anfillo
+7,36,"Prohibited, strongly sanctioned",Kafa
+12,37,"Prohibited, strongly sanctioned",Beta Israel
+6,38,"Prohibited, strongly sanctioned",Baditu
+12,42,"Prohibited, strongly sanctioned",Afar
+13,38,"Prohibited, strongly sanctioned",Amhara
+14,8,"Prohibited, strongly sanctioned",Tazarawa
+17,18,"Prohibited, strongly sanctioned",Daza
+21,17,"Prohibited, strongly sanctioned",Teda
+33,4,"Prohibited, strongly sanctioned",Mzab
+20,-5,"Prohibited, strongly sanctioned",Barabish
+31,2,"Prohibited, strongly sanctioned",Algerians
+30,9,"Prohibited, strongly sanctioned",Hamama
+35,10.94,"Prohibited, strongly sanctioned",Sahel
+25,33,"Prohibited, strongly sanctioned",Egyptians
+30,-9,"Prohibited, strongly sanctioned",Shluh
+33,-7,"Prohibited, strongly sanctioned",Beraber
+42,20,"Prohibited, strongly sanctioned",Gheg
+37,-6,"Prohibited, strongly sanctioned",Spaniards
+47,288,"Prohibited, strongly sanctioned",French Canadians
+53,-9,"Prohibited, strongly sanctioned",Irish
+44,20,"Prohibited, strongly sanctioned",Serbs
+47,20,"Prohibited, strongly sanctioned",Magyar
+32,44,"Prohibited, strongly sanctioned",Kurd
+43,41,"Prohibited, strongly sanctioned",Abkhaz
+38,30,"Prohibited, strongly sanctioned",Turks
+33,37,"Prohibited, strongly sanctioned",Rwala
+32,35,"Prohibited, strongly sanctioned",Hebrews
+32,45,"Prohibited, strongly sanctioned",Babylonians
+28,47,"Prohibited, strongly sanctioned",Mutair
+32.77,35.03,"Prohibited, strongly sanctioned",Druze
+15,45,"Prohibited, strongly sanctioned",Yemeni
+25,68,"Prohibited, strongly sanctioned",Sindhi
+30,69,"Prohibited, strongly sanctioned",Marri
+33,68,"Prohibited, strongly sanctioned",Ghilzai
+32,73,"Prohibited, strongly sanctioned",Punjabi
+35,66,"Prohibited, strongly sanctioned",Hazara
+30,34,"Prohibited, strongly sanctioned",Basseri
+34,63,"Prohibited, strongly sanctioned",Moghol
+36,52,"Prohibited, strongly sanctioned",Iranians
+61.99,164.24,"Prohibited, strongly sanctioned",Koryak
+35,136,"Prohibited, strongly sanctioned",Japanese
+26,100,"Prohibited, strongly sanctioned",Minchia
+37,75,"Prohibited, strongly sanctioned",Burusho
+28,84,"Prohibited, strongly sanctioned",Magar
+24,87,"Prohibited, strongly sanctioned",Santal
+26,83,"Prohibited, strongly sanctioned",Uttar Pradesh
+22,74,"Prohibited, strongly sanctioned",Bhil
+12,76,"Prohibited, strongly sanctioned",Kodavas
+26,95,"Prohibited, strongly sanctioned",Sema
+25,94,"Prohibited, strongly sanctioned",Purum
+2.58,102.25,"Prohibited, strongly sanctioned",Negri Sembilan
+17,107,"Prohibited, strongly sanctioned",Annamese
+12,105,"Prohibited, strongly sanctioned",Khmer
+5,103,"Prohibited, strongly sanctioned",Malays
+24,121,"Prohibited, strongly sanctioned",Atayal
+-7,110,"Prohibited, strongly sanctioned",Javanese
+-6,143,"Prohibited, strongly sanctioned",Kutubu
+-8,139,"Prohibited, strongly sanctioned",Marind-Amin
+-9,148,"Prohibited, strongly sanctioned",Koiari
+-6.69,147.26,"Prohibited, strongly sanctioned",Busama
+-6,144,"Prohibited, strongly sanctioned",Enga
+3.38,172.99,"Prohibited, strongly sanctioned",Makin
+-1.47,175.06,"Prohibited, strongly sanctioned",Gilbert Onotoa
+15.13,145.71,"Prohibited, strongly sanctioned",Chamorro
+-9.49,159.82,"Prohibited, strongly sanctioned",Kaoka
+-9.63,161.44,"Prohibited, strongly sanctioned",Ulawans
+-2,147,"Prohibited, strongly sanctioned",Manus
+-15.95,168.22,"Prohibited, strongly sanctioned",Bunlap
+-10.73,165.85,"Prohibited, strongly sanctioned",Santa Cruz Islanders
+62,216,"Prohibited, strongly sanctioned",Dena'ina
+48,288,"Prohibited, strongly sanctioned",Montagnais
+49,264,"Prohibited, strongly sanctioned",Minnesota Ojibwa
+46,268,"Prohibited, strongly sanctioned",Katikitegon
+46,275,"Prohibited, strongly sanctioned",Eastern Ojibwa
+47,295,"Prohibited, strongly sanctioned",Mi'kmaq
+49.16,234.15,"Prohibited, strongly sanctioned",Nuu chah nulth
+51,235,"Prohibited, strongly sanctioned",Klahoose
+50,237,"Prohibited, strongly sanctioned",Squamish
+49.72,235.03,"Prohibited, strongly sanctioned",Comox
+48.84,236.73000000000000,"Prohibited, strongly sanctioned",Lummi
+48,237,"Prohibited, strongly sanctioned",Klallam
+48,237,"Prohibited, strongly sanctioned",Twana
+49.01,237.27000000000000,"Prohibited, strongly sanctioned",Cowichan
+49,238,"Prohibited, strongly sanctioned",Stó:lō
+51,232.51,"Prohibited, strongly sanctioned",Kwakwaka'wakw
+39.81,236.45,"Prohibited, strongly sanctioned",Wiyot
+40.35,236.53,"Prohibited, strongly sanctioned",Mattole-Bear River
+42,236,"Prohibited, strongly sanctioned",Tolowa
+41,238,"Prohibited, strongly sanctioned",Yana
+39,239,"Prohibited, strongly sanctioned",Nisenan
+41,239,"Prohibited, strongly sanctioned",Atsugewi
+43,238,"Prohibited, strongly sanctioned",Klamath
+45,239,"Prohibited, strongly sanctioned",Tenino
+51,240,"Prohibited, strongly sanctioned",Shuswap
+48,243,"Prohibited, strongly sanctioned",Coeur d’Alene
+46,241,"Prohibited, strongly sanctioned",Umatilla
+50.02,235.22,"Prohibited, strongly sanctioned",Lillooet
+51,248,"Prohibited, strongly sanctioned",Blackfoot
+39,256,"Prohibited, strongly sanctioned",Cheyenne
+54,250,"Prohibited, strongly sanctioned",Sarcee
+40,257,"Prohibited, strongly sanctioned",Arapaho
+31,252,"Prohibited, strongly sanctioned",Chiricahua
+22,260,"Prohibited, strongly sanctioned",Chichimeca
+9,282,"Prohibited, strongly sanctioned",Guna
+17,268,"Prohibited, strongly sanctioned",Lacandon
+15,269,"Prohibited, strongly sanctioned",K'iche'
+15,268,"Prohibited, strongly sanctioned",Mam
+-13,288,"Prohibited, strongly sanctioned",Inca
+-54,291,"Prohibited, strongly sanctioned",Ona
+-29,299,"Prohibited, strongly sanctioned",Abipón
+54,56,"Prohibited, strongly sanctioned",Bashkir
+59,26,"Prohibited, strongly sanctioned",Estonians
+55,50,"Prohibited, strongly sanctioned",Kazan tatar
+57,24,"Prohibited, strongly sanctioned",Latvians
+55,23,"Prohibited, strongly sanctioned",Lithuanian Karaim
+55,24,"Prohibited, strongly sanctioned",Lithuanian Tatar
+57,23,"Prohibited, strongly sanctioned",Livs
+-24,27,Prohibited but weakly sanctioned,Tswana
+-3,37,Prohibited but weakly sanctioned,Chagga
+1,32,Prohibited but weakly sanctioned,Ganda
+6,7,Prohibited but weakly sanctioned,Igbo
+6,8,Prohibited but weakly sanctioned,Ekoi
+8,4,Prohibited but weakly sanctioned,Oyo Yoruba
+10,8,Prohibited but weakly sanctioned,Kagoro
+2,29,Prohibited but weakly sanctioned,Lese
+10,32,Prohibited but weakly sanctioned,Shilluk
+6,16,Prohibited but weakly sanctioned,Gbaya
+4,31,Prohibited but weakly sanctioned,Pojulu
+3,34,Prohibited but weakly sanctioned,Jie
+1,36,Prohibited but weakly sanctioned,Plains Suk
+5,32,Prohibited but weakly sanctioned,Bari
+8,48,Prohibited but weakly sanctioned,Somali
+6,38,Prohibited but weakly sanctioned,Dorse
+15,-17,Prohibited but weakly sanctioned,Wolof
+14,0,Prohibited but weakly sanctioned,Liptako
+11,8,Prohibited but weakly sanctioned,Zazzagawa Hausa
+17,-1,Prohibited but weakly sanctioned,Songhai
+23,6,Prohibited but weakly sanctioned,Tuareg Ahaggar
+35,-4,Prohibited but weakly sanctioned,Riffians
+40.89,14.25,Prohibited but weakly sanctioned,Neapolitans
+43,-2,Prohibited but weakly sanctioned,Spanish Basques
+42,287,Prohibited but weakly sanctioned,New Englanders
+-37.11,-12.27,Prohibited but weakly sanctioned,Tristan da Cunha
+-23.68,313.36,Prohibited but weakly sanctioned,Brazilians
+53,41,Prohibited but weakly sanctioned,Russians
+48,70,Prohibited but weakly sanctioned,Kazakh
+53,142,Prohibited but weakly sanctioned,Nivkh
+38.134147,126.960754,Prohibited but weakly sanctioned,Koreans
+26.16,127.8,Prohibited but weakly sanctioned,Okinawans
+18,79,Prohibited but weakly sanctioned,Telugu
+8,81,Prohibited but weakly sanctioned,Vedda
+26,94,Prohibited but weakly sanctioned,Angami
+20,95,Prohibited but weakly sanctioned,Burmese
+18,98,Prohibited but weakly sanctioned,Lawa
+5,101,Prohibited but weakly sanctioned,Semang
+15,100,Prohibited but weakly sanctioned,Thai
+18,121,Prohibited but weakly sanctioned,Kalinga
+2,112,Prohibited but weakly sanctioned,Iban
+-5.31,119.69,Prohibited but weakly sanctioned,Macassarese
+-8.22,124.26,Prohibited but weakly sanctioned,Alorese
+-7.52,138.46,Prohibited but weakly sanctioned,Kimam
+-4,139,Prohibited but weakly sanctioned,Dani
+-7.82,145.31,Prohibited but weakly sanctioned,Elema
+-6,155,Prohibited but weakly sanctioned,Siuai
+-6.69,156.52,Prohibited but weakly sanctioned,Choiseulese
+-12.5,177.07,Prohibited but weakly sanctioned,Rotumans
+-17.81,178.32,Prohibited but weakly sanctioned,Vanua Levu
+-19.74,184.93,Prohibited but weakly sanctioned,Tongans
+-13.94,188.23,Prohibited but weakly sanctioned,Upolu Samoans
+-21.93,202.09,Prohibited but weakly sanctioned,Mangaians
+60.72,213.51,Prohibited but weakly sanctioned,Chugach
+63,264,Prohibited but weakly sanctioned,Caribou Inuit
+70,278,Prohibited but weakly sanctioned,Iglulik Inuit
+51.75,287.34000000000000,Prohibited but weakly sanctioned,Mistissini Cree
+62,200,Prohibited but weakly sanctioned,Deg Xit'an
+53.86,193.21,Prohibited but weakly sanctioned,Aleut
+53,234,Prohibited but weakly sanctioned,Alkatcho
+47,238,Prohibited but weakly sanctioned,Puyallup
+44.75,236.28,Prohibited but weakly sanctioned,Tillamook
+58.12,226.08,Prohibited but weakly sanctioned,Tlingit
+42,236,Prohibited but weakly sanctioned,Tututni
+41,237,Prohibited but weakly sanctioned,Chimariko
+42,237,Prohibited but weakly sanctioned,Karuk
+41,237,Prohibited but weakly sanctioned,Hupa
+52,233,Prohibited but weakly sanctioned,Nuxalk
+39,238,Prohibited but weakly sanctioned,Nomlaki
+39.34,236.23000000000000,Prohibited but weakly sanctioned,Coast Yuki
+39,237,Prohibited but weakly sanctioned,Northern Pomo
+39,242,Prohibited but weakly sanctioned,Tübalulabal
+40,237,Prohibited but weakly sanctioned,Yuki
+42,238,Prohibited but weakly sanctioned,Modoc
+50,238,Prohibited but weakly sanctioned,Nlaka'pamux
+46,247,Prohibited but weakly sanctioned,Bitterroot Salish
+49,243,Prohibited but weakly sanctioned,Kalispel
+49,240,Prohibited but weakly sanctioned,Sinkaitk
+43,241,Prohibited but weakly sanctioned,Wadadokado
+37,242,Prohibited but weakly sanctioned,Eastern Mono
+48,241,Prohibited but weakly sanctioned,Sanpoil
+44,248,Prohibited but weakly sanctioned,Agaiduka
+40,246,Prohibited but weakly sanctioned,Gosiute
+37,250,Prohibited but weakly sanctioned,Antarianunts
+36,249,Prohibited but weakly sanctioned,San Juan
+43,248,Prohibited but weakly sanctioned,Bannock
+36,246,Prohibited but weakly sanctioned,Hualapai
+34,246,Prohibited but weakly sanctioned,Tolkepaya
+50,243,Prohibited but weakly sanctioned,Kutenai
+48,254,Prohibited but weakly sanctioned,Assiniboine
+51,260,Prohibited but weakly sanctioned,Bungi
+36,261,Prohibited but weakly sanctioned,Kiowa Apache
+43,257,Prohibited but weakly sanctioned,Teton
+41,264,Prohibited but weakly sanctioned,Omaha
+36,256,Prohibited but weakly sanctioned,Jicarilla
+32,245,Prohibited but weakly sanctioned,Cocopa
+34,249,Prohibited but weakly sanctioned,Kewyipaya
+37,250,Prohibited but weakly sanctioned,Navajo
+19,261,Prohibited but weakly sanctioned,Aztec
+17,265,Prohibited but weakly sanctioned,Mixe
+19,262,Prohibited but weakly sanctioned,Tlaxcalans
+12,288,Prohibited but weakly sanctioned,Wayuu
+18.41,287.83,Prohibited but weakly sanctioned,Haitians
+6,292,Prohibited but weakly sanctioned,Piapoco
+5,306,Prohibited but weakly sanctioned,Ndyuka
+5,291,Prohibited but weakly sanctioned,Guahibo
+2,295,Prohibited but weakly sanctioned,Yanomami
+-12,293,Prohibited but weakly sanctioned,Chácobo
+-3,290,Prohibited but weakly sanctioned,Ticuna
+-3,282,Prohibited but weakly sanctioned,Shuar
+-1,286,Prohibited but weakly sanctioned,Witoto
+-55.02,291.02,Prohibited but weakly sanctioned,Yahgan
+-46,290,Prohibited but weakly sanctioned,Tehuelche
+-7,315,Prohibited but weakly sanctioned,Canela
+57,53,Prohibited but weakly sanctioned,Chuvash
+59,29,Prohibited but weakly sanctioned,Ingrians
+64,33,Prohibited but weakly sanctioned,Karelians
+47,29,Prohibited but weakly sanctioned,Moldovans
+59,29,Prohibited but weakly sanctioned,Votes
+63,62,Prohibited but weakly sanctioned,Mansi
+50,136,Prohibited but weakly sanctioned,Ulch
+-26,18,"Permitted, sanction if pregnancy",Nama
+-24,31,"Permitted, sanction if pregnancy",Lovedu
+-23,30,"Permitted, sanction if pregnancy",Venda
+-13,36,"Permitted, sanction if pregnancy",Yao
+-8,33,"Permitted, sanction if pregnancy",Safwa
+-5,33,"Permitted, sanction if pregnancy",Nyamwezi
+-2,38,"Permitted, sanction if pregnancy",Kamba
+-4,32,"Permitted, sanction if pregnancy",Sumbwa
+1,34,"Permitted, sanction if pregnancy",Gisu
+5,11,"Permitted, sanction if pregnancy",Bafia
+11,-1,"Permitted, sanction if pregnancy",Tallensi
+7,9,"Permitted, sanction if pregnancy",Tiv
+7,12,"Permitted, sanction if pregnancy",Mambila
+5,27,"Permitted, sanction if pregnancy",Azande
+3,32,"Permitted, sanction if pregnancy",Acholi
+4,33,"Permitted, sanction if pregnancy",Lotuko
+7,36,"Permitted, sanction if pregnancy",Shako
+68,22,"Permitted, sanction if pregnancy",Sami
+39,100,"Permitted, sanction if pregnancy",Tu
+26,91,"Permitted, sanction if pregnancy",Garo
+25,94,"Permitted, sanction if pregnancy",Aimol
+22,93,"Permitted, sanction if pregnancy",Maras
+26,97,"Permitted, sanction if pregnancy",Kachin
+-4,136,"Permitted, sanction if pregnancy",Mee
+-9,147,"Permitted, sanction if pregnancy",Motu
+-6,144,"Permitted, sanction if pregnancy",Kakoli
+-4,142,"Permitted, sanction if pregnancy",Kwoma
+-3.24,144.1,"Permitted, sanction if pregnancy",Wogeo
+-9,148,"Permitted, sanction if pregnancy",Orokaiva
+-5.6,154.91,"Permitted, sanction if pregnancy",Kurtatchi
+-17.74,180.69,"Permitted, sanction if pregnancy",Lau
+-12.29,168.83,"Permitted, sanction if pregnancy",Tikopia
+61,240,"Permitted, sanction if pregnancy",DeneTha
+66,225,"Permitted, sanction if pregnancy",Kutchin
+58,229,"Permitted, sanction if pregnancy",Tahltan
+51,275,"Permitted, sanction if pregnancy",Eastern Cree
+49,268,"Permitted, sanction if pregnancy",Rainy River Ojibwe
+54,228,"Permitted, sanction if pregnancy",Haida
+47.42,235.84,"Permitted, sanction if pregnancy",Quinault
+39.73,236.4,"Permitted, sanction if pregnancy",Sinkyone
+41,239,"Permitted, sanction if pregnancy",Achumawi
+45,245,"Permitted, sanction if pregnancy",Nez Perce
+43,248,"Permitted, sanction if pregnancy",Bohogue
+51,245,"Permitted, sanction if pregnancy",Kainai
+49,245,"Permitted, sanction if pregnancy",Piegan
+34,250,"Permitted, sanction if pregnancy",Western Apache
+36,249,"Permitted, sanction if pregnancy",Hano
+37,254,"Permitted, sanction if pregnancy",Taos
+9,277,"Permitted, sanction if pregnancy",Bribri
+9,296,"Permitted, sanction if pregnancy",Cariña
+-16,291,"Permitted, sanction if pregnancy",Aymara
+-39,292,"Permitted, sanction if pregnancy",Mapuche
+58,52,"Permitted, sanction if pregnancy",Besermyan
+53,50,"Permitted, sanction if pregnancy",Erzya Mordvins
+61,35,"Permitted, sanction if pregnancy",Veps
+52,134,"Permitted, sanction if pregnancy",Negidal
+54.01,142.71,"Permitted, sanction if pregnancy",Orok
+47,136,"Permitted, sanction if pregnancy",Udihe
+-2,18,Trial marriage,Ekonda
+2,28,Trial marriage,Budu
+6,0,Trial marriage,Adangme
+0,36,Trial marriage,Keyu
+53,7,Trial marriage,Dutch
+-8.18,115.02,Trial marriage,Balinese
+69,250,Trial marriage,Copper Inuit
+15.41,298.73,Trial marriage,Callinago
+-6,302,Trial marriage,Munduruku
+1,289,Trial marriage,Cubeo
+45.44,29.32,Trial marriage,Gagauz
+2,28,"Permitted, no sanctions",Mbuti
+-31,30,"Permitted, no sanctions",Pondo
+-10,14,"Permitted, no sanctions",Kisama
+-24,32,"Permitted, no sanctions",Tsonga
+-16,27,"Permitted, no sanctions",Ila
+-12,22,"Permitted, no sanctions",Luvale
+-7,15,"Permitted, no sanctions",Bakongo
+-1,12,"Permitted, no sanctions",Mitsogho
+-18,28,"Permitted, no sanctions",Plateau Tonga
+-15,31,"Permitted, no sanctions",Lala
+-18,35,"Permitted, no sanctions",Sena
+-8,38,"Permitted, no sanctions",Luguru
+-3,34,"Permitted, no sanctions",Sukuma
+1,35,"Permitted, no sanctions",Vugusu
+1,30,"Permitted, no sanctions",Amba
+-6,25,"Permitted, no sanctions",Songye
+2,22,"Permitted, no sanctions",Poto
+1,11,"Permitted, no sanctions",Fang
+2,20,"Permitted, no sanctions",Ngombe
+0,20,"Permitted, no sanctions",Nkundo
+3,11,"Permitted, no sanctions",Ngumba
+6,12,"Permitted, no sanctions",Tikar
+6,10,"Permitted, no sanctions",Widikum
+3,25,"Permitted, no sanctions",Baboa
+7,-9,"Permitted, no sanctions",Kpelle
+6,9,"Permitted, no sanctions",Banyang
+6,5,"Permitted, no sanctions",Itsekiri
+18,8,"Permitted, no sanctions",Koro
+7,1,"Permitted, no sanctions",Ewe
+5.27,-3.58,"Permitted, no sanctions",Assini
+5.15,-5.25,"Permitted, no sanctions",Avikam
+6,-9,"Permitted, no sanctions",Sapo
+7,-6,"Permitted, no sanctions",Guro
+8,-10,"Permitted, no sanctions",Gbande
+7,-8,"Permitted, no sanctions",Ngere
+6,-7,"Permitted, no sanctions",Bete
+8,-5,"Permitted, no sanctions",Baule
+12,-16,"Permitted, no sanctions",Banyun
+12,-15,"Permitted, no sanctions",Biafada
+11.1,-16.15,"Permitted, no sanctions",Bijogo
+12.88,-16.19,"Permitted, no sanctions",Diola
+12,-16,"Permitted, no sanctions",Papel
+12,-13,"Permitted, no sanctions",Bassari
+14,-12,"Permitted, no sanctions",Serer
+10,-6,"Permitted, no sanctions",Senufo
+11,-3,"Permitted, no sanctions",Dagara
+9,1,"Permitted, no sanctions",Basari
+11,1,"Permitted, no sanctions",Somba
+11,1,"Permitted, no sanctions",Tem
+11,-13,"Permitted, no sanctions",Futajalonke
+13,-13,"Permitted, no sanctions",Coniagui
+12,5,"Permitted, no sanctions",Dakakari
+11,5,"Permitted, no sanctions",Reshe
+10,8,"Permitted, no sanctions",Adara
+10,9,"Permitted, no sanctions",Anaguta
+12,31,"Permitted, no sanctions",Otoro
+3,28,"Permitted, no sanctions",Mangbetu
+10,14,"Permitted, no sanctions",Fali
+3,19,"Permitted, no sanctions",Bwaka
+2,26,"Permitted, no sanctions",Popoi
+4,32,"Permitted, no sanctions",Madi
+4,34,"Permitted, no sanctions",Didinga
+-2,36,"Permitted, no sanctions",Maasi
+5,34,"Permitted, no sanctions",Toposa
+1,37,"Permitted, no sanctions",Samburu
+-1,34,"Permitted, no sanctions",Luo
+-1,36,"Permitted, no sanctions",Kipsigis
+16,38,"Permitted, no sanctions",Nara
+15,37,"Permitted, no sanctions",Kunama
+20,36,"Permitted, no sanctions",Amarar
+12,10,"Permitted, no sanctions",Maguzawa
+12,11,"Permitted, no sanctions",Karekare
+12,24,"Permitted, no sanctions",Fur
+14.73,-14.32,"Permitted, no sanctions",Tukulor
+12,12,"Permitted, no sanctions",Wodaabe Fulani
+12,10,"Permitted, no sanctions",Ngizim
+13,5,"Permitted, no sanctions",Bororo Fulani
+16,0,"Permitted, no sanctions",Udalan Tuareg
+18,-3,"Permitted, no sanctions",Kel Antessar
+30,31,"Permitted, no sanctions",Ancient Egyptians
+49,24,"Permitted, no sanctions",Hutsuls
+40,45,"Permitted, no sanctions",Armenians
+65,125,"Permitted, no sanctions",Yakut
+66,177,"Permitted, no sanctions",Chukchi
+44,144,"Permitted, no sanctions",Ainu
+29,103,"Permitted, no sanctions",Lolo
+26,107,"Permitted, no sanctions",Miao
+19,109,"Permitted, no sanctions",Li
+28,95,"Permitted, no sanctions",Adi
+28,89,"Permitted, no sanctions",Lepcha
+28,87,"Permitted, no sanctions",Sherpa
+16,79,"Permitted, no sanctions",Chenchu
+20,81,"Permitted, no sanctions",Muria Gond
+18,82,"Permitted, no sanctions",Reddi
+19,81,"Permitted, no sanctions",Madia
+12,77,"Permitted, no sanctions",Toda
+21,85,"Permitted, no sanctions",Hill Bhuiya
+22,81,"Permitted, no sanctions",Baiga
+12,93,"Permitted, no sanctions",Andamanese
+-19,46,"Permitted, no sanctions",Merina
+-22,47,"Permitted, no sanctions",Tanala
+9.17,92.77,"Permitted, no sanctions",Nicobarese
+7,80,"Permitted, no sanctions",Sinhalese
+-25,46,"Permitted, no sanctions",Antandroy
+-21,43.93,"Permitted, no sanctions",Sakalava
+-22.9,47.75,"Permitted, no sanctions",Antaisaka
+27,94,"Permitted, no sanctions",Ao
+23,97,"Permitted, no sanctions",Palaung
+20,101,"Permitted, no sanctions",Lamet
+4,102,"Permitted, no sanctions",Senoi
+13,104,"Permitted, no sanctions",Ancient Khmer
+21,100,"Permitted, no sanctions",Akha
+17,121,"Permitted, no sanctions",Sagada
+17,121,"Permitted, no sanctions",Ifugao
+17,121,"Permitted, no sanctions",Bontok
+2,99,"Permitted, no sanctions",Toba Batak
+6,117,"Permitted, no sanctions",Kadazan-Dusun
+-2.93,100.23,"Permitted, no sanctions",Mentaweians
+-3,103,"Permitted, no sanctions",Anak Dalam
+-6,145,"Permitted, no sanctions",Siane
+-9,147,"Permitted, no sanctions",Koita
+-8,147,"Permitted, no sanctions",Mafulu
+-6,145,"Permitted, no sanctions",Fore
+7.45,134.54,"Permitted, no sanctions",Palauans
+5.31,162.98,"Permitted, no sanctions",Kosraeans
+15.21,145.76,"Permitted, no sanctions",Carolinians
+6.28,169.49,"Permitted, no sanctions",Marshallese
+7.34,151.6,"Permitted, no sanctions",Trukese
+7.09,171.13,"Permitted, no sanctions",Majuro
+7.25,144.46,"Permitted, no sanctions",Ifaluk
+6.88,158.22,"Permitted, no sanctions",Ponapeans
+9.55,138.13,"Permitted, no sanctions",Yapese
+-1.74,142.85,"Permitted, no sanctions",Aua
+-8.43,151.09,"Permitted, no sanctions",Trobriands
+-10,151,"Permitted, no sanctions",Dobuans
+-13.68,187.59,"Permitted, no sanctions",American Samoans
+-11.74,160.42,"Permitted, no sanctions",Rennell Islanders
+-13.28,183.83,"Permitted, no sanctions",Uveans
+-10.89,194.16,"Permitted, no sanctions",Pukapukans
+-7.48,178.68,"Permitted, no sanctions",Ellice
+-9.2,188.15,"Permitted, no sanctions",Tokelau
+1.09,154.8,"Permitted, no sanctions",Kapingamarangi
+-14.31,181.89,"Permitted, no sanctions",Futunans
+-19.05,190.14,"Permitted, no sanctions",Niueans
+-38.41,176.31,"Permitted, no sanctions",Māori
+-8.9,219.92,"Permitted, no sanctions",Marquesans
+-10.41,199.02,"Permitted, no sanctions",Manihikians
+-15.94,217.69,"Permitted, no sanctions",Raroians
+19.89,204.17,"Permitted, no sanctions",Hawaiians
+-23.12,225.03,"Permitted, no sanctions",Mangarevans
+-17.71,210.46,"Permitted, no sanctions",Tahitians
+-27.12,250.64,"Permitted, no sanctions",Easter Islanders
+68,208,"Permitted, no sanctions",Nunamiut
+78,290,"Permitted, no sanctions",Inughuit (Northern Greenland)
+65,241,"Permitted, no sanctions",Délįne
+71,203,"Permitted, no sanctions",Tareumiut
+58,295,"Permitted, no sanctions",Labrador Inuit
+66,323,"Permitted, no sanctions",Tasiilaq
+68.66,308.78,"Permitted, no sanctions",Kalaallit (West Greenland)
+60,255,"Permitted, no sanctions",Dene
+52,266,"Permitted, no sanctions",Pekangekum
+59,232,"Permitted, no sanctions",Kaska
+46,278,"Permitted, no sanctions",Ottawa
+62,284,"Permitted, no sanctions",Taqagmiut
+58,290,"Permitted, no sanctions",Naskapi
+38.22,237.44,"Permitted, no sanctions",Wappo
+38,251,"Permitted, no sanctions",Southern Ute
+41,243,"Permitted, no sanctions",White Knife Shoshoni
+36,247,"Permitted, no sanctions",Southern Paiute (Kaibab)
+43,251,"Permitted, no sanctions",Wind River Eastern Shoshone
+52,238,"Permitted, no sanctions",Chilcotin
+45,266,"Permitted, no sanctions",Plains Cree
+43,261,"Permitted, no sanctions",Ponca
+37,275,"Permitted, no sanctions",Shawnee
+44,282,"Permitted, no sanctions",Huron
+43,283,"Permitted, no sanctions",Seneca
+41,285,"Permitted, no sanctions",Delaware
+32,269,"Permitted, no sanctions",Natchez
+36,254,"Permitted, no sanctions",San Ildefonso
+35,253,"Permitted, no sanctions",Santa Ana
+36,249,"Permitted, no sanctions",Hopi
+35,246,"Permitted, no sanctions",Mojave
+28,253,"Permitted, no sanctions",Tarahumara
+11,288,"Permitted, no sanctions",Paraujano
+19.94,284.63,"Permitted, no sanctions",Taíno
+5,301,"Permitted, no sanctions",Barama River Carib
+5,294,"Permitted, no sanctions",Yabarana
+1,301,"Permitted, no sanctions",Wai-wai
+4,294,"Permitted, no sanctions",Sanema
+-16,296,"Permitted, no sanctions",Sirionó
+-3,288,"Permitted, no sanctions",Yagua
+-10,288,"Permitted, no sanctions",Amahuaca
+-9,286,"Permitted, no sanctions",Shipibo-Conibo
+5,288,"Permitted, no sanctions",Muisca
+-24,297,"Permitted, no sanctions",Wichí
+-22,303,"Permitted, no sanctions",Kadiwéu
+-22,298,"Permitted, no sanctions",Choroti
+-25,300,"Permitted, no sanctions",Toba
+-16,305,"Permitted, no sanctions",Bororo
+-12,307,"Permitted, no sanctions",Trumai
+-28,310,"Permitted, no sanctions",Aweikoma
+-8,325,"Permitted, no sanctions",Tupinambá
+57,53,"Permitted, no sanctions",Udmurt
+72,90,"Permitted, no sanctions",Nganasan
+54.98,161.79,"Permitted, no sanctions",Itelmen
+64,173,"Permitted, no sanctions",Ungazikmit
+55,112,"Permitted, no sanctions",Evenk
+51,138,"Permitted, no sanctions",Oroch
