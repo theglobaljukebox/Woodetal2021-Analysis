@@ -1,6 +1,6 @@
 #This code performs inter-rater reliability analyses for Cantometric training codings from CompMusic Lab students and with Global Jukebox codings
 
-setwd("/Users/pesavage/Documents/Research/Papers/Unpublished/Wood et al Global Jukebox/global-jukebox")
+setwd("~/Documents/Research/Publications/Unpublished/Wood et al Global Jukebox/global-jukebox")
 
 
 #This code requires installing and loading the following packages:
@@ -21,8 +21,71 @@ library(pwr)
 
 options(stringsAsFactors = FALSE)
 
+
+##########
+######pre-registered code for confirmatory analyses using consensus coding for 30 randomly selected Cantometric codings agreed on by PES and ALCW (updated slightly to match new formatting):
+
+##Starting here rather than doing this at the end because for some reason googlesheets4::read_sheet has started having an error when trying to read data directly from GoogleSheets
+
+#Read Cantometric codings from raw data file
+(c <- as.data.frame(read.csv("canto_codings.csv")))
+
+#Read PES/ALCW cantometrics (including ID rows)
+#Read consensus codings:
+(cons <- as.data.frame(read.csv("Cantometrics30PESALCWConsensusCodings.csv")))
+
+#Reduce to only 30 songs and 40 variables (37 Cantometrics + 3 metadata) of interest:
+(cons<-cons[1:30,1:40])
+
+#Read pilot data:
+d<-read.csv("WeightedKappacantoIRR.csv",header=TRUE,row.names=1)
+d$Kappa<-rowMeans(d) #add column of means
+
+#fix formatting bugs
+cons[,c(2:38,40)]<-as.numeric(as.character(unlist(cons[,c(2:38,40)])))
+
+#merge those with overlapping coding IDs
+m<-merge(cons,c,by="song_id")
+
+#convert bit codings to 1-13, ignoring multicodings
+m[43:79]<-ifelse(m[43:79]==2,1,ifelse(m[43:79]==4,2,ifelse(m[43:79]==8,3,ifelse(m[43:79]==16,4,ifelse(m[43:79]==32,5,ifelse(m[43:79]==64,6,ifelse(m[43:79]==128,7,ifelse(m[43:79]==256,8,ifelse(m[43:79]==512,9,ifelse(m[43:79]==1024,10,ifelse(m[43:79]==2048,11,ifelse(m[43:79]==4096,12,ifelse(m[43:79]==8192,13,NA)))))))))))))
+
+#Count # of NA values
+sum(is.na(m[43:79]))
+
+##Calculate all weighted Kappas for each of the 37 lines
+out <- matrix(NA, nrow=0, ncol=2)
+for(i in 1:37){
+  rates<-cbind(i,psych::cohen.kappa(m[,c(i+2,i+42)])$weighted.kappa)
+  out <- rbind(out,rates)
+}
+colnames(out)<-c("LineNumber","Kappa")
+
+write.csv(out,"consIRR.csv")
+p<-read.csv("consIRR.csv",header=TRUE,row.names=2)
+
+###Hypothesis testing
+
+#Hypothesis 1 power analysis/test
+t.test(p$Kappa, alternative="greater")
+
+#Hypothesis 2 power analysis/test
+cor.test(p$Kappa,d$Kappa)
+plot(p$Kappa ~d$Kappa, col="lightblue", pch=19, cex=2,ylim=c(0,1),xlim=c(-0.2,1),xlab="Kappa (mean of 6 pilot raters)",ylab="Kappa (2-rater consensus vs. Jukebox)")
+text(p$Kappa~d$Kappa, labels=rownames(d),cex=0.9, font=2)
+
+
+
+
+
+###Original scripts
+
+
+
 #Read full Cantometrics data from Google Sheets:
 (c <- as.data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1AjynK9mMQTw58B_B8b_ZIip3fyUm-aoV7Pp21HziBb0/edit?ts=5edaae90#gid=974103515")))
+
+
 
 #Read Consensus Tape data from Google Sheets
 (HD <- as.data.frame(read_sheet("https://docs.google.com/spreadsheets/d/1vCA6P92w71z1lAIz_EMDrp-qplUkqpC_aGdXLc0OfQM/gid=400900714&output=csv",sheet=4)))
@@ -158,42 +221,4 @@ t.test(d$Kappa, alternative="greater") #t = 10.364, df = 36, p-value = 1.185e-12
 pwr.r.test(n = 37, r = , sig.level = 0.025, power = 0.95) #r = 0.5785229
 mean(as.dist(cor(d[,1:7]))) # mean r among 7 raters =  0.7023493
 
-##########
-######pre-registered code for confirmatory analyses using consensus coding for 30 randomly selected Cantometric codings agreed on by PES and ALCW:
 
-#Read PES/ALCW cantometrics (including ID rows)
-(cons <- read.csv("ConsCodings.csv",header=TRUE))
-
-#Reduce to only 30 songs of interest:
-(cons<-cons[19:48,])
-
-#fix formatting bugs
-cons[,c(2:38,40)]<-as.numeric(as.character(unlist(cons[,c(2:38,40)])))
-
-#merge those with overlapping coding IDs
-m<-merge(cons,c,by="canto_coding_id")
-
-#convert bit codings to 1-13, ignoring multicodings
-m[43:79]<-ifelse(m[43:79]==2,1,ifelse(m[43:79]==4,2,ifelse(m[43:79]==8,3,ifelse(m[43:79]==16,4,ifelse(m[43:79]==32,5,ifelse(m[43:79]==64,6,ifelse(m[43:79]==128,7,ifelse(m[43:79]==256,8,ifelse(m[43:79]==512,9,ifelse(m[43:79]==1024,10,ifelse(m[43:79]==2048,11,ifelse(m[43:79]==4096,12,ifelse(m[43:79]==8192,13,NA)))))))))))))
-
-#Count # of NA values
-sum(is.na(m[43:79]))
-
-##Calculate all weighted Kappas for each of the 37 lines
-out <- matrix(NA, nrow=0, ncol=2)
-for(i in 1:37){
-  rates<-cbind(i,psych::cohen.kappa(m[,c(i+2,i+42)])$weighted.kappa)
-  out <- rbind(out,rates)
-}
-colnames(out)<-c("LineNumber","Kappa")
-
-write.csv(out,"consIRR.csv")
-p<-read.csv("consIRR.csv",header=TRUE,row.names=2)
-
-###Hypothesis testing
-
-#Hypothesis 1 power analysis/test
-t.test(p$Kappa, alternative="greater")
-
-#Hypothesis 2 power analysis/test
-cor.test(p$Kappa,d$Kappa)
