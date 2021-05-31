@@ -1,0 +1,64 @@
+## Data cleaning, checking, validating
+
+This is for code used in cleaning and validating the cantometrics dataset. The code can be re-run using data available in this repository.
+
+
+### Installation Guide/Dependencies
+
+#### Python Version 3.4
+
+
+You must have a working version of Python 3 installed.
+You may download it here https://www.python.org/downloads/
+
+To check to see if your Python has been added to your path open terminal and type:
+
+`python --version`
+
+Ensure that your pip distribution is for Python 3.
+
+`pip --version`
+
+If you get and error, refer to online forums on how to get around this, as the solutions are installation specific, and vary depedning on your operating system.
+
+If all is well until now, you may proceed to install dependencies
+
+`pip install -r requirements.txt`
+
+
+Error checking:
+    Main code is in "automatic_screening.py"
+
+Notes:
+
+    I haven't tested the code yet, but it's probably close-to if not completely ready
+    The path names need to be changed, but I guess that one person should be in charge of
+    deciding on the directory layout
+
+    The code cannot be run without three sets of files:
+        codings.json
+        ".npy" for each recording (pYIN)
+        ".score.csv" for each recording (Marolt)
+
+
+### Error checking
+
+We checked for multiple types of errors. All of these analyses can be re-run using "src/automatic_screening.py":
+
+From this directory simply run:
+
+`python  src/automatic_screening.py'
+
+
+### Inter-rater aggreement and accuracy
+
+Code for calculating kappa, accuracy (and other meaures) can be re-run using "src/interrater_agreement.py":
+
+From this directory simply run:
+
+`python  src/interrater_agreement.py'
+
+
+
+
+
