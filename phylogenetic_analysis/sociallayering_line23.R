@@ -12,18 +12,18 @@ taxa_url = "https://raw.githubusercontent.com/D-PLACE/dplace-data/master/phyloge
 name = "Austronesia"
 
 # ---- Data ---- #
-ea_cantometrics = read.csv('data/ea_cantomtericsmodalprofiles_socialstrain.csv')
+ea_cantometrics = read.csv('data/socialfactors_cantomtericsmodalprofiles.csv')
 
 tree = read.nexus(tree_url)
 taxa = read.csv(taxa_url)
 
+# We are not interested in OldJavanese
 tree = drop.tip(tree, "OldJavanese")
 ### Standardize branch lengths
 tree$edge.length = tree$edge.length / max(tree$edge.length)
 
 #### Analysis #### 
 ### Global ###
-
 relevel_line23 = data.frame(line_23 = sort(unique(ea_cantometrics$line_23)),
                             line_23ordinal = 1:(length(unique(ea_cantometrics$line_23))-1))
 
@@ -37,7 +37,6 @@ fit_simple = lm(line_23ordinal ~ SocialFactors_V33_code, data = large_languagefa
 fit_languagefam = lmer(line_23ordinal ~ SocialFactors_V33_code + (1|Language_family), data = large_languagefamily)
 
 ### Regional ###
-
 cantometrics = left_join(ea_cantometrics, taxa, by = c("Glottocode" = "glottocode"))
 # we need to have only one row per society (despite there being multiple songs per society)
 cantometrics = cantometrics[!duplicated(cantometrics$taxon),]
@@ -89,7 +88,8 @@ rect(head(seq(left, right, by = (right-left)/n), -1),
      -2, 
      tail(seq(left, right, by = (right-left)/n), -1), 
      -0.5,
-     col = colfunc(5))
+     # col = colfunc(5))
+     col = c("#5E9AC4", "#88C1CA", "#F6C3C3", "#F1635B", "#C52B2F"))
 text(x = c(left, right - 0.05), y = -2.05, c("Low Embellishment / \n No slavery, class, or caste distinctions",
   "Extreme Embellishment / \n Social layering score of five to six."), pos = 1)
   

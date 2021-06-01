@@ -1,3 +1,7 @@
+#### This script will get the data for phylogenetic comparisons and maps
+#### It currently requires access to the google sheets file containing 
+#### social layering data. 
+
 library(googlesheets4)
 library(dplyr)
 
@@ -8,10 +12,10 @@ dplace_codes = read.csv('https://raw.githubusercontent.com/D-PLACE/dplace-data/m
 stratification = left_join(stratification, dplace_codes, c("soc_id" = "id"))
 
 # get cantometrics data
-cantometrics_modal = read.csv("data/modalprofile_values.csv")
+cantometrics_modal = read.csv("output/modal_profiles.csv")
 cantometrics_modal$soc_id = as.numeric(cantometrics_modal$soc_id)
 
-cantometrics_metadata = read.csv('data/societies.csv')
+cantometrics_metadata = read.csv('https://raw.githubusercontent.com/theglobaljukebox/cantometrics/main/raw/societies.csv?token=AAM3DDZI6G63T7MYNLY3BZ3AW2V7W')
 cantometrics = left_join(cantometrics_modal, cantometrics_metadata, by = c("soc_id" = "society_id")) 
 
 cantometrics = cantometrics %>% 
@@ -49,4 +53,4 @@ ea_cantometrics$line22_col = values2col(ea_cantometrics$line_22)
 
 sum(!is.na(ea_cantometrics$SocialFactors_V33_code))
 
-write.csv(ea_cantometrics, file = "data/ea_cantomtericsmodalprofiles_socialstrain.csv")
+write.csv(ea_cantometrics, file = "data/socialfactors_cantomtericsmodalprofiles.csv")
