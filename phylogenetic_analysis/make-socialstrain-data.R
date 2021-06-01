@@ -15,7 +15,7 @@ stratification = left_join(stratification, dplace_codes, c("soc_id" = "id"))
 cantometrics_modal = read.csv("output/modal_profiles.csv")
 cantometrics_modal$soc_id = as.numeric(cantometrics_modal$soc_id)
 
-cantometrics_metadata = read.csv('https://raw.githubusercontent.com/theglobaljukebox/cantometrics/main/raw/societies.csv?token=AAM3DDZI6G63T7MYNLY3BZ3AW2V7W')
+cantometrics_metadata = read_sheet("https://docs.google.com/spreadsheets/d/1tb3Nip43e4LaJbglaXzcCTP2CiMyrgwIsU2egk3tfNM/edit#gid=1190601304")
 cantometrics = left_join(cantometrics_modal, cantometrics_metadata, by = c("soc_id" = "society_id")) 
 
 cantometrics = cantometrics %>% 
