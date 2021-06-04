@@ -4,6 +4,10 @@ library(dplyr)
 library(RColorBrewer)
 library(phylolm)
 library(lmerTest)
+library(sjPlot)
+library(sjmisc)
+library(ggplot2)
+library(ggeffects)
 
 #### Script ####
 
@@ -33,10 +37,55 @@ t = table(ea_cantometrics$Language_family)
 big_languagefamily = names(t)[t > 5]
 
 large_languagefamily = ea_cantometrics[ea_cantometrics$Language_family %in% big_languagefamily,]
+
+ggplot(large_languagefamily, aes(x = SocialFactors_V33_code, y = line_23ordinal)) + 
+  geom_jitter(position = position_jitter(width = 0.1, height = 0.1))
+
+large_languagefamily = large_languagefamily %>% 
+  select(line_23ordinal, SocialFactors_V33_code, Language_family, Division) %>% 
+  na.omit
+
+# fit_simple <- brm(line_23ordinal ~ SocialFactors_V33_code, data=large_languagefamily, 
+#                   family=cumulative("logit"), 
+#                   chain = 2, cores = 2)
 fit_simple = lm(line_23ordinal ~ SocialFactors_V33_code, data = large_languagefamily)
 fit_languagefam = lmer(line_23ordinal ~ SocialFactors_V33_code + (1|Language_family), data = large_languagefamily)
+fit_region = lmer(line_23ordinal ~ SocialFactors_V33_code + (1|Division), data = large_languagefamily)
+fit_both = lmer(line_23ordinal ~ SocialFactors_V33_code + (1|Division) + (1|Language_family), data = large_languagefamily)
 
-### Regional ###
+plot_model(fit_languagefam, y.offset = .4, type = "re")
+plot_model(fit_region, y.offset = .4, type = "re")
+plot_model(fit_both, y.offset = .4, type = "re")
+
+# Model comparison
+
+anova(fit_region, fit_both, test="Chisq")
+anova(fit_languagefam, fit_both, test="Chisq")
+
+## Model predictions
+
+  # install the package first if you haven't already, then load it
+
+# Extract the prediction data frame
+pred.both <- ggpredict(fit_both, terms = c("SocialFactors_V33_code"))  # this gives overall predictions for the model
+pred.both = predict(fit_both)
+
+plot(large_languagefamily$line_23ordinal[!is.na(large_languagefamily$line_23ordinal)], 
+     pred.both)
+
+# Plot the predictions 
+
+(ggplot(pred.both) + 
+    geom_line(aes(x = x, y = predicted)) +          # slope
+    geom_ribbon(aes(x = x, ymin = predicted - std.error, ymax = predicted + std.error), 
+                fill = "lightgrey", alpha = 0.5) +  # error band
+    geom_jitter(data = large_languagefamily,                      # adding the raw data (scaled values)
+               aes(x = SocialFactors_V33_code, y = line_23ordinal), ) + 
+    labs(x = "Social Layering", y = "Embellishment") + 
+    theme_minimal()
+)
+
+#### Regional ####
 cantometrics = left_join(ea_cantometrics, taxa, by = c("Glottocode" = "glottocode"))
 # we need to have only one row per society (despite there being multiple songs per society)
 cantometrics = cantometrics[!duplicated(cantometrics$taxon),]
@@ -64,12 +113,14 @@ fit = lm(line_23ordinal ~ SocialFactors_V33_code, data = model_df)
 
 fit_phylo = list()
 for(i in seq_along(pruned_trees)){
-  fit_phylo[[i]] = phylolm(line_23ordinal ~ SocialFactors_V33_code, data = model_df, phy = pruned_trees[[i]])  
+  fit_phylo[[i]] = phylolm(line_23ordinal ~ SocialFactors_V33_code, data = model_df, phy = pruned_trees[[i]], model = "lambda")  
 }
 
 phylo_coefficients = lapply(fit_phylo, function(f) coef(summary(f)))
 
-Reduce("+", phylo_coefficients) / length(phylo_coefficients)
+lambda = lapply(fit_phylo, function(s) s$sigma2) %>% unlist %>% mean
+
+round(Reduce("+", phylo_coefficients) / length(phylo_coefficients), 2)
 
 # png(paste0("trees/", name, "_socialfactorssociallayering_line23.png"), width = 200, height = 200, units='mm', res = 300)
 pdf("trees/Austronesia_socialfactorssociallayering_line23.pdf")

@@ -6,3 +6,5 @@ token.pickle
 /output/long_form.csv
 .Rproj.user
 global-jukebox.Rproj
+.Rhistory
+.Rapp.history

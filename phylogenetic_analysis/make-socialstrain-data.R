@@ -19,14 +19,16 @@ cantometrics_metadata = read_sheet("https://docs.google.com/spreadsheets/d/1tb3N
 cantometrics = left_join(cantometrics_modal, cantometrics_metadata, by = c("soc_id" = "society_id")) 
 
 cantometrics = cantometrics %>% 
-  dplyr::select(soc_id, line_23, line_4, line_22, Society_latitude, Society_longitude, Glottocode, Language_family)
+  dplyr::select(soc_id, line_23, line_4, line_22, Society_latitude, Society_longitude, Glottocode, 
+                Language_family, Region, Division)
 
 ea_cantometrics = full_join(cantometrics, stratification, c("Glottocode" = "glottocode"),  suffix = c(".canto", ".strat"))
 
 # Only keep columns we care about
 keep_cols = c("soc_id.strat", "xd_id.x", "soc_id.canto", "pref_name_for_society.x", "Glottocode", 
               "SocialFactors_V33_code", "line_23", "line_4", "line_22",
-              "Society_latitude", "Society_longitude", "Language_family")
+              "Society_latitude", "Society_longitude", "Language_family",
+              "Region", "Division")
 
 ea_cantometrics = ea_cantometrics[,keep_cols]
 
