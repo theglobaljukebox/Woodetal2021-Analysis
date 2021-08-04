@@ -1,0 +1,1292 @@
+soc_id,xd_id,pref_name_for_society,ORIG_name_and_ID_in_this_dataset,alt_names_by_society,Lat,Long,SocialFactors_V33_code
+Aa1,xd1,!Kung,Kung (Aa1),"Kung Bushmen, !Kung (Was Nyae), Was Nyae",-20,21,1
+Aa2,xd2,Dorobo,Dorobo (Aa2),"Andorobo, Okiek, Wandorobbo",0,36,1
+Aa5,xd5,Mbuti,Mbuti (Aa5),"Sua, BaSua, Kango, BaKango, Bambuti, BaMbuti Pygmies",2,28,1
+Aa6,xd6,Sandawe,Sandawe (Aa6),Wasandaui,-5,36,1
+Aa7,xd7,Naron,Naron (Aa7),Aikwe,-20,24,1
+Aa8,xd8,/Xam,Xam (Aa8),"Xam, Cape Bushman",-30,23,1
+Aa9,xd9,Hadza,Hatsa Kindiga (Aa9),"Hadzabe, Hatsa Kindiga, Hadza, Kindiga",-3,35,1
+Ad37,xd106,Teita,Teita (Ad37),"Taita, Wateita",-4,39,1
+Ad38,xd107,Kara,Kara (Ad38),Wakara,-2,33,1
+Ae17,xd135,Rega,Rega (Ae17),"Balegga, Barega, Valega, Warega",-3,28,1
+Ae32,xd152,Kumu,Kumu (Ae32),"Bakumu, Wakumu",-1,27,1
+Ae34,xd154,Plains Bira,Plains Bira (Ae34),Babira,1,30,1
+Af51,xd232,Gagu,Gagu (Af51),Gban,7,-6,1
+Af7,xd241,Bete,Bete (Af7),,6,-7,1
+Ag14,xd249,Baga,Baga (Ag14),,10,-14,1
+Ag16,xd251,Banyun,Banyune (Ag16),"Bainuk, Banhun, Banyune",12,-16,1
+Ag19,xd254,Diola,Diola (Ag19),,12.88,-16.19,1
+Ag20,xd256,Papel,Pepel (Ag20),Pepel,12,-16,1
+Ag21,xd257,Bassari,Bassari (Ag21),Biyan,12,-13,1
+Ah39,xd330,Podokwo,Podokwo (Ah39),Podogo,11,14,1
+Ai24,xd353,Mandja,Mandja (Ai24),,6,18,1
+Ai35,xd365,Bongo,Bongo (Ai35),Dor,7,29,1
+Aj10,xd385,Acholi,Acholi (Aj10),Acooli,3,32,1
+Aj23,xd399,Plains Suk,Plains Suk (Aj23),Pokot,1,36,1
+Aj5,xd410,Turkana,Turkana (Aj5),"ŋiTurkana, Elgume",4,35,1
+Aj7,xd412,Nandi,Nandi (Aj7),,0,35,1
+Cd5,xd523,Shluh,Shluh (Cd5),"Shilha, Islhiyn, Chleuch",30,-9,1
+Cf3,xd538,Tristan da Cunha,Tristan da Cunha (Cf3),,-37.11,-12.27,1
+Ci2,xd578,Khevsur,Khevsur (Ci2),Chevsur,43,45,1
+Eb4,xd612,Dagur,Dagur (Eb4),Dagor,49,125,1
+Ec1,xd617,Nivkh,Gilyak (Ec1),Gilyak,53,142,1
+ec12,xd620,Nganasan,Nganasan (ec12),Tavgi Samoyed,72,90,1
+ec15,xd623,Mansi,Mansi (ec15),"Vogul, Gogulich, Mansiy, Voguly",63,62,1
+ec16,xd624,Evenk,Evenk (ec16),"Ewenki, Tungus, Chapogir, Avanki, Avankil, Solon, Khamnigan",55,112,1
+ec19,xd627,Orok,Orok (ec19),"Uilta, Ul'ta, Nani, Oroki, Oroc, Ulta, Ujlta",54.01,142.71,1
+ec20,xd629,Oroch,Oroch (ec20),Orochi,51,138,1
+ec21,xd630,Udihe,Udihe (ec21),"Udeghes, Udyhe, Udekhe, Udegeis",47,136,1
+Ec7,xd635,Ainu,Ainu (Ec7),"Ainu (Hokkaido), Hokkaido",44,144,1
+Ec8,xd636,Ket,Ket (Ec8),"Yenisei Ostyak, Yeniseians",62,90,1
+Ed4,xd647,Miao,Miao (Ed4),,26,107,1
+Ef1,xd661,Santal,Santal (Ef1),"Santhal, Saontal",24,87,1
+Eg1,xd672,Chenchu,Chenchu (Eg1),,16,79,1
+Eg13,xd676,Muria Gond,Muria Gond (Eg13),,20,81,1
+Eg4,xd680,Toda,Toda (Eg4),,12,77,1
+Eg9,xd685,Baiga,Baiga (Eg9),,22,81,1
+Eh1,xd686,Andamanese,Andamese (Eh1),"Big Andaman Island, Andamese",12,93,1
+Eh4,xd690,Vedda,Vedda (Eh4),"Wanniyalaeto, Veddah",8,81,1
+Eh5,xd691,Nicobarese,Nicobarese (Eh5),Holchu,9.17,92.77,1
+Ej14,xd721,Senoi,Senoi (Ej14),,4,102,1
+Ej16,xd723,Negri Sembilan,Negri Sembilan (Ej16),Negeri Sembilan,2.58,102.25,1
+Ej3,xd725,Semang,Semang (Ej3),,5,101,1
+Ej6,xd728,Moken,Selung (Ej6),"Selung, Mawken, Salon, Sea Gypsies",11.78,98.28,1
+Ej7,xd729,Akha,Akha (Ej7),"e-Kaw, Kaw",21,100,1
+Ia14,xd737,Tao,Yami (Ia14),Yami,22.05,121.55,1
+Ia4,xd744,Subanun,Subanun (Ia4),,8,123,1
+Ia5,xd745,Hanunoo,Hanunoo (Ia5),,13,121,1
+Ib7,xd756,Mentaweians,Mentaweians (Ib7),,-2.93,100.23,1
+Ib8,xd757,Anak Dalam,Kubu (Ib8),"Orang Batin Sembilan, Orang Rimba, Kubu",-3,103,1
+Ic12,xd762,Sumbawanese,Sumbawanese (Ic12),,-8.63,117.27,1
+Id1,xd772,Northern Aranda,Aranda (Id1),"Aranda (Northern), Northern Arenda, Arunta",-24,134,1
+Id10,xd773,Walbiri,Walbiri (Id10),Warlpiri,-22,132,1
+Id11,xd774,Gidjingali,Gidjingali (Id11),"Burarra, Gun-nartpa",-12.29,134.32,1
+Id12,xd775,Yir Yoront,Yir Yoront (Id12),,-15,142,1
+Id13,xd776,Anindilyagwa,Groote Eylandt (Id13),"Enindilywakwa, Groote Eylandt, Groote Eyelandt",-13.99,136.6,1
+Id2,xd777,"Yolngu, Dhuwal",Murngin (Id2),"Murngin, Wulamba, Dhuwal",-12.48,135.96,1
+Id3,xd778,Tiwi,Tiwi (Id3),,-11.56,130.81,1
+Id4,xd779,Diyari,Dieri (Id4),"Dieri, Dieri",-28,138,1
+Id5,xd780,Kariyarra,Kariera (Id5),Kariera,-21,118,1
+Id6,xd781,Wikmunkan,Wikmunkan (Id6),Wikmunkun,-14,142,1
+Id8,xd783,Tasmanians (northwestern),Tasmanians (Id8),"Palawa, Tasmanians (northwestern), Tasmanians (Western), Tasmanians (West Coast)",-42,146,1
+Id9,xd784,Ngiyambaa,Wongaibon (Id9),Wongaibon,-32,146,1
+Ie11,xd787,Kakoli,Kakoli (Ie11),,-6,144,1
+Ie12,xd788,Kwoma,Kwoma (Ie12),,-4,142,1
+Ie13,xd789,Kiwai,Kiwai (Ie13),,-9,143,1
+Ie14,xd790,Miriam,Miriam (Ie14),,-9.91,144.06,1
+Ie15,xd791,Abelam,Abelam (Ie15),,-3.79,143.09,1
+Ie16,xd792,Kutubu,Kutubu (Ie16),,-6,143,1
+Ie18,xd794,Kimam,Kimam (Ie18),Frederik-Hendrik Islanders,-7.52,138.46,1
+Ie19,xd795,Marind-Amin,Marindamin (Ie19),"Marindamin, Tugeri",-8,139,1
+Ie2,xd796,Wantoat,Wantoat (Ie2),,-6.15,146.53,1
+Ie21,xd798,Mailu,Mailu (Ie21),,-10,149,1
+Ie23,xd800,Muju,Muju (Ie23),,-6,141,1
+Ie26,xd803,Ngarawapum,Ngarawapum (Ie26),,-6,146,1
+Ie27,xd804,Banaro,Banaro (Ie27),,-4.56,144.34,1
+Ie29,xd806,Manam,Manam (Ie29),,-4.08,145.03,1
+Ie3,xd807,Arapesh,Arapesh (Ie3),,-4,144,1
+Ie30,xd808,Mimika,Mimika (Ie30),,-4,135,1
+Ie33,xd811,Soromadja,Soromadja (Ie33),Tor,-2,138,1
+Ie35,xd813,Iatmul,Iatmul (Ie35),,-4,143,1
+Ie38,xd816,Dani,Dani (Ie38),,-4,139,1
+Ie4,xd818,Wogeo,Wogeo (Ie4),,-3.24,144.1,1
+Ie5,xd819,Keraki,Keraki (Ie5),,-9,142,1
+Ie7,xd821,Enga,Enga (Ie7),,-6,144,1
+Ie9,xd823,Orokaiva,Orokaiva (Ie9),,-9,148,1
+If12,xd827,Bikinians,Bikinians (If12),,11.7,165.29,1
+If15,xd830,Carolinians,Carolinians (If15),,15.21,145.76,1
+If16,xd831,Lamotrek,Lamotrek (If16),,7.46,146.38,1
+If2,xd833,Trukese,Trukese (If2),Chuukese,7.34,151.6,1
+If4,xd835,Ifaluk,Ifuluk (If4),Ifuluk,7.25,144.46,1
+If8,xd839,Chamorro,Chamorro (If8),,15.13,145.71,1
+If9,xd840,Ulithians,Ulithians (If9),,10.02,139.79,1
+Ig10,xd842,Usiai,Usiai (Ig10),,-2,147,1
+Ig21,xd854,Tangu,Tangu (Ig21),Tanga,-3.38,153.31,1
+Ig4,xd856,Lesu,Lesu (Ig4),New Irelanders,-3.06,151.66,1
+Ig5,xd857,Dobuans,Dobuans (Ig5),,-10,151,1
+Ig6,xd858,Ulawans,Ulawans (Ig6),,-9.63,161.44,1
+Ih5,xd871,Ajie,Ajie (Ih5),,-21.37,165.47,1
+Ih8,xd874,Vanua Levu,Vanua Levu (Ih8),,-17.81,178.32,1
+Ii3,xd882,Pukapukans,Pukapukans (Ii3),Danger Islanders,-10.89,-165.84,1
+Ii6,xd885,Tokelau,Tokelau (Ii6),,-9.2,-171.85,1
+Ij5,xd894,Raroians,Raroians (Ij5),Rareians,-15.94,-142.31,1
+Na1,xd1026,Nabesna,Nabesna (Na1),Upper Tanana Indians,63,-141,1
+Na13,xd1030,Baffin Island Inuit,Baffinland (Na13),Baffinland,65.24,-64.63,1
+Na14,xd1031,Inughuit (Northern Greenland),Polar Eskimo (Na14),"Polar Eskimo, Arctic Highlanders, Smith Sound Inuit, Smith Sound Eskimo",78,-70,1
+Na15,xd1032,Tlicho,Dogrib (Na15),Dogrib,63,-117,1
+Na16,xd1033,Délįne,Satudene (Na16),"Bear Lake Dene, Satudene, Great Bear Lake People, Sahtu, Sahtu Dene",65,-119,1
+Na17,xd1034,DeneTha,Slave (Na17),"Slave, Deh Cho (Southern Slavey), Slavey, Dene (distinguish from speakers of the Dene language)",61,-120,1
+Na21,xd1038,Caribou Inuit,Caribou Eskimo (Na21),Caribou Eskimo,63,-96,1
+Na22,xd1025,Iglulik Inuit,Iglulik (Na22),"Igloolik, Iglulingmiut",70,-82,1
+Na23,xd1039,Labrador Inuit,Labrador Eskimo (Na23),"Sukinninmiut, Labrador Eskimo",58,-65,1
+Na24,xd1040,Tasiilaq,Angmagsalik (Na24),"Angmagsalik (East Greenland), Ammassalik, East Greenland Eskimo, Polar Eskimo",66,-37,1
+Na25,xd1041,Kalaallit (West Greenland),Greenlanders (Na25),"West Greenland Eskimo, West Greenland Inuit",68.66,-51.22,1
+Na28,xd1044,Sekani,Sekani (Na28),"Tsek'ene, Sicauni",56,-123,1
+Na29,xd1045,Beaver,Beaver (Na29),"Denezaa, Tsattine",58,-117,1
+Na3,xd1022,Copper Inuit,Copper Eskimo (Na3),"Kitlinermiut, Copper Eskimo",69,-110,1
+Na30,xd1046,Dene,Chipewyan (Na30),Chipewyan,60,-105,1
+Na31,xd1047,Eastern Cree,Eastern Cree (Na31),,51,-85,1
+Na32,xd1048,Montagnais,Montagnais (Na32),"Innu, Naskapi",48,-72,1
+Na33,xd1049,Northern Saulteaux,Northern Saulteaux (Na33),"N. Saulteaux, North Sauteaux",52,-98,1
+Na34,xd1050,Pekangekum,Pekangekum (Na34),,52,-94,1
+Na35,xd1051,Nipigon,Nipigon (Na35),"Lake Nipigon Ojibway, Anishinaabek, Southern Saulteaux",50,-88,1
+Na36,xd1052,Minnesota Ojibwa,Chippewa (Na36),"Minnesota Chippewa, Chippewa, Ojibwe, Ojibwa, Ojibway",49,-96,1
+Na37,xd1053,Rainy River Ojibwe,Rainy River (Na37),"Gojijiwininiwag, Rainy River, Emo",49,-92,1
+Na38,xd1054,Katikitegon,Katikitegon (Na38),Wisconsin Ojibwa,46,-92,1
+Na39,xd1055,Eastern Ojibwa,Eastern Ojibwa (Na39),"Kitchibuan, Kitchibuan Ojibwa; Kitchibaun Ojibwa",46,-85,1
+Na4,xd1056,Kaska,Kaska (Na4),Nahane,59,-128,1
+Na40,xd1057,Ottawa,Ottawa (Na40),"Odawa, Odaawaa",46,-82,1
+Na41,xd1058,Mi'kmaq,Micmac (Na41),Micmac,47,-65,1
+Na43,xd1060,Netsilik,Netsilik (Na43),"Netsilik Inuit, Netsilik Eskimo",69,-96,1
+Na44,xd1061,Taqagmiut,Taqagmiut (Na44),Taqagmiut Eskimo,62,-76,1
+Na45,xd1062,Mistissini Cree,Mistassini (Na45),Mistassini Cree,51.75,-72.66,1
+Na5,xd1063,Naskapi,Naskapi (Na5),,58,-70,1
+Na7,xd1065,Attawapiskat Cree,Cree Attawapiskat (Na7),Attawapiskat,53,-83,1
+Nc15,xd1113,Coast Yuki,Coast Yuki (Nc15),,39.34,-123.77,1
+Nc16,xd1114,Huchnom,Huchnom (Nc16),,39,-123,1
+Nc2,xd1118,Tübalulabal,Tubatulabal (Nc2),Tubatulabal,39,-118,1
+Nc30,xd1130,Serrano,Serrano (Nc30),,34,-117,1
+Nc31,xd1131,Cahuilla (Desert),Cahuilla (Nc31),Desert Cahuilla,33,-116,1
+Nc32,xd1132,Cupeño,Cupeno (Nc32),"Kuupangaxwichem, Cupeno",33,-117,1
+Nc33,xd1133,Luiseño,Luiseno (Nc33),"Payómkawichum, Luiseno",33,-117,1
+Nc34,xd1134,Kiliwa,Kiliwa (Nc34),K'olew,31,-115,1
+Nc5,xd1136,Central Sierra Miwok,Miwok (Nc5),Miwok,38,-120,1
+Nc6,xd1137,Kumeyaay,Diegueno (Nc6),"Diegueño, Diegueno",32,-116,1
+Nd13,xd1145,Kalispel,Kalispel (Nd13),,49,-117,1
+Nd15,xd1147,Sinkaitk,Sinkaitk (Nd15),Southern Okanagon,49,-120,1
+Nd2,xd1152,Southern Ute,Southern Ute (Nd2),"Wimonuntci, Weminute, Wimonantci Ute",38,-109,1
+Nd21,xd1154,Tagotoka,Tagotoka (Nd21),Duck Valley Paiute,43,-117,1
+Nd22,xd1155,Wadadokado,Wadadokado (Nd22),"Paiute, Northern Paiute",43,-119,1
+Nd23,xd1156,Atsakudokwa,Atsakudokwa (Nd23),Quinn River Paiute,42,-118,1
+Nd24,xd1157,Kidutokado,Kidutokado (Nd24),"Gididika, Surprise Valley Paiute",42,-120,1
+Nd25,xd1158,Sawakudokwa,Sawakudokwa (Nd25),Winnemucca Paiute,41,-118,1
+Nd26,xd992,Wadatkuht,Wadatkuht (Nd26),Honey Lake Paiute,41,-120,1
+Nd27,xd1160,Kuyuidokado,Kuyuidokado (Nd27),Pyramid Lake Paiute,40,-119,1
+Nd28,xd1161,Toedokado,Toedokado (Nd28),"Stillwater Paiute, Cattail Paiute",40,-118,1
+Nd29,xd1162,Tunava (Deep Springs and Fish Lake),Tunava (Nd29),"Deep Springs Valley Paiute, Fish Lake Valley Paiute",37,-118,1
+Nd3,xd1163,Havasupai,Havasupai (Nd3),Plateau Yuma,36,-112,1
+Nd30,xd1164,Eastern Mono,Eastern Mono (Nd30),Owens Valley Paiute,37,-118,1
+Nd31,xd1165,Koso,Koso (Nd31),"Western Panamint, Koso Mountain Shoshoni, Little Lake Shoshoni",36,-118,1
+Nd32,xd1166,Tümpisa Shoshone (Saline and Panamint),Panamint (Nd32),"Panamint Shoshoni, Panamint, Saline Valley Shoshoni",36,-117,1
+Nd33,xd1167,Beatty,Beatty (Nd33),"Eastern Panamint, Beatty Shoshoni, Belted Range Shoshoni",37,-116,1
+Nd34,xd1168,Lida Shoshoni,Lida Shoshoni (Nd34),,37,-117,1
+Nd35,xd1169,Mahaguaduka,Mahaguaduka (Nd35),Reese River Shoshoni,39,-117,1
+Nd36,xd1170,Wiyambituka,Wiyambituka (Nd36),"Morey Shoshoni, Great Smokey Valley Shoshoni, Little Smokey Valley Shoshoni",39,-117,1
+Nd37,xd1171,Railroad Valley Shoshoni,Hamilton (Nd37),Hamilton,39,-116,1
+Nd38,xd1172,Ely Shoshoni,Ely Shoshoni (Nd38),,39,-115,1
+Nd39,xd995,Spring Valley Shoshoni,Spring Valley (Nd39),"Spring Valley, Snake Valley Shoshoni, Antelope Valley Shoshoni",40,-115,1
+Nd4,xd1174,Sanpoil,Sanpoil (Nd4),,48,-119,1
+Nd40,xd1175,Tubaduka,Tubaduka (Nd40),Grouse Creek Shoshoni,40,-113,1
+Nd41,xd1176,Wadaduka,Wadaduka (Nd41),"Ruby Valley Shoshoni, Pine Creek Shoshoni, Diamond Valley Shoshoni, Egan Canyon Shoshoni",41,-116,1
+Nd42,xd1177,Elko Shoshoni,Elko Shoshoni (Nd42),Upper Humboldt River Shoshoni,41,-116,1
+Nd43,xd1178,White Knife Shoshoni,White Knife (Nd43),"Battle Mountain Shoshoni, Tosawihi",41,-117,1
+Nd44,xd1179,Yahanduka,Yahanduka (Nd44),Snake River Shoshoni,42,-115,1
+Nd46,xd1182,Agaiduka,Agaiduka (Nd46),"Salmon-Eater Shoshoni, Lemhi River Shoshoni",44,-112,1
+Nd47,xd1181,Tukudika,Tukudika (Nd47),"Sheep-Eater Shoshoni, Lemhi Mountain Shoshoni",44,-111,1
+Nd48,xd1183,Gosiute,Gosiute (Nd48),"Gosiute Shoshoni, Deep Creek Shoshoni",40,-114,1
+Nd49,xd1184,Antarianunts,Antarianunts (Nd49),"Henry Mountains Paiute, Kaiparowits",37,-110,1
+Nd5,xd1185,Hukundika,Hukundika (Nd5),"Seed-Eaters, Northern Shoshoni, Hukunduka, Hukuniduica",42,-112,1
+Nd50,xd1186,Panguitch,Panguitch (Nd50),,38,-112,1
+Nd51,xd1187,Moapa,Moapa (Nd51),"Muddy Paiute, Parano",36,-115,1
+Nd52,xd1188,Shivwits,Shivwits (Nd52),"Suwuntsu (St. George), Suwuntsu, St. George, Gunlock, Uinkaret, Southern Paiute",36,-117,1
+Nd53,xd1189,Southern Paiute (Kaibab),Kaibab (Nd53),"Kaivavwits, Southern Paiute, Kaipapicicimi, Kaibabits",36,-113,1
+Nd54,xd1190,Chemehuevi,Chemehuevi (Nd54),Colorado River Reservation,35,-115,1
+Nd55,xd1189,Southern Paiute (Las Vegas),Las Vegas (Nd55),"Las Vegas, Southern Paiute",36,-115,1
+Nd56,xd1192,San Juan,San Juan (Nd56),Kwaanitikwokets,36,-111,1
+Nd57,xd1193,Pahvant,Pahvant (Nd57),Sevier Desert Ute,39,-113,1
+Nd58,xd1194,Uintah Ute,Uintah (Nd58),"Tompanowots, Yampa",40,-112,1
+Nd59,xd1195,Moanunts,Moanunts (Nd59),Noanunts,39,-112,1
+Nd6,xd1196,Washo,Washo (Nd6),,39,-120,1
+Nd60,xd1197,Moache,Moache (Nd60),"Moache Ute, Mowatei",37,-105,1
+Nd61,xd1198,Taviwatsiu,Taviwatsiu (Nd61),White River Ute,40,-105,1
+Nd62,xd1199,Uncompahgre Ute,Uncompahgre (Nd62),Mowataviwatsiu,39,-107,1
+Nd63,xd1200,Bannock,Bannock (Nd63),Eastern Bannock,43,-112,1
+Nd64,xd1201,Wind River Eastern Shoshone,Wind River (Nd64),"Wind River, Eastern Shoshoni, Kucundika, Buffalo Hunters, Buffalo-Eater",43,-109,1
+Nd65,xd1202,Hualapai,Walapai (Nd65),Walapai,36,-114,1
+Nd66,xd1203,Yavapai,Yavapai (Nd66),Apache-Mojave,35,-112,1
+Nd67,xd1204,Tolkepaya,Tolkepaya (Nd67),"Apache-Yuma, Western Yavapai",34,-114,1
+Ne1,xd1208,Gros Ventre,Gros Ventre (Ne1),"A'ani, A'aninin, Haaninin",48.78,-108.98,1
+Ne11,xd1210,Assiniboine,Assiniboin (Ne11),"Hohe, Nakota, Stoney",48,-106,1
+Ne14,xd1213,Bungi,Bungi (Ne14),"Plains Ojibwa, Bungee, Manitoba Saulteaux, Ojibway, Ojibwe",51,-100,1
+Ne15,xd1214,Hidatsa,Hidatsa (Ne15),,47,-101,1
+Ne16,xd1215,Karankawa,Karankawa (Ne16),,29,-96,1
+Ne17,xd1216,Kiowa,Kiowa (Ne17),,36,-99,1
+Ne19,xd1218,Plains Cree,Plains Cree (Ne19),,45,-94,1
+Ne2,xd1219,Kiowa Apache,Kiowa Apache (Ne2),"Naisha Dene, Na'isha",36,-99,1
+Ne20,xd1220,Santee,Santee (Ne20),"Isanti, Eastern Dakota",45,-94,1
+Ne4,xd1223,Crow,Crow (Ne4),Apsaalooké,45,-108,1
+Ne5,xd1224,Cheyenne,Cheyenne (Ne5),,39,-104,1
+Ne6,xd1225,Mandan,Mandan (Ne6),,47,-101,1
+Ne7,xd1226,Sarcee,Sarsi (Ne7),"Tsuu, Sarci",54,-110,1
+Ne9,xd1228,Arapaho,Arapaho (Ne9),"Hinono'eiteen, Arapahoe",40,-103,1
+Nf2,xd1236,Ho Chunk,Winnebago (Nf2),Winnebago,44,-88,1
+Nf5,xd1239,Wichita,Wichita (Nf5),,34,-98,1
+Ng10,xd1245,Seneca,Iroquois (Ng10),"O-non-dowa-gah, Iroquois",43,-77,1
+Ng11,xd1246,Yuchi,Yuchi (Ng11),"Euchee, Uchee",35,-86,1
+Ng12,xd1247,Choctaw,Choctaw (Ng12),,33,-88,1
+Ng2,xd1251,Seminole,Seminole (Ng2),,27,-81,1
+Ng3,xd1252,Muscogee,Creek (Ng3),"Creek, Taskigi Creek",33,-84,1
+Ng4,xd1253,Penobscot,Penobscot (Ng4),,45,-68,1
+Ng5,xd1254,Cherokee,Cherokee (Ng5),,36,-83,1
+Ng6,xd1255,Delaware,Delaware (Ng6),Lenape,41,-75,1
+Ng9,xd1258,Catawba,Catawba (Ng9),Issa,35,-80,1
+Nh1,xd1259,Chiricahua,Chiricahua (Nh1),"Chiricahua Apache, Eastern Apache",31,-108,1
+Nh10,xd1260,Isleta,Isleta (Nh10),,35,-107,1
+Nh11,xd1261,San Ildefonso,Tewa (Nh11),"Tewa, San Ildefonso Pueblo",36,-106,1
+Nh13,xd1263,Acoma,Acoma (Nh13),,35,-108,1
+Nh14,xd1264,Laguna,Laguna (Nh14),,35,-107,1
+Nh16,xd1266,Jicarilla,Jicarilla (Nh16),,36,-104,1
+Nh17,xd1267,Western Apache,Western Apache (Nh17),Ndee,34,-110,1
+Nh18,xd1268,Hopi,Hopi (Nh18),Hopi of Old Oraiibi,36,-111,1
+Nh2,xd1270,Hano,Hano (Nh2),,36,-111,1
+Nh23,xd1274,Kewyipaya,Kewyipaya (Nh23),Southeastern Yavapai,34,-111,1
+Nh24,xd1275,Lipan Apache,Lipan (Nh24),Lipan,30,-100,1
+Nh25,xd1276,Sia,Sia (Nh25),"Tsiya, Zia",36,-107,1
+Nh4,xd1280,Zuni,Zuni (Nh4),,35,-109,1
+Nh5,xd1281,Maricopa,Maricopa (Nh5),Piipash,33,-113,1
+Nh6,xd1282,Taos,Taos (Nh6),,37,-106,1
+Nh7,xd1283,Cochiti,Cochiti (Nh7),,36,-106,1
+Nh8,xd1284,Jemez,Jemez (Nh8),"Walatowa, Towa",36,-107,1
+Nh9,xd1285,Picuris,Picuris (Nh9),,36,-106,1
+Ni2,xd1287,Tohono O'odham,Papago (Ni2),Papago,31,-112,1
+Ni4,xd1289,Seri,Seri (Ni4),Comcaac,29,-112,1
+Ni5,xd1290,Chichimeca,Chichimec (Ni5),Chichimec,22,-100,1
+Ni6,xd1291,Pima,Pima (Ni6),Akimel O'Odham,31,-111,1
+Ni7,xd1292,Yaqui,Yaqui (Ni7),Yoeme,28,-110,1
+Nj3,xd1302,Sierra Popoluca,Popoluca (Nj3),"Popoluca, Soteapanec Zoque, Soteapan Zoque, Soteapaneco, Soteapan Soke",18,-95,1
+Nj6,xd1305,Huave,Huave (Nj6),,16.22,-95.02,1
+Nj9,xd1308,Tlaxcalans,Tlaxdalans (Nj9),,19,-98,1
+Sa10,xd1310,Lacandon,Lacandon (Sa10),,17,-92,1
+Sa4,xd1320,Emberá,Choco (Sa4),Choco,8,-78,1
+Sa5,xd1321,Bribri,Bribri (Sa5),Talamanca,9,-83,1
+Sa7,xd1323,Garifuna,Black Carib (Sa7),"Black Carib, Garif",16,-89,1
+Sa9,xd1325,Miskito,Miskito (Sa9),"Mískitu, Mosquito",13,-85,1
+Sb4,xd1329,Cariña,Carinya (Sb4),Carinya,9,-64,1
+Sb5,xd1330,Paraujano,Paraujano (Sb5),Onoto,11,-72,1
+Sb7,xd1332,Yupa,Yupa (Sb7),,9,-72,1
+Sc1,xd1335,Warao,Warrau (Sc1),Warrau,9,-62,1
+Sc13,xd1339,Panare,Panare (Sc13),,6,-66,1
+Sc16,xd1342,Ye'kuana,Yekuana (Sc16),"So'to, Yekuana",3,-65,1
+Sc17,xd1343,Piapoco,Piapoco (Sc17),,6,-68,1
+Sc18,xd1344,Ndyuka,Djuka (Sc18),"Djuka, Bush Negroes, Ndjuka",5,-54,1
+Sc2,xd1345,Pumé,Yaruro (Sc2),Yaruro,7,-68,1
+Sc3,xd1346,Barama River Carib,Barama Carib (Sc3),"Barama Carib, Carib",5,-59,1
+Sc4,xd1347,Guahibo,Guahibo (Sc4),,5,-69,1
+Sc5,xd1348,Wapishana,Wapishana (Sc5),,3,-60,1
+Sc6,xd1349,Saramaccan,Saramacca (Sc6),"Saramaccan of Suriname, Saramacca, Bush Negroes",4,-56,1
+Sc7,xd1350,Yabarana,Yabarana (Sc7),,5,-66,1
+Sc8,xd1351,Piaroa,Piaroa (Sc8),,5,-67,1
+Sc9,xd1352,Curripaco,Curipaco (Sc9),Curipaco,5,-67,1
+Sd1,xd1353,Munduruku,Mundurucu (Sd1),"Wuy Jugu, Mundurucu",-6,-58,1
+Sd2,xd1354,Tapirapé,Tapirape (Sd2),Tapirape,-11,-52,1
+Sd3,xd1355,Palikur,Palikur (Sd3),Wasa,3,-52,1
+Sd4,xd1356,Guaica,Waica (Sd4),"Waica, Guiaika",2,-65,1
+Sd5,xd1357,Sateré Mawé,Maue (Sd5),Maue,-4,-57,1
+Sd6,xd1358,Shiriana,Shiriana (Sd6),"Kirishana, Xiriana",4,-63,1
+Sd7,xd1359,Wai-wai,Waiwai (Sd7),Waiwai,1,-59,1
+Sd8,xd1360,Sanema,Sanema (Sd8),,4,-66,1
+Sd9,xd1361,Yanomami,Yanomamo (Sd9),"Yanomamo, Yanoama",2,-65,1
+Se1,xd1362,Sirionó,Siriono (Se1),"Miá, Siriono",-16,-64,1
+Se11,xd1364,Chácobo,Chacobo (Se11),"Nóʔciria, Chacobo",-12,-67,1
+Se2,xd1366,Ticuna,Tucuna (Se2),"Tucuna, Tikuna",-3,-70,1
+Se3,xd1367,Shuar,Jivaro (Se3),Jivaro,-3,-78,1
+Se4,xd1368,Yagua,Yagua (Se4),,-3,-72,1
+Se8,xd1372,Amahuaca,Amahuaca (Se8),,-10,-72,1
+Sf3,xd1376,Chachi,Cayapa (Sf3),Cayapa,1,-79,1
+Sf7,xd1380,Asháninka,Campa (Sf7),"Campa, Ande, Anti, Kampa",-8,-75,1
+Sg1,xd1383,Yahgan,Yahgan (Sg1),,-55.02,-68.98,1
+Sg3,xd1385,Ona,Ona (Sg3),,-54,-69,1
+Sg5,xd1387,Alacaluf,Alacaluf (Sg5),Kawésqar,-52,-74,1
+Sh1,xd1388,Wichí,Mataco (Sh1),"Mataco, Nocten",-24,-63,1
+Sh5,xd1392,Choroti,Choroti (Sh5),Zolota,-22,-62,1
+Sh8,xd1395,Toba,Toba (Sh8),"Qom-lik, Qom, Tacshic, Toqoit",-25,-60,1
+Sh9,xd1396,Lengua,Lengua (Sh9),,-23,-59,1
+Si1,xd1397,Bororo,Bororo (Si1),,-16,-55,1
+Si10,xd1398,Kuikuru,Kuikuru (Si10),Ukuge,-13,-54,1
+Si3,xd1400,Bacairi,Bacairi (Si3),,-14,-55,1
+Si4,xd1401,Nambikwara,Nambicura (Si4),Nambicura,-12,-59,1
+Si5,xd1402,Kamayurá,Camayura (Si5),Camayura,-12,-54,1
+Si6,xd1403,Guató,Guato (Si6),Guato,-19,-58,1
+Si8,xd1405,Umotina,Umotina (Si8),,-15,-57,1
+Sj11,xd1409,Shavante,Shavante (Sj11),,-14,-52,1
+Sj2,xd1410,Sherente,Sherente (Sj2),Cherente,-9,-48,1
+Sj3,xd1411,Aweikoma,Aweikoma (Sj3),"Xokleng, Shokleng, Botocudo of Santa Catarina, Bugre, Kaingang of Santa Catarina (though Aweikoma and Kaingang today considered separate groups)",-28,-50,1
+Sj4,xd1412,Canela,Ramcocamecra (Sj4),"Ramcocamecra, Timbira, Canella",-7,-45,1
+Sj5,xd1413,Aimoré,Botocudo (Sj5),"Nac-nanuk, Nac-poruk, Botocudo",-18,-42,1
+Sj6,xd1414,Tenetehara,Tenetehara (Sj6),,-3,-46,1
+Sj7,xd1415,Apinaye,Apinaye (Sj7),,-6,-49,1
+Sj9,xd1417,Kayapo,Coroa (Sj9),"Coroa, Northern Cayapo",-8,-52,1
+Aa3,xd3,Nama,Nama Hottentot (Aa3),"Khoekhoe, Namaqua, Nama Hottentot",-26,18,2
+Aa4,xd4,Bergdama,Bergdama (Aa4),"Hakouin, Mountain Damara",-22,16,2
+Ab10,xd11,Pondo,Pondo (Ab10),"Amapondo, Mpondo",-31,30,2
+Ab21a,xd23,Kisama,Kisama (Ab21a),"Cisama, Quissama",-10,14,2
+Ac10,xd34,Chewa,Chewa (Ac10),"Achewa, Cewa, Sheva",-14,33,2
+Ac11,xd35,Luvale,Luvale (Ac11),"Aluena, Balovale, Lobare, Luena",-12,22,2
+Ac13,xd37,Tonga,Lake Tonga (Ac13),"Lake Tonga, Batonga, Matoka",-12,34,2
+Ac15,xd39,Mbala,Mbala (Ac15),"Ambala, Bambala",-5,18,2
+Ac24,xd49,Sakata,Sakata (Ac24),"Balesa, Basakata, Lesa",-3,18,2
+Ac25,xd50,Songo,Songo (Ac25),Basongo,-5,18,2
+Ac26,xd51,Yanzi,Yanzi (Ac26),"Bayansi, Wachanzi",-4,18,2
+Ac30,xd56,Plateau Tonga,Plateau Tonga (Ac30),Batonga,-18,28,2
+Ac32,xd58,Kaonde,Kaonde (Ac32),Bakaonde,-13,26,2
+Ac38,xd64,Nyanja,Nyanja (Ac38),"Nyanja, Anyanja, Wanyanja, Waanyanja",-16,36,2
+Ac39,xd65,Nyasa,Nyasa (Ac39),"Anyassa, Wanyassa",-13,35,2
+Ac40,xd67,Sena,Sena (Ac40),"Asena, Wasena",-18,35,2
+Ac41,xd68,Makonde,Makonde (Ac41),Wamakonde,-11,40,2
+Ac42,xd69,Makua,Makua (Ac42),Wamakua,-15,39,2
+Ac5,xd71,Lamba,Lamba (Ac5),"Balamba, Walamba",-13,28,2
+Ac7,xd73,Yao,Yao (Ac7),"Achawa, Wayao",-13,36,2
+Ad13,xd80,Kiga,Chiga (Ad13),"Chiga, Bachiga, Ciga, Kyiga",-3,30,2
+Ad25,xd93,Rangi,Rangi (Ad25),"Irangi, Langi, Warangi",-5,36,2
+Ad26,xd94,Turu,Turu (Ad26),"Lima, Walimi, Waniaturu",-5,34,2
+Ad27,xd95,Kwere,Kwere (Ad27),Wakwere,-7,39,2
+Ad28,xd96,Zigula,Zigula (Ad28),"Seguha, Wazigua, Zegura",-5.84,38.79,2
+Ad33,xd102,Pokomo,Pokomo (Ad33),Wapokomo,-1,40,2
+Ad35,xd104,Meru,Meru (Ad35),,0,35,2
+Ad4,xd109,Kikuyu,Kikuyu (Ad4),Aikikuyu,-1,37,2
+Ad5,xd120,Mbugwe,Mbugwe (Ad5),Wambugwe,-4,36,2
+Ad50,xd121,Kaguru,Kaguru (Ad50),,-6,37,2
+Ad51,xd122,Ngulu,Ngulu (Ad51),"Nguru, Wanguru",-6,38,2
+Ad6,xd123,Nyakyusa,Nyakyusa (Ad6),,-9,34,2
+Ae11,xd129,Songola,Songola (Ae11),"Basongola, Wasongola",-4,26,2
+Ae21,xd140,Kela,Kela (Ae21),"Akela, Bakela, Ekela, Ikela",-3,23,2
+Ae22,xd141,Kutsu,Kutshu (Ae22),"Kutshu, Ankutshu, Bankutshu, Wankutshu",-4,22,2
+Ae29,xd148,Poto,Poto (Ae29),"Bapoto, Foto, Mafoto, Upoto",2,22,2
+Ae31,xd151,Budu,Budu (Ae31),"Babudu, Banabuddu, Mabudu, Wabuddu",2,28,2
+Ae35,xd155,Rumbi,Rumbi (Ae35),"Barumbi, Warumbi",0,28,2
+Ae36,xd156,Bombesa,Bombesa (Ae36),"Mbesa, Mombesa",1,23,2
+Ae37,xd157,Budja,Budja (Ae37),"Babudza, Mbudja",3,23,2
+Ae38,xd158,Ndoko,Ndoko (Ae38),Doko,2,21,2
+Ae39,xd159,Ngombe,Ngombe (Ae39),Gombe,2,20,2
+Ae45,xd166,Kundu,Kundu (Ae45),Bakundu,10,9,2
+Ae48,xd169,Bafia,Bafia (Ae48),"Bekpa, Fia",5,11,2
+Ae51,xd173,Banen,Banen (Ae51),,5,11,2
+Ae59,xd181,Widikum,Eidekum (Ae59),"Eidekum, Widekum",6,10,2
+Ae7,xd183,Baboa,Babwa (Ae7),"Babwa, Ababwa, Bobua",3,25,2
+Af10,xd187,Igbo,Ibo (Af10),Ibo,6,7,2
+Af11,xd188,Toma,Toma (Af11),,11,-9,2
+Af16,xd193,Banyang,Banyang (Af16),"Banjangi, Konguan, Manyang, Nyangi",6,9,2
+Af2,xd197,Kissi,Kissi (Af2),Ghizi,9,-10,2
+Af29,xd207,Idoma,Idoma (Af29),,7,8,2
+Af31,xd210,Koro,Koro (Af31),,18,8,2
+Af37,xd216,Buem,Buem (Af37),,7.22,0.46,2
+Af4,xd219,Yako,Yako (Af4),,6,8,2
+Af44,xd224,Alagya,Alagya (Af44),Jackjack,5.22,-4.42,2
+Af45,xd225,Avikam,Avikam (Af45),"Brignan, Kwakwa",5.15,-5.25,2
+Af47,xd227,Krahn,Kran (Af47),"Kran, Bush Kru",6,-8,2
+Af49,xd229,Sapo,Sapo (Af49),"Pahn, Sapahn",6,-9,2
+Af54,xd235,Gbande,Gbande (Af54),,8,-10,2
+Af9,xd243,Baule,Baule (Af9),,8,-5,2
+Ag10,xd245,Konkomba,Konkomba (Ag10),"Bekpokpak, Konko, Kpankpam, Lekpokpam, Pangpana, Tyopo",10,0,2
+Ag11,xd246,Lobi,Lobi (Ag11),,10,-4,2
+Ag12,xd247,Nankanse,Nankanse (Ag12),Nankana,10,-1,2
+Ag15,xd250,Balanta,Balante (Ag15),Balante,12,-16,2
+Ag18,xd253,Bijogo,Bijogo (Ag18),Bijago,11.1,-16.15,2
+Ag34,xd271,Dorosie,Dorosie (Ag34),Dorho,11,-4,2
+Ag35,xd272,Kulango,Kulango (Ag35),Parkhalla,7,-3,2
+Ag37,xd274,Awuna,Awuna (Ag37),"Atyulo, Frafra, Kassonfra, Yulu",11,-2,2
+Ag38,xd275,Builsa,Builsa (Ag38),"Bura, Kanjaga",11,-2,2
+Ag39,xd276,Dagara,Dagari (Ag39),"Dagari, Dagaba",11,-3,2
+Ag48,xd286,Basari,Basari (Ag48),,9,1,2
+Ag49,xd287,Kabre,Kabre (Ag49),"Bekaburum, Kabure",10,2,2
+Ag50,xd289,Moba,Moba (Ag50),"Bmoba, Moab",11,1,2
+Ag51,xd290,Somba,Somba (Ag51),"Betammadibe, Tamprusi",11,1,2
+Ag54,xd293,Yalunka,Yalunka (Ag54),Dialonke,10,-12,2
+Ag8,xd296,Coniagui,Coniagui (Ag8),"Awunlen, Koniagi",13,-13,2
+Ah1,xd298,Katab,Katab (Ah1),,10,8,2
+Ah10,xd299,Chawai,Chawai (Ah10),Atsam,10,9,2
+Ah13,xd302,Dakakari,Dakakari (Ah13),,12,5,2
+Ah14,xd303,Kamuku,Kamuku (Ah14),,11,6,2
+Ah19,xd308,Adara,Kadara (Ah19),Kadara,10,8,2
+Ah20,xd310,Kagoro,Kagoro (Ah20),,10,8,2
+Ah22,xd312,Yergum,Yergum (Ah22),,9,10,2
+Ah24,xd314,Kentu,Kentu (Ah24),,7,10,2
+Ah25,xd315,Tigon,Tigon (Ah25),"Tukum, Thgon",17,11,2
+Ah26,xd316,Ndoro,Ndoro (Ah26),,7,11,2
+Ah28,xd318,Chamba,Chamba (Ah28),Tsamba,8,11,2
+Ah29,xd319,Daka,Daka (Ah29),Dekka,8,11,2
+Ah3,xd320,Tiv,Tiv (Ah3),Munshi,7,9,2
+Ah31,xd322,Mumuye,Mumuye (Ah31),,9,12,2
+Ah32,xd323,Vere,Vere (Ah32),Were,9,13,2
+Ah33,xd324,Yungur,Yungur (Ah33),Binna,10,12,2
+Ah38,xd329,Kapsiki,Kapsiki (Ah38),"Hiji, Hill Margi",11,14,2
+Ah4,xd331,Mambila,Mambila (Ah4),Torbi,7,12,2
+Ah6,xd333,Gure,Gure (Ah6),Agbiri,10,8,2
+Ah7,xd334,Mafa,Matakam (Ah7),Matakam,11,14,2
+Ah9,xd336,Anaguta,Anaguta (Ah9),Naguta,10,9,2
+Ai1,xd337,Banda,Banda (Ai1),,7,22,2
+Ai12,xd340,Fali,Fali (Ai12),,10,14,2
+Ai13,xd341,Laka,Laka (Ai13),,8,16,2
+Ai2,xd348,Nyaro,Nyaro (Ai2),,11,31,2
+Ai22,xd351,Sara,Sara (Ai22),,9,18,2
+Ai23,xd352,Bwaka,Bwaka (Ai23),"Gbwaka, Mbaka, Ngbaka",3,19,2
+Ai25,xd354,Mbandja,Mbandja (Ai25),Banza,4,21,2
+Ai26,xd355,Ngbandi,Ngbandi (Ai26),"Gbandi, Mogwandi",4,22,2
+Ai28,xd357,Popoi,Popoi (Ai28),"Bagunda, Bapopoie",2,26,2
+Ai32,xd362,Lugbara,Lugbara (Ai32),Lugware,3,32,2
+Ai36,xd366,Jur,Jur (Ai36),"Gour, Jo-Luo",8,28,2
+Ai37,xd367,Koalib,Koalib (Ai37),,12,31,2
+Ai41,xd372,Tira,Tira (Ai41),,11,30,2
+Ai42,xd373,Tullishi,Tullishi (Ai42),,12,29,2
+Ai43,xd374,Nyimang,Nyima (Ai43),"Nyima, Nyamang",12,29,2
+Ai46,xd377,Koma,Koma (Ai46),"Gwama, Coma",9,35,2
+Ai5,xd379,Mamvu,Mamvu (Ai5),Mornvu,3,29,2
+Ai7,xd381,Gbaya,Baya (Ai7),"Baya, Baja",6,16,2
+Ai8,xd382,Dilling,Dilling (Ai8),,12,30,2
+Aj1,xd384,Teso,Teso (Aj1),"Bateso, Iteso, Kedi",2,34,2
+Aj11,xd386,Dinka,Dinka (Aj11),Denkawi,9,29,2
+Aj16,xd391,Mondari,Mondari (Aj16),Mandari,6,31,2
+Aj2,xd395,Maasi,Masai (Aj2),Masai,-2,36,2
+Aj21,xd397,Jie,Jie (Aj21),,3,34,2
+Aj28,xd404,Tatoga,Tatoga (Aj28),"Datoga, Mangati, Taturu",-5,35,2
+Aj6,xd411,Luo,Luo (Aj6),"Jaluo, Luwo, Nilotic Kavirondo, Nyifwa",-1,34,2
+Aj9,xd414,Kipsigis,Kipsigis (Aj9),"Lumbwa, Sikisi",-1,36,2
+Ca31,xd439,Beta Israel,Falasha (Ca31),"Falasha, Black Jews",12,37,2
+Ca32,xd440,Nara,Barea (Ca32),"Barea, Baria",16,38,2
+Ca33,xd441,Kunama,Kunama (Ca33),Cunama,15,37,2
+Cb10,xd459,Karekare,Karekare (Cb10),,12,11,2
+Cb21,xd471,Djafun,Djafun (Cb21),Djafun Fulani,8,13,2
+Cg4,xd544,Sami,Lapps (Cg4),Lapps,68,22,2
+ch13,xd550,Besermyan,Besermyan (ch13),"Beserman, Besermen, Besermyane",58,52,2
+ch14,xd551,Chuvash,Chuvash (ch14),"Chavash, Chuvashy",57,53,2
+ch17,xd554,Gagauz,Gagauz (ch17),"Christian Bulgars, Hıristiyan-Bulgar, Gagauzi, Gagauzy",45.44,29.32,2
+ch18,xd555,Ingrians,Ingrians (ch18),"Izhorians, Izhora, Inkerilainen, Inkeroine, Izhoralaine, Karjalain, Inkerin Suomalainen, Ingrian Finns, Izhortsy",59,29,2
+ch19,xd556,Karelians,Karelians (ch19),"Karjalaizet, Karjalaini, Karely, Livgilyajne, Livvikjoj, Lyuudilaine, Lyuudikjo",64,33,2
+Ch2,xd557,Hutsuls,Hutsul (Ch2),"Hutsul, Hucul, Huzul",49,24,2
+ch24,xd562,Livs,Livs (ch24),"Livians, Livonians, Liivod, Liibod, Liivnikad, Liivlist, Kalamied, Raandalis",57,23,2
+ch26,xd564,Udmurt,Udmurt (ch26),"Utmort, Ukmort, Udmurty, Votiak, Votyak, Votjaki",57,53,2
+ch27,xd565,Veps,Veps (ch27),"Vepsians, Chudy, Chukhari, Chuhari, Bepsya, Bepsja, Veps' Lyudinikad, Tyagalazhet, Tjagalazhet",61,35,2
+ch28,xd566,Votes,Votes (ch28),"Vod', Maavaitchi, Vod",59,29,2
+Ci10,xd575,Armenians,Armenians (Ci10),,40,45,2
+Cj8,xd594,Druze,Druze (Cj8),,32.77,35.03,2
+Ec11,xd619,Selkup,Selkup (Ec11),Ostyak Samoyed,59,90,2
+ec13,xd621,Itelmen,Itelmen (ec13),"Itelymem, Kamchadal",54.98,161.79,2
+ec17,xd625,Negidal,Negidal (ec17),"Negidaly, Neghidal",52,134,2
+Ec4,xd632,Yurak-Samoyeds,Yurak (Ec4),"Nenets, Yurak",68,75,2
+Ec6,xd634,Yukaghir,Yukaghir (Ec6),,70,145,2
+Ec9,xd637,Nanai,Goldi (Ec9),"Goldi, Gold",47,132,2
+Ed8,xd651,Minchia,Minchia (Ed8),,26,100,2
+Ei11,xd698,Aimol,Aimol (Ei11),,25,94,2
+Ej1,xd716,Lamet,Lamet (Ej1),,20,101,2
+Ej10,xd717,Rade,Rhade (Ej10),Rhade,13,108,2
+Ej9,xd731,Thai,Siamese (Ej9),"Siamese, Central Thai",15,100,2
+Ia1,xd732,Atayal,Atayal (Ia1),,24,121,2
+Ia13,xd736,Badjau Tawi-Tawi,Badjau Tawi-Tawi (Ia13),"Tawi-Tawi Badjaw, Badjau",5.09,119.97,2
+Ia15,xd738,Manobo,Manobo (Ia15),,8,126,2
+Ia16,xd739,Kalinga,Kalinga (Ia16),,18,121,2
+Ia2,xd742,Sagada,Sagada (Ia2),Sagada Igorot,17,121,2
+Ib1,xd750,Iban,Iban (Ib1),"Dayak, Sea Dayak",2,112,2
+Ib5,xd754,Kadazan-Dusun,Dusun (Ib5),Dusun,6,117,2
+Ic10,xd760,Tobelorese,Tobelorese (Ic10),Togutil,1,128,2
+Ic8,xd770,Kei,Kei (Ic8),Kei Islanders,-5.58,133.07,2
+Ie1,xd785,Mee,Kapauku (Ie1),Kapauku,-4,136,2
+Ie10,xd786,Motu,Motu (Ie10),,-9,147,2
+Ie17,xd793,Siane,Siane (Ie17),,-6,145,2
+Ie24,xd801,Koiari,Koiari (Ie24),,-9,148,2
+Ie25,xd802,Mafulu,Mafulu (Ie25),,-8,147,2
+Ie28,xd805,Busama,Busama (Ie28),,-6.69,147.26,2
+Ie31,xd809,Fore,Fore (Ie31),,-6,145,2
+Ie32,xd810,Sio,Sio (Ie32),,-6,147,2
+Ie39,xd817,Elema,Elema (Ie39),,-7.82,145.31,2
+Ie6,xd820,Waropen,Waropen (Ie6),,-2.14,137.23,2
+Ie8,xd822,Purari,Purari (Ie8),,-7,145,2
+Ig1,xd841,Siuai,Siuai (Ig1),,-6,155,2
+Ig11,xd843,Rossel Islanders,Rossel (Ig11),Rossel,-11.36,154.14,2
+Ig13,xd845,Aua,Aua (Ig13),,-1.74,142.85,2
+Ig14,xd846,Dahuni,Dahuni (Ig14),,-10.41,149.91,2
+Ig7,xd859,Lakalai,Lakalai (Ig7),Western Nakanai,-5.5,150.81,2
+Ig9,xd861,Manus,Manus (Ig9),,-2,147,2
+Ih1,xd862,Mota,Mota (Ih1),,-13.84,167.7,2
+Ih14,xd867,Mbau Fijians,Mbau Fijians (Ih14),,-17.81,178.32,2
+Ih2,xd868,Seniang,Seniang (Ih2),,-16.51,167.47,2
+Ih3,xd869,Bunlap,Bunlap (Ih3),Pentecost,-15.95,168.22,2
+Ih4,xd870,Lau,Lau (Ih4),,-17.74,-179.31,2
+Ii5,xd884,Ontong Java,Ontong Java (Ii5),"Leuenuwa, Lord Howe's Islanders",-5.48,159.7,2
+Na12,xd1029,Nunamiut,Nunamiut (Na12),"Inland North Alaskan Eskimo, Nunamiut Eskimo",68,-152,2
+Na2,xd1036,Tareumiut,Tareumiut (Na2),"Tagiumiut, Point Barrow Eskimo, Barrow",71,-157,2
+Na6,xd1064,Nunivak,Nunivak (Na6),Nunivak Cup'ig,60,-166,2
+Na8,xd1066,Deg Xit'an,Ingalik (Na8),Ingalik,62,-160,2
+Nb33,xd1094,Chimariko,Chimariko (Nb33),,41,-123,2
+Nb39,xd1100,Sinkyone,Sinkyone (Nb39),,39.73,-123.6,2
+Nc1,xd1107,Nomlaki,Nomlaki (Nc1),Central Wintun,39,-122,2
+Nc10,xd1108,Achumawi,Achomawi (Nc10),Achomawi,41,-121,2
+Nc11,xd1109,Yana,Yana (Nc11),Nozi,41,-122,2
+Nc12,xd1110,Maidu,Maidu (Nc12),Pujunan,40,-121,2
+Nc13,xd1111,Nisenan,Nisenan (Nc13),"Southern Maidu, Nisenan Southern Maidu",39,-121,2
+Nc14,xd1112,Wintu,Wintu (Nc14),Northern Wintu,41,-122,2
+Nc18,xd1116,Eastern Pomo,Eastern Pomo (Nc18),"Clear Lake Pomo, Eastern Pomo",39,-123,2
+Nc19,xd1117,Southern Pomo,Southern Pomo (Nc19),Southern Pomo,38.55,-122.94,2
+Nc21,xd1120,Lake Miwok,Lake Miwok (Nc21),,38.75,-123.2,2
+Nc22,xd1121,Patwin,Patwin (Nc22),Southern Wintun,39,-122,2
+Nc23,xd1122,Western Mono,Monachi (Nc23),"Monachi, Western Mono, Monache",37,-119,2
+Nc24,xd1123,Southern Valley Yokuts,Lake Yokuts (Nc24),"Lake Yokuts, Tachi Yokuts, Chunut Yokuts",36,-120,2
+Nc25,xd1124,Wukchumni,Wukchumni (Nc25),Central Foothills Yokuts,36,-119,2
+Nc26,xd1125,Salinan,Salinan (Nc26),,36,-121,2
+Nc27,xd1126,Kawaiisu,Kawaiisu (Nc27),Kawaiisu Shoshoni,35,-118,2
+Nc28,xd1127,Chumash,Chumash (Nc28),,34.44,-119.71,2
+Nc29,xd1128,Tongva,Gabrielo (Nc29),"Gabrielo, Gabrielino, Gabrieleno",34,-118,2
+Nc3,xd1129,Northern Foothill Yokuts,Yokuts (Nc3),Yokuts,36,-120,2
+Nc4,xd1135,Atsugewi,Atsugewi (Nc4),,41,-121,2
+Nc7,xd1138,Yuki,Yuki (Nc7),,40,-123,2
+Nd11,xd1143,Shuswap,Shuswap (Nd11),Secwepemc,51,-120,2
+Nd12,xd1144,Bitterroot Salish,Flathead (Nd12),"Salish, Flathead",46,-113,2
+Nd16,xd1148,Wenatchi,Wenatchi (Nd16),,48,-121,2
+Nd19,xd1151,Umatilla,Umatilla (Nd19),,46,-119,2
+Nd45,xd1180,Bohogue,Bohogue (Nd45),Fort Hall Shoshoni,43,-112,2
+Nd7,xd1205,Kutenai,Kutenai (Nd7),"Ktunaxa, Kootenay, Kootenai",50,-117,2
+Ne12,xd1211,Blackfoot,Blackfoot (Ne12),Siksika,51,-112,2
+Ne13,xd1212,Kainai,Blood (Ne13),"Blood, Kainah, Blood Tribe",51,-115,2
+Ne18,xd1217,Piegan,Piegan (Ne18),Pikuni,49,-115,2
+Ne3,xd1222,Comanche,Comanche (Ne3),,33,-100,2
+Ne8,xd1227,Teton,Teton (Ne8),,43,-103,2
+Nf13,xd1233,Shawnee,Shawnee (Nf13),,37,-85,2
+Nf3,xd1237,Omaha,Omaha (Nf3),Dhegiha,41,-96,2
+Nf4,xd1238,Myaamia,Miami (Nf4),Miami,40,-86,2
+Nf7,xd1241,Fox,Fox (Nf7),Meskwaki,45,-95,2
+Nf9,xd1243,Menominee,Menomini (Nf9),Menomini,46,-88,2
+Ng1,xd1244,Huron,Huron (Ng1),"Bear and Cord Peoples, Wendat, Ouendat, Attignaouantan, Attinniaoenten, Attigneenongnahac, Hatingeennonniahak",44,-78,2
+Nh12,xd1262,Santa Ana,Santa Ana (Nh12),,35,-107,2
+Nh15,xd1265,Mescalero,Mescalero (Nh15),,33,-103,2
+Nh19,xd1269,Cocopa,Cocopa (Nh19),Cocopah,32,-115,2
+Nh21,xd1272,Mojave,Mohave (Nh21),Mohave,35,-114,2
+Nh3,xd1279,Navajo,Navaho (Nh3),"Diné Bizaad, Navaho",37,-110,2
+Ni1,xd1286,Tarahumara,Tarahumara (Ni1),Rarámuri,28,-107,2
+Ni3,xd1288,Huichol,Huichol (Ni3),Wixárika,23,-104,2
+Sa8,xd1324,Mam,Mam (Sa8),,15,-92,2
+Sb1,xd1326,Callinago,Callinago (Sb1),,15.41,-61.27,2
+Sb2,xd1327,Cágaba,Cagaba (Sb2),"Cagaba, Kagaba, Kogi",11,-74,2
+Sc10,xd1336,Lokono,Locono (Sc10),"Locono, Arawak",5.95,-56.98,2
+Sc15,xd1341,Taulípang,Taulipang (Sc15),"Taulipang, Arecuna, Arekuna",4,-62,2
+Se5,xd1369,Cubeo,Cubeo (Se5),"Jiwa, Tucano",1,-71,2
+Se6,xd1370,Witoto,Witoto (Se6),"Ouitoto, Uitoto",-1,-74,2
+Se9,xd1373,Shipibo-Conibo,Conibo (Se9),Conibo,-9,-74,2
+Sf2,xd1375,Aymara,Aymara (Sf2),,-16,-69,2
+Sg4,xd1386,Tehuelche,Tehuelche (Sg4),Patagon,-46,-70,2
+Si2,xd1399,Trumai,Trumai (Si2),Ho kod ke,-12,-53,2
+Si7,xd1404,Paresi,Paressi (Si7),Paressi,-15,-58,2
+Sj1,xd1407,Carajá,Caraja (Sj1),Caraja,-12,-50,2
+Ab1,xd10,Herero,Herero (Ab1),"Damara, Ovaherero",-21,16,3
+Ab11,xd12,Xhosa,Xhosa (Ab11),"amaXhosa, Amakosa, Kaffirs, Xosa",-32.89,27.91,3
+Ab12,xd13,Zulu,Zulu (Ab12),Amazulu,-29,31,3
+Ab14,xd15,Lovedu,Lovedu (Ab14),Balovedu,-24,31,3
+Ab2,xd21,Swazi,Swazi (Ab2),Amaswazi,-27,32,3
+Ab4,xd27,Tsonga,Thonga (Ab4),"Thonga, Tonga, Vatsonga",-24,32,3
+Ab8,xd31,Sotho,Sotho (Ab8),Basuto,-29,28,3
+Ac1,xd33,Ila,Ila (Ac1),Baila,-16,27,3
+Ad1,xd76,Bajuni,Bajun (Ad1),"Wabajuni, Bajun, Bagiuni, Barjun, Wagunya",-2,41,3
+Ad14,xd81,Luguru,Luguru (Ad14),Waluguru,-8,38,3
+Ad3,xd98,Chagga,Chagga (Ad3),"Dschagga, Wachagga",-3,37,3
+Ad9,xd126,Gisu,Gisu (Ad9),"Bagesu, Gishu",1,34,3
+Ae1,xd127,Amba,Amba (Ae1),"Awamba, Baamba, Bamba",1,30,3
+Ae12,xd130,Duala,Duala (Ae12),"Diwala, Koelle",4,10,3
+Ae18,xd136,Songye,Songe (Ae18),"Songe, Basonge, Bassongo",-6,25,3
+Ae2,xd138,Kpe,Kpe (Ae2),"Bakwedi, Bakwiri, Kpeli, Kwiri",4.22,9.27,3
+Ae25,xd144,Tetela,Tetela (Ae25),Batetela,-4,25,3
+Ae28,xd147,Ngala,Ngala (Ae28),"Bangala, Boloki, Gens d'Eau",1,18,3
+Ae30,xd150,Bira,Bira (Ae30),"Babeyru, Babira, Babila, Wabira",1,29,3
+Af15,xd192,Kpelle,Kpelle (Af15),"Guerse, Kpese",7,-9,3
+Af19,xd196,Efik,Efik (Af19),Riverain Ibibio,5,8,3
+Af20,xd198,Ibibio,Ibibio (Af20),,5,8,3
+Af23,xd201,Afikpo,Afikpo (Af23),,6,8,3
+Af25,xd203,Isoko,Isoko (Af25),,5,6,3
+Af26,xd204,Kukuruku,Kukuruku (Af26),,7,6,3
+Af27,xd205,Eloyi,Afo (Af27),"Eloyi, Afo",8,8,3
+Af52,xd233,Guro,Guro (Af52),,7,-6,3
+Af55,xd236,Gola,Gola (Af55),,7,-11,3
+Ag30,xd267,Bobo,Bobo (Ag30),,13,-4,3
+Ag31,xd268,Minianka,Minianka (Ag31),,12,-6,3
+Ag32,xd269,Senufo,Senufo (Ag32),"Sene, Siena",10,-6,3
+Ag4,xd277,Tallensi,Tallensi (Ag4),,11,-1,3
+Ag40,xd278,Isala,Isala (Ag40),"Debe, Gelebagu, Hisala, Pasala",10,-2,3
+Ag7,xd295,Bozo,Bozo (Ag7),,14,-5,3
+Ah5,xd332,Margi,Margi (Ah5),Marghi,11,13,3
+Ai10,xd338,Otoro,Otoro (Ai10),"Otoro Nuba, Nuba",12,31,3
+Ai31,xd361,Logo,Logo (Ai31),,3,30,3
+Ai39,xd369,Mesakin,Mesakin (Ai39),,11,30,3
+Ai40,xd371,Moro,Moro (Ai40),,11,30,3
+Aj12,xd387,Lotuko,Lotuko (Aj12),Latuka,4,33,3
+Aj25,xd401,Keyu,Keyu (Aj25),Elgeyu,0,36,3
+Aj3,xd406,Nuer,Nuer (Aj3),Nath,8,32,3
+Aj4,xd409,Lango,Lango (Aj4),Umiro,2,33,3
+Aj8,xd413,Bari,Bari (Aj8),,5,32,3
+Ca1,xd415,Konso,Konso (Ca1),,6,37,3
+Ca11,xd417,Arusi,Arusi (Ca11),,8,40,3
+Ca14,xd420,Burji,Burji (Ca14),,5,38,3
+Ca6,xd454,Afar,Afar (Ca6),"Danakil, Dankali",12,42,3
+Cb5,xd482,Buduma,Buduma (Cb5),"Yedina, Yedina",13,15,3
+Cd3,xd521,Riffians,Riffians (Cd3),,35,-4,3
+Ci11,xd576,Kurd,Kurd (Ci11),,32,44,3
+Ea6,xd605,Basseri,Basseri (Ea6),,30,34,3
+Ec10,xd618,Ob Ostyak,Ob Ostyak (Ec10),,62,74,3
+ec14,xd622,Ungazikmit,Ungazikmit (ec14),"Eskaleut, Asian Eskimo",64,-173,3
+ec18,xd626,Ulch,Ulch (ec18),"Ulchi, Ulcha, Ulych, Olch, Olcha, Olchis, Hoche, Hol-Chih.",50,136,3
+Ec2,xd628,Yakut,Yakut (Ec2),Sakha,65,125,3
+Ec3,xd631,Chukchi,Chukchee (Ec3),"lygoravetlyan, Ankalyn, Chavchu, Chukchee",66,177,3
+Ec5,xd633,Koryak,Koryak (Ec5),,61.99,164.24,3
+Ed3,xd646,Manchu,Manchu (Ed3),,45,126,3
+Ed7,xd650,Okinawans,Okinawans (Ed7),,26.16,127.8,3
+Ee1,xd653,Adi,Abor (Ee1),Abor,28,95,3
+Ei1,xd696,Garo,Garo (Ei1),A.Chik,26,91,3
+Ei12,xd699,Thado,Thado (Ei12),,25,94,3
+Ei13,xd700,Angami,Angami (Ei13),,26,94,3
+Ei14,xd701,Ao,Ao (Ei14),,27,94,3
+Ei16,xd703,Sema,Sema (Ei16),,26,95,3
+Ei2,xd707,Lhota,Lhota (Ei2),,27,94,3
+Ei7,xd713,Karen,Karen (Ei7),,17.12,97.19,3
+Ej13,xd720,Muong,Muong (Ej13),,21,105,3
+Ej2,xd724,Mnong Gar,Mnong Gar (Ej2),,12,107,3
+Ia3,xd743,Ifugao,Ifugao (Ia3),,17,121,3
+Ia6,xd746,Paiwan,Paiwan (Ia6),,22.44,120.77,3
+Ib4,xd753,Toba Batak,Batak (Ib4),"Toba, Batak",2,99,3
+Ic2,xd764,Alorese,Alorese (Ic2),Abui,-8.22,124.26,3
+Ic5,xd767,Toradja,Toradja (Ic5),,-2,121,3
+Ie20,xd797,Koita,Koita (Ie20),,-9,147,3
+Ie22,xd799,Mekeo,Mekeo (Ie22),,-9,147,3
+If1,xd824,Palauans,Palauans (If1),,7.45,134.54,3
+If11,xd826,Kosraeans,Kusaians (If11),Kusaians,5.31,162.98,3
+If13,xd828,Nauruans,Nauruans (If13),,-0.53,166.92,3
+If14,xd829,Makin,Makin (If14),Gilbertese,3.38,172.99,3
+If17,xd832,Marshallese - Jaluit atoll,Marshallese (If17),,6.28,169.49,3
+If3,xd834,Majuro,Majuro (If3),Marshallese,7.09,171.13,3
+If5,xd836,Ponapeans,Ponapeans (If5),Pohnpeian,6.88,158.22,3
+If6,xd837,Yapese,Yapese (If6),,9.55,138.13,3
+If7,xd838,Gilbert Onotoa,Gilbert Onotoa (If7),"Onotoa, Gilbertese",-1.47,175.06,3
+Ig12,xd844,Choiseulese,Choiseulese (Ig12),,-6.69,156.52,3
+Ig2,xd852,Trobriands,Trobriands (Ig2),,-8.43,151.09,3
+Ig3,xd855,Kurtatchi,Kurtatchi (Ig3),Buka,-5.6,154.91,3
+Ih10,xd863,Tannese,Tannese (Ih10),,-19.6,169.44,3
+Ih6,xd872,Rotumans,Rotumans (Ih6),,-12.5,177.07,3
+Ih9,xd875,Santa Cruz Islanders,Santa Cruz (Ih9),Santa Cruz,-10.73,165.85,3
+Ii1,xd876,American Samoans,Samoans (Ii1),,-13.68,-172.41,3
+Ii10,xd877,Rennell Islanders,Rennell (Ii10),"Mugaba, Rennell",-11.74,160.42,3
+Ii12,xd878,Tongans,Tongans (Ii12),,-19.74,-175.07,3
+Ii13,xd879,Uveans,Uveans (Ii13),Wallis Islanders,-13.28,-176.17,3
+Ii14,xd880,Upolu Samoans,Upolu (Ii14),"Upolu, Western Samoans",-13.94,-171.77,3
+Ii2,xd881,Tikopia,Tikopia (Ii2),,-12.29,168.83,3
+Ii4,xd883,Ellice,Ellice (Ii4),Tuvalu Islanders,-7.48,178.68,3
+Ii7,xd886,Kapingamarangi,Kapingamarang (Ii7),Kapingamarang,1.09,154.8,3
+Ii8,xd887,Futunans,Futunans (Ii8),Horne Islanders,-14.31,-178.11,3
+Ii9,xd888,Niueans,Niueans (Ii9),,-19.05,-169.86,3
+Ij1,xd889,Mangaians,Mangaians (Ij1),,-21.93,-157.91,3
+Ij3,xd892,Marquesans,Marquesans (Ij3),,-8.9,-140.08,3
+Ij4,xd893,Manihikians,Manihikians (Ij4),,-10.41,-160.98,3
+Ij7,xd896,Mangarevans,Mangarevans (Ij7),,-23.12,-134.97,3
+Ij8,xd897,Tahitians,Tahitians (Ij8),Society Islanders,-17.71,-149.54,3
+Na20,xd1037,Kutchin,Kutchin (Na20),"Gwich'in, Loucheux",66,-135,3
+Na26,xd1042,Dena'ina,Tanaina (Na26),Tanaina,62,-144,3
+Na27,xd1043,Tahltan,Tahltan (Na27),Southwestern Nahane,58,-131,3
+Nb12,xd1071,Klahoose,Klahuse (Nb12),Klahuse,51,-125,3
+Nb13,xd1072,Squamish,Squamish (Nb13),,50,-123,3
+Nb14,xd1073,Comox,Comox (Nb14),K'ómoks,49.72,-124.97,3
+Nb17,xd1076,Puyallup,Puyallup (Nb17),,47,-122,3
+Nb2,xd1079,Twana,Twana (Nb2),,48,-123,3
+Nb21,xd1081,Coos,Coos (Nb21),,43,-124,3
+Nb26,xd1086,Cowichan,Cowichan (Nb26),Hul'q'umi'num Mustimuhw,49.01,-122.73,3
+Nb28,xd1088,Alsea,Alsea (Nb28),,44,-124,3
+Nb29,xd1089,Siuslaw,Siuslaw (Nb29),,44,-124,3
+Nb30,xd1091,Takelma,Takelma (Nb30),"Rogue River Indians, Tekelma",42,-123,3
+Nb31,xd1092,Tututni,Tututni (Nb31),,42,-124,3
+Nb32,xd1093,Shasta,Shasta (Nb32),,41,-122,3
+Nb34,xd1095,Karuk,Karok (Nb34),Karok,42,-123,3
+Nb35,xd1096,Hupa,Hupa (Nb35),,41,-123,3
+Nb36,xd1097,Wiyot,Wiyot (Nb36),,39.81,-123.55,3
+Nb4,xd1101,Yurok,Yurok (Nb4),,41,-124,3
+Nb5,xd1102,Eyak,Eyak (Nb5),dAXunhyuu,60.34,-144.85,3
+Nb6,xd1103,Tolowa,Tolowa (Nb6),,42,-124,3
+Nc8,xd1139,Klamath,Klamath (Nc8),,43,-122,3
+Nc9,xd1140,Modoc,Modoc (Nc9),,42,-122,3
+Nd1,xd1141,Tenino,Tenino (Nd1),"Warmsprings Sahaptin, Yenino",45,-121,3
+Nd10,xd1142,Nlaka'pamux,Thompson (Nd10),"Thompson, Nitlakapamuk, Thompson River Salish",50,-122,3
+Nd14,xd1146,Coeur d’Alene,Coeur d’Alene (Nd14),"Schitsu'umsh, Skitswish",48,-117,3
+Nd17,xd1149,Klikitat,Klikitat (Nd17),Yakima,46,-122,3
+Nd18,xd1150,Wishram,Wishram (Nd18),,46,-121,3
+Nd20,xd1153,Nez Perce,Nez Perce (Nd20),"Nimi'ipuu, Sahaptin",45,-115,3
+Nd8,xd1206,Chilcotin,Chilcotin (Nd8),Tsilhqot'in,52,-122,3
+Nd9,xd1207,Lillooet,Lillooet (Nd9),"St'at'imc, Stlatlum",50.02,-124.78,3
+Nf10,xd1230,Iowa,Iowa (Nf10),"Bah Kho-je, Baxoje",41,-95,3
+Nf11,xd1231,Otoe,Oto (Nf11),Oto,40,-95,3
+Nf12,xd1232,Ponca,Ponca (Nf12),,43,-99,3
+Sa1,xd1309,Guna,Cuna (Sa1),"Dule, Tule, Cuna, Kuna",9,-78,3
+Sa12,xd1312,Lenca,Lenca (Sa12),,14,-88,3
+Sb6,xd1331,Wayuu,Goajiro (Sb6),Goajiro,12,-72,3
+Se10,xd1363,Cocama,Cocama (Se10),Ucayali,1,-79,3
+Sg2,xd1384,Mapuche,Mapuche (Sg2),,-39,-68,3
+Sj8,xd1416,Tupinambá,Tupinamba (Sj8),Tupinamba,-8,-35,3
+Ab19,xd20,Ambo,Ambo (Ab19),Ovambo,-17,16,4
+Ab20,xd22,Ngumbi,Ngumbi (Ab20),"Bangumbi, Humbe, Khumbi, Nkumbe, Ovakumbe, Vankumbe",-15,15,4
+Ab3,xd26,Lozi,Lozi (Ab3),,-15,23,4
+Ab5,xd28,Mbundu,Mbundu (Ab5),"Banano, Mbari, Nano, Ovimbundu",-12,16,4
+Ab6,xd29,Venda,Venda (Ab6),"Bavenda, Bawenda",-23,30,4
+Ab7,xd30,Nyaneka,Nyaneka (Ab7),"Banianeka, Munyaneka, Ovanyaneka, Vanyaneka",-15,14,4
+Ac12,xd36,Chokwe,Chokwe (Ac12),"Badjok, Kioko, Tsokwe",-10,21,4
+Ac14,xd38,Bakongo,Kongo (Ac14),Kongo,-7,15,4
+Ac17,xd41,Suku,Suku (Ac17),,-6,18,4
+Ac2,xd44,Pende,Pende (Ac2),Bapende,-6,20,4
+Ac21,xd46,Bunda,Bunda (Ac21),"Ambundu, Babunda",-5,19,4
+Ac23,xd48,Lele,Lele (Ac23),"Bashilele, Wongo",-5,21,4
+Ac3,xd55,Bemba,Bemba (Ac3),Awemba,-11,31,4
+Ac31,xd57,Buye,Buye (Ac31),Babui,-7,28,4
+Ac33,xd59,Lala,Lala (Ac33),Balala,-15,31,4
+Ac34,xd60,Luapula,Luapula (Ac34),Bena Kazembe,-10,29,4
+Ac36,xd62,Tumbuka,Tumbuka (Ac36),"Atimbuka, Batumbaka, Watumbaka",-12,34,4
+Ac8,xd74,Yombe,Yombe (Ac8),"Bayombe, Mayombe",-5,13,4
+Ac9,xd75,Ngoni,Ngoni (Ac9),Angoni,-12,33,4
+Ad11,xd78,Bena,Bena (Ad11),Wabena,-9,36,4
+Ad15,xd82,Iwa,Iwa (Ad15),"Awiwa, Wawiwa, Wiwa",-10,32,4
+Ad16,xd83,Ngonde,Ngonde (Ad16),"Konde, Nkonde, Wangonde",-10,34,4
+Ad17,xd84,Safwa,Safwa (Ad17),Wassafwa,-8,33,4
+Ad19,xd86,Fipa,Fipa (Ad19),Wafipa,-8,31,4
+Ad2,xd87,Nyoro,Nyoro (Ad2),"Banyoro, Kitara",2,32,4
+Ad20,xd88,Nyamwezi,Nyamwezi (Ad20),"Banyamwezi, Wanyamwezi",-5,33,4
+Ad21,xd89,Pimbwe,Pimbwe (Ad21),Bapimbwe,-7,31,4
+Ad22,xd90,Sukuma,Sukuma (Ad22),"Basukuma, Wassukuma",-3,34,4
+Ad23,xd91,Sangu,Sangu (Ad23),Rori,-8,34,4
+Ad24,xd92,Gogo,Gogo (Ad24),Wagogo,-7,36,4
+Ad36,xd105,Pare,Pare (Ad36),"Asu, Wapare",-4,38,4
+Ad39,xd108,Sonjo,Sonjo (Ad39),,-3,36,4
+Ad42,xd112,Haya,Haya (Ad42),"Basiba, Wahaya, Wassiba, Ziba",-1,32,4
+Ad43,xd113,Kerewe,Kerewe (Ad43),"Bakerewe, Wakerewe",-3,33,4
+Ad46,xd116,Soga,Soga (Ad46),Basoga,1,33,4
+Ad47,xd117,Sumbwa,Sumbwa (Ad47),,-4,32,4
+Ad48,xd118,Toro,Toro (Ad48),Batoro,1,31,4
+Ad49,xd119,Zinza,Zinza (Ad49),Basindja,-3,31,4
+Ad7,xd124,Ganda,Ganda (Ad7),Baganda,1,32,4
+Ad8,xd125,Hehe,Hehe (Ad8),Wahehe,-8,35,4
+Ae14,xd132,Ha,Ha (Ae14),"Abaha, Waha",-5,30,4
+Ae19,xd137,Garanganze,Yeke (Ae19),"Yeke, Bayeke",-11,28,4
+Ae20,xd139,Ekonda,Ekonda (Ae20),,-2,18,4
+Ae23,xd142,Lalia,Lalia (Ae23),"Dzalia, Lolia",-1,23,4
+Ae24,xd143,Mongo,Mongo (Ae24),"Balolo, Bamongo, Lolo, Mbongo",1,22,4
+Ae26,xd145,Topoke,Topoke (Ae26),"Foma, Tofoke",0,24,4
+Ae3,xd149,Fang,Fang (Ae3),"Fan, Pahouin, Pangwe",1,11,4
+Ae4,xd160,Nkundo,Nkundo (Ae4),,0,20,4
+Ae41,xd162,Kota,Kota (Ae41),"Bakota, Ikota, Kuta",1,14,4
+Ae42,xd163,Ngumba,Ngumba (Ae42),Mvumba,3,11,4
+Ae43,xd164,Sanga,Sanga (Ae43),"Basanga, Bosanga, Masanga, Missanga",2,16,4
+Ae44,xd165,Bubi,Bubi (Ae44),"Adija, Ediya",3.54,8.72,4
+Ae47,xd168,Puku,Puku (Ae47),Bapuku,2,10,4
+Ae5,xd171,Bamileke,Bamileke (Ae5),,5,10,4
+Ae50,xd172,Bamum,Bamum (Ae50),"Bamun, Mum",6,11,4
+Ae56,xd178,Nsaw,Nsaw (Ae56),Bansaw,6,11,4
+Ae58,xd180,Tikar,Tikar (Ae58),,6,12,4
+Ae6,xd182,Luba,Luba (Ae6),Baluba,-8,26,4
+Ae9,xd185,Fut,Fut (Ae9),"Bafut, Fu",6,10,4
+Af1,xd186,Fon,Fon (Af1),"Dahomey, Dahomeans",7,2,4
+Af13,xd190,Ebira,Igbira (Af13),"Igbira, Egbiri, Kotokori",8,7,4
+Af21,xd199,Ijaw,Ijaw (Af21),Ijo,4.37,6.58,4
+Af22,xd200,Itsekiri,Itsekiri (Af22),"Awerri, Jekri, Warri",6,5,4
+Af24,xd202,Edo,Edo (Af24),Bini,6,6,4
+Af3,xd208,Ashanti,Ashanti (Af3),Twi,7,-2,4
+Af32,xd211,Egba,Egba (Af32),,7,3,4
+Af33,xd212,Ekiti,Ekiti (Af33),,8,5,4
+Af34,xd213,Ife,Ife (Af34),,7,5,4
+Af36,xd215,Ewe,Ewe (Af36),,7,1,4
+Af39,xd218,Anyi,Anyi (Af39),,7,-4,4
+Af40,xd220,Assini,Assini (Af40),Issinese,5.27,-3.58,4
+Af41,xd221,Attie,Attie (Af41),,6,-4,4
+Af42,xd222,Fante,Fanti (Af42),Fanti,6,-1,4
+Af5,xd230,Mende,Mende (Af5),,8,-11,4
+Af6,xd240,Oyo Yoruba,Oyo Yoruba (Af6),,8,4,4
+Af8,xd242,Nupe,Nupe (Af8),,9,6,4
+Ag1,xd244,Bambara,Bambara (Ag1),Bamana,13,-7,4
+Ag22,xd258,Serer,Serer (Ag22),Kegueme,14,-12,4
+Ag23,xd259,Kasonke,Kasonke (Ag23),,13,-11,4
+Ag25,xd261,Soninke,Soninke (Ag25),Sarakole,15,10,4
+Ag3,xd266,Dogon,Dogon (Ag3),"Dagom, Habbe, Kado, Tombo",15,-3,4
+Ag45,xd283,Gurma,Gurma (Ag45),"bigourmantcheba, Gourmantche",12,2,4
+Ag47,xd285,Mossi (Ouagadougou),Mossi Ouagadou (Ag47),"Mossi Ouagadou, Massi, Moshi",12,-2,4
+Ag6,xd294,Futajalonke,Futajalonke (Ag6),Foutadjallonke,11,-13,4
+Ag9,xd297,Malinke,Malinke (Ag9),"Mandingo, Wangara",11,-9,4
+Ah16,xd305,Angas,Angas (Ah16),,9,9,4
+Ah2,xd309,Jukun,Jukun (Ah2),Juko,8,10,4
+Ah8,xd335,Bafute,Wute (Ah8),"Wute, Bafute, Bute, Mfute",6,12,4
+Ai11,xd339,Mangbetu,Mangbetu (Ai11),Monbuttu,3,28,4
+Ai3,xd359,Azande,Azande (Ai3),Niam-Niam,5,27,4
+Ai6,xd380,Shilluk,Shilluk (Ai6),,10,32,4
+Aj17,xd392,Alur,Alur (Aj17),"Aloro, Lur",2,31,4
+Ca10,xd416,Esa,Esa (Ca10),"Eissa, Isa",10,43,4
+Ca12,xd418,Gibe,Gibe (Ca12),Oromo of Gibe Region,8,37,4
+Ca2,xd426,Somali,Somali (Ca2),,8,48,4
+Ca29,xd436,Yem,Janjero (Ca29),Janjero,8,38,4
+Ca30,xd438,Kafa,Kafa (Ca30),"Kafecho, Kaffa",7,36,4
+Ca40,xd449,Baditu,Baditu (Ca40),"Amarro, Koira",6,38,4
+Ca41,xd450,Dorse,Dorse (Ca41),Dorze,6,38,4
+Ca42,xd451,Shako,Shako (Ca42),"Chako, Shekke, Tschako",7,36,4
+Cb1,xd458,Maguzawa,Maguzawa (Cb1),Pagan Hausa,12,10,4
+Cb15,xd464,Messiria Humr,Messiria Humr (Cb15),,11,28,4
+Cb17,xd466,Fur,Fur (Cb17),Darfur,12,24,4
+Cb18,xd467,Kanembu,Kanembu (Cb18),,14,14,4
+Cb19,xd468,Kanuri,Kanuri (Cb19),,12,13,4
+Cb23,xd473,Tukulor,Tukulor (Cb23),"Tekrur, Torado",14.73,-14.32,4
+Cb25,xd475,Tazarawa,Tazarawa (Cb25),,14,8,4
+Cb6,xd483,Tera,Tera (Cb6),,11,12,4
+Cb7,xd484,Bolewa,Bolewa (Cb7),"Bole, Borlawa, Fika",11,11,4
+Cb9,xd486,Hausa Kanawa,Hausa Kanawa (Cb9),Hausa,12,9,4
+Cc14,xd492,Daza,Daza (Cc14),"Dasa, Dazagada",17,18,4
+Cc2,xd498,Teda,Teda (Cc2),Toubou,21,17,4
+Cd11,xd509,Guanche,Guanche (Cd11),,27.99,-15.62,4
+Ce2,xd529,Portuguese,Portuguese (Ce2),,42,-7,4
+Ce3,xd530,Ancient Romans,Romans (Ce3),Romans,42,12,4
+Ce4,xd531,French Basques,Basques (Ce4),"Euskaldunak, Basques, French Basques",43,-1,4
+Ce5,xd532,Neapolitans,Neapolitians (Ce5),Neapolitians,40.89,14.25,4
+Ce7,xd534,Greeks,Greeks (Ce7),Hellenes,39,23,4
+Ce8,xd535,Spanish Basques,Spanish Basques (Ce8),Spanish Basques,43,-2,4
+Cf1,xd536,New Englanders,New England (Cf1),New England,42,-73,4
+Cf5,xd540,French Canadians,French Canadians (Cf5),,47,-72,4
+Cg1,xd541,Dutch,Dutch (Cg1),,53,7,4
+Cg2,xd542,Icelanders,Icelanders (Cg2),,64,-20,4
+Cg3,xd543,Irish,Irish (Cg3),Gaelic,53,-9,4
+Cg5,xd545,Walloons,Walloons (Cg5),,50,5,4
+Ch1,xd546,Serbs,Serbs (Ch1),Serbians,44,20,4
+Ch11,xd548,Russians,Russians (Ch11),,53,41,4
+ch12,xd549,Bashkir,Bashkir (ch12),"Basquort, Bashkort, Bashkiry",54,56,4
+ch15,xd552,Erzya Mordvins,Erzia mordva (ch15),"Erzia mordva, Erzia Mordvins, Erzja Mordvins",53,50,4
+ch16,xd553,Estonians,Estonians (ch16),"Eestlased, Maarahvas, Hiumaases, Saaremaased, Setu, Estontsy, Chud",59,26,4
+ch20,xd558,Kazan tatar,Kazan tatar (ch20),"Kazanskie Tatary, Kazanly, Tatarlar",55,50,4
+ch21,xd559,Latvians,Latvians (ch21),"Latvieshi, Latyshi",57,24,4
+ch22,xd560,Lithuanian Karaim,Lithuanian Karaim (ch22),"Karaites, Karaila",55,23,4
+ch23,xd561,Lithuanian Tatar,Lithuanian Tatar (ch23),,55,24,4
+ch25,xd563,Moldovans,Moldovans (ch25),"Moldoven, Moldavans, Moldavane",47,29,4
+Ch3,xd567,Czechs,Czechs (Ch3),,50,16,4
+Ch4,xd568,Mari,Cheremis (Ch4),Cheremis,43,46,4
+Ch5,xd569,Bulgarians,Bulgarians (Ch5),,43,24,4
+Ch7,xd571,Ukranians,Ukranians (Ch7),,48,36,4
+Ch8,xd572,Magyar,Hungarian (Ch8),"Magyarok, Hungarian",47,20,4
+Ch9,xd573,Lithuanians,Lithuanians (Ch9),,55,24,4
+Ci12,xd577,Abkhaz,Abkhaz (Ci12),,43,41,4
+Ci4,xd580,Cherkess,Cherkess (Ci4),Circassians,44,42,4
+Ci5,xd581,Turks,Turks (Ci5),,38,30,4
+Cj10,xd587,Madan,Madan (Cj10),"Marsh Arabs, Ma'dan, Ma'adan",31,47,4
+Cj2,xd588,Rwala,Rwala (Cj2),Rwala Bedouin,33,37,4
+Cj3,xd589,Hebrews,Hebrews (Cj3),,32,35,4
+Cj4,xd590,Babylonians,Babylonians (Cj4),,32,45,4
+Cj7,xd593,Lebanese,Lebanese (Cj7),,34,36,4
+Cj9,xd595,Yemeni,Yemeni (Cj9),,15,45,4
+Ea10,xd597,Marri,Marri (Ea10),,30,69,4
+Ea13,xd600,Punjabi,"Punjabi, West (Ea13)",Punjabi (West),32,73,4
+Ea3,xd602,Hazara,Hazara (Ea3),,35,66,4
+Ea5,xd604,Nuristani,Nuri (Ea5),"Nuri, Kafirs, Kafiristanis",36,71,4
+Eb1,xd609,Kazakh,Kazak (Eb1),Kazak,48,70,4
+Eb3,xd611,Khalka,Khalka (Eb3),"Xanx, Khalka Mongols",46,97,4
+Eb7,xd615,Chahar,Chahar (Eb7),,41,115,4
+Ed15b,xd643,Chekiang,Chekiang (Ed15b),Chinese,31,120,4
+Ed5,xd648,Japanese,Japanese (Ed5),,35,136,4
+Ed6,xd649,Min Chinese,Min Chinese (Ed6),,24,115,4
+Ee6,xd658,Sherpa,Sherpa (Ee6),,28,87,4
+Ef11,xd663,Uttar Pradesh,Uttar Pradesh (Ef11),,26,83,4
+Eg3,xd679,Madia,Maria Gond (Eg3),"Maria Gond, Gond",19,81,4
+Eh2,xd688,Merina,Merina (Eh2),"Antimerina, Hova, Imerina",-19,46,4
+Eh3,xd689,Tanala,Tanala (Eh3),,-22,47,4
+Eh7,xd693,Antandroy,Antandroy (Eh7),Tandroy,-25,46,4
+Eh8,xd694,Sakalava,Sakalava (Eh8),,-21,43.93,4
+Eh9,xd695,Antaisaka,Antaisaka (Eh9),,-22.9,47.75,4
+Ei19,xd706,Chin,Chin (Ei19),Khyang,22,94,4
+Ei3,xd709,Burmese,Burmese (Ei3),Bamar people,20,95,4
+Ei4,xd710,Maras,Lakher (Ei4),Lakher,22,93,4
+Ei5,xd711,Kachin,Kachin (Ei5),,26,97,4
+Ei8,xd714,Khasi,Khasi (Ei8),,26,92,4
+Ej4,xd726,Annamese,Annamese (Ej4),Vietnamese,17,107,4
+Ej5,xd727,Khmer,Cambodians (Ej5),Cambodians,12,105,4
+Ej8,xd730,Malays,Malays (Ej8),,5,103,4
+Ia12,xd735,Sugbuanon,Sugbuhanon (Ia12),"Cebuanos, Sugbuhanon, Cebuan Bisaya, Cebuans",10.2,123.65,4
+Ia7,xd747,Tagbanua,Tagbanua (Ia7),,10,119,4
+Ia8,xd748,Bontok,Bontok (Ia8),,17,121,4
+Ib2,xd751,Javanese,Javanese (Ib2),,-7,110,4
+Ib6,xd755,Minangkabau,Minangkabau (Ib6),,-1,101,4
+Ic1,xd759,Macassarese,Macassarese (Ic1),,-5.31,119.69,4
+Ic11,xd761,Ambonese,Ambonese (Ic11),,-3.71,128.18,4
+Ic4,xd766,Rotinese,Rotinese (Ic4),"Atahori Rote, Hataholi Lote",-10.71,123.18,4
+Ic6,xd768,Tanimbarese,Tanimbarese (Ic6),,-8.19,130.96,4
+Ic7,xd769,Ili-Mandiri,Ili-Mandiri (Ic7),,-8.33,122.85,4
+Ic9,xd771,Sumbanese,Sumbanese (Ic9),Tau Humba,-10,120,4
+Ih7,xd873,Lifu,Lifu (Ih7),Lifu Islanders,-20.94,167.23,4
+Ij2,xd891,Māori,Maori (Ij2),Maori,-38.41,176.31,4
+Ij6,xd895,Hawaiians,Hawaiians (Ij6),,19.89,-155.83,4
+Ij9,xd898,Easter Islanders,Easter Island (Ij9),Easter Island,-27.12,-109.36,4
+Na10,xd1027,Chugach,Chugach (Na10),"Chugachigmiut, Chugash",60.72,-146.49,4
+Na19,xd1035,Dakelh,Carrier (Na19),"Carrier, Takulli",54,-124,4
+Na9,xd1067,Aleut,Aleut (Na9),Unagan,53.86,-166.79,4
+Nb1,xd1068,Haida,Haida (Nb1),,54,-132,4
+Nb10,xd1069,Alkatcho,Alkatcho (Nb10),"Tsuu'Tina, Alkatcho Carrier, Ilgatcho, Ilgachuz",53,-126,4
+Nb11,xd1070,Nuu chah nulth,Nootka (Nb11),"Nuu-chah-nulth, Aht, Central Nootka",49.16,-125.85,4
+Nb15,xd1074,Lummi,Lummi (Nb15),Lhaq'temish,48.84,-123.27,4
+Nb16,xd1075,Klallam,Klallam (Nb16),Clallum,48,-123,4
+Nb18,xd1077,Quileute,Quileute (Nb18),,47.91,-124.59,4
+Nb19,xd1078,Lower Chinook,Chinook (Nb19),Chinook,45.99,-123.77,4
+Nb20,xd1080,Tillamook,Tillamok (Nb20),Nehalem,44.75,-123.72,4
+Nb22,xd1082,Tlingit,Tlingit (Nb22),"Kolosh, Southern Tlingit",58.12,-133.92,4
+Nb23,xd1083,Heiltsuk,Bellabella (Nb23),"Bellabella, Bella Bella",52,-128,4
+Nb24,xd1084,Makah,Makah (Nb24),,48.33,-124.62,4
+Nb25,xd1085,Quinault,Quinault (Nb25),,47.42,-124.16,4
+Nb27,xd1087,Stó:lō,Stalo (Nb27),"Stalo, Halkomelem, Fraser River Cowichan",49,-122,4
+Nb3,xd1090,Kwakwaka'wakw,Kwakiutl (Nb3),"Southern Kwakiutl, Kwagu'ł, Kwagyewlth",51,-127.49,4
+Nb7,xd1104,Tsimshian,Tsimshian (Nb7),Ts’msyan,54.64,-130.25,4
+Nb8,xd1105,Haisla,Haisla (Nb8),Kitimat,54,-129,4
+Nb9,xd1106,Nuxalk,Bellacoola (Nb9),"Nuxalkmc, Bellacoola, Bilqula, Bella Coola",52,-127,4
+Nf6,xd1240,Pawnee,Pawnee (Nf6),,42,-100,4
+Nf8,xd1242,Hasinai,Hasinai (Nf8),"Southwestern Caddo, Texas",31,-95,4
+Nj2,xd1301,Aztec,Aztec (Nj2),Aztec of Tenochtitlan,19,-99,4
+Sa11,xd1311,Kaqchikel,Cakchiquel (Sa11),Cakchiquel,14,-91,4
+Sa13,xd1313,K'iche',Quiche (Sa13),Quiche,15,-91,4
+Sa3,xd1319,Ch'orti',Chorti (Sa3),Chorti,14,-89,4
+Sa6,xd1322,Yucatec Maya,Yucatec Maya (Sa6),,18,-90,4
+Sb8,xd1333,Taíno,Taino (Sb8),Taino,19.94,-75.37,4
+Sb9,xd1334,Haitians,Haitians (Sb9),,18.41,-72.17,4
+Se7,xd1371,Camba,Camba (Se7),,-18,-63,4
+Sf1,xd1374,Inca,Inca (Sf1),,-13,-72,4
+Sf6,xd1379,Muisca,Chibcha (Sf6),Chibcha,5,-72,4
+Sh2,xd1389,Terena,Terena (Sh2),Poké,-21,-58,4
+Sh3,xd1390,Abipón,Abipon (Sh3),"Abipon, Abipones",-29,-61,4
+Sh4,xd1391,Kadiwéu,Caduveo (Sh4),Caduveo,-22,-57,4
+Sh6,xd1393,Chamacoco,Chamacoco (Sh6),Ishír,-20,-59,4
+Ab13,xd14,Tswana,Tswana (Ab13),"Batswana, Bechuana",-24,27,5
+Ab9,xd32,Ndebele,Ndebele (Ab9),"Amandebele, Matabele",-20,28,5
+Ac4,xd66,Kuba,Kuba (Ac4),Bakuba,-5,22,5
+Ad45,xd115,Nyankole,Nyankole (Ad45),Banyankole,0,31,5
+Ae10,xd128,Banyaruanda,Ruanda (Ae10),Ruanda,-2,30,5
+Ae15,xd133,Hunde,Hunde (Ae15),Bahunde,-2,28,5
+Ae8,xd184,Rundi,Rundi (Ae8),"Barundi, Warundi",-3,30,5
+Ag2,xd255,Mossi (Yatenga),Yatenga (Ag2),"Yatenga, Massi, Moshi, Mossi",13,-2,5
+Aj15,xd390,Kuku,Kuku (Aj15),,4,32,5
+Ca3,xd437,Tigrinya,Tigrinya (Ca3),,14,39,5
+Ca39,xd447,Jimma,Jimma (Ca39),,8,37,5
+Ca7,xd455,Amhara,Amhara (Ca7),,13,38,5
+Cb2,xd469,Wolof,Wolof (Cb2),,15,-17,5
+Cb22,xd472,Liptako,Liptako (Cb22),,14,0,5
+Cb26,xd476,Zazzagawa Hausa,Zazzagawa Hausa (Cb26),"Hausa, Zazzagawa",11,8,5
+Cb3,xd480,Songhai,Songhai (Cb3),,17,-1,5
+Cc1,xd487,Regeibat,Regeibat (Cc1),Rgibat,22,-13,5
+Cc10,xd488,Asben,Asben (Cc10),"Air Tuareg, Kel Air",18,8,5
+Cc12,xd490,Ifora,Ifora (Cc12),,20,2,5
+Cc15,xd493,Drawa,Drawa (Cc15),,31,-7,5
+Cc16,xd494,Chaambra,Chaambra (Cc16),Schanba,32,3,5
+Cc17,xd495,Delim,Delim (Cc17),Oulad Delim,22,-15,5
+Cc18,xd496,Kunta,Kunta (Cc18),Kounta,19,-1,5
+Cc19,xd497,Trarza,Trarza (Cc19),,18,-15,5
+Cc20,xd499,Zenaga,Zenaga (Cc20),,18,-8,5
+Cc4,xd501,Mzab,Mzab (Cc4),"Beni Mzab, Mozabites",33,4,5
+Cc5,xd502,Kel Antessar,Antessar (Cc5),"Antessar, Kel Antessar, Tuareg north of Timbuctoo",18,-3,5
+Cc7,xd504,Barabish,Barabish (Cc7),,20,-5,5
+Cc8,xd505,Aulliminden,Aulliminden (Cc8),Oulliminden,8,2,5
+Cc9,xd506,Tuareg Ahaggar,Tuareg Ahaggar (Cc9),Tuareg,23,6,5
+Cd12,xd510,Algerians,Algerians (Cd12),,31,2,5
+Cd16,xd514,Moroccans,Moroccans (Cd16),,33,-8,5
+Cd2,xd518,Egyptians,Egyptians (Cd2),"Fellahin, Fellaheen",25,33,5
+Cf2,xd537,Boers,Boers (Cf2),Afrikanders,-16,28,5
+Cf4,xd539,Brazilians,Brazilians (Cf4),,-23.68,-46.64,5
+Ea11,xd598,Ghilzai,Afghans (Ea11),"Pashtuns, Pushtun, Afghans",33,68,5
+Ea2,xd601,Yusufzai,Pathan (Ea2),"Pukhtun, Pathan, Yusufsai, Yūsufzai, Yousafzai",35,72,5
+Ed1,xd638,Koreans,Koreans (Ed1),,38.134147,126.960754,5
+Ee5,xd657,Shina,Dard (Ee5),Dard,35,73,5
+Ee8,xd660,Magar,Magar (Ee8),,28,84,5
+Ef2,xd664,Bengali,Bengali (Ef2),,23,88,5
+Ef5,xd667,Bhil,Bhil (Ef5),,22,74,5
+Ef7,xd669,Pahari,Pahari (Ef7),,30,78,5
+Eg10,xd673,Telugu,Telugu (Eg10),,18,79,5
+Eg2,xd678,Tamil,Tamil (Eg2),,11,79,5
+Eg5,xd681,Kodavas,Coorg (Eg5),Coorg,12,76,5
+Eg6,xd682,Kerala,Kerala (Eg6),,11,76,5
+Eh6,xd692,Sinhalese,Sinhalese (Eh6),,7,80,5
+Ej15,xd722,Ancient Khmer,Khmer (Ej15),Khmer,13,104,5
+Ib3,xd752,Balinese,Balinese (Ib3),,-8.18,115.02,5
+Ic3,xd765,Belu,Belu (Ic3),,-9,126,5
+Ab15,xd16,Pedi,Pedi (Ab15),Bapedi,-25,30,#N/A
+Ab16,xd17,Lenge,Lenge (Ab16),Valenge,-25,34,#N/A
+Ab17,xd18,Ndau,Ndau (Ab17),Vandau,-20,34,#N/A
+Ab18,xd19,Shona,Shona (Ab18),Mashona,-19,31,#N/A
+Ab21b,xd24,Bomvana,Bomvana (Ab21b),,-32,28,#N/A
+Ab22,xd25,Chopi,Chopi (Ab22),Vachopi,-24.76,34.47,#N/A
+Ac16,xd40,Mitsogho,Shogo (Ac16),"Shogo, Ashogo, Issogo, Mitsogo",-1,12,#N/A
+Ac18,xd42,Sundi,Sundi (Ac18),Basundi,-5,14,#N/A
+Ac19,xd43,Teke,Teke (Ac19),Bateke,-3,15,#N/A
+Ac20,xd45,Yaka,Yaka (Ac20),"Bayaka, Giaka, Maiaca",-7,17,#N/A
+Ac22,xd47,Dzing,Dzing (Ac22),"Badinga, Dinga",-4,20,#N/A
+Ac27,xd52,Luchazi,Luchazi (Ac27),"Balochasi, Kaluchazi, Valuchazi",-13,23,#N/A
+Ac28,xd53,Luimbe,Luimbe (Ac28),"Baluimbi, Valuimbe",-12,18,#N/A
+Ac29,xd54,Luwa,Luwa (Ac29),Balua,-7,19,#N/A
+Ac35,xd61,Shila,Shila (Ac35),"Awasira, Bashila, Wasira",-10,28,#N/A
+Ac37,xd63,Kunda,Kunda (Ac37),Achikunda,-15,32,#N/A
+Ac43,xd70,Mambwe,Mambwe (Ac43),Amambwe,9,32,#N/A
+Ac6,xd72,Ndembu,Ndembu (Ac6),"Andembu, Southern Lunda",-11,26,#N/A
+Ad10,xd77,Shambaa,Shambala (Ad10),"Wasambaa, Shambala, Sambara, Waschambala",-5,38,#N/A
+Ad12,xd79,Gusii,Gusii (Ad12),"Abagusii, Gizii, Kissi, Kosova",-1,35,#N/A
+Ad18,xd85,Bende,Bende (Ad18),"Vende, Wabende",-7,31,#N/A
+Ad29,xd97,Hadimu,Hadimu (Ad29),Wahadimu,-6.07,39.43,#N/A
+Ad30,xd99,Digo,Digo (Ad30),"Adigo, Wadigo",-4,39,#N/A
+Ad31,xd100,Duruma,Duruma (Ad31),Waduruma,-4,39,#N/A
+Ad32,xd101,Giriama,Giriama (Ad32),"Kiriama, Wagiryama",-3,40,#N/A
+Ad34,xd103,Kamba,Kamba (Ad34),"Akamba, Wakamba",-2,38,#N/A
+Ad40,xd110,Tiriki,Tiriki (Ad40),,0,35,#N/A
+Ad41,xd111,Vugusu,Vugusu (Ad41),Kotosh,1,35,#N/A
+Ad44,xd114,Konjo,Konjo (Ad44),,-1,30,#N/A
+Ae13,xd131,Bashi,Bashi (Ae13),"Baniabungu, Wanyabungu",-2,29,#N/A
+Ae16,xd134,Lulua,Lulua (Ae16),Bena Lulua,-6,23,#N/A
+Ae27,xd146,Lokele,Lokele (Ae27),"Likile, Lukelle",1,25,#N/A
+Ae33,xd153,Ndaka Babali,Ndaka Babali (Ae33),"Bandaka, Bali, Babali, Mabali, Mobale (formerly erroneously called Ndaka)",1,27,#N/A
+Ae40,xd161,Dzem,Dzem (Ae40),"Djem, Ndjem, Nyem",3,14,#N/A
+Ae46,xd167,Mpongwe,Mpongwe (Ae46),"Empongwe, Pongo",-2,10,#N/A
+Ae49,xd170,Bali Nyonga,Bali (Ae49),"Bali, Bulu, Bani, Li",6,10,#N/A
+Ae52,xd174,Fungom,Fungom (Ae52),,7,10,#N/A
+Ae53,xd175,Koko,Koko (Ae53),"Bakoko, Betjek, Mwele",4,11,#N/A
+Ae54,xd176,Kom,Kom (Ae54),"Bahom, Bamekom, Bikom",6,10,#N/A
+Ae55,xd177,Ndob,Ndob (Ae55),"Bandob, Mburukem, Ndop",6,10,#N/A
+Ae57,xd179,Nsungli,Nsungli (Ae57),Dzungle,6,11,#N/A
+Af12,xd189,Akyem,Akyem (Af12),Akwahu,7,-1,#N/A
+Af14,xd191,Sherbro,Sherbro (Af14),Mampua,7.52,-12.69,#N/A
+Af17,xd194,Boki,Boki (Af17),Nki,6,9,#N/A
+Af18,xd195,Ekoi,Ekoi (Af18),,6,8,#N/A
+Af28,xd206,Gbagyi,Gbari (Af28),"Gbari, Gwali",10,10,#N/A
+Af30,xd209,Igala,Igala (Af30),Igara,7,7,#N/A
+Af35,xd214,Adangme,Adangme (Af35),Adampe,6,0,#N/A
+Af38,xd217,Abron,Abron (Af38),Brong,7.53,-2.15,#N/A
+Af43,xd223,Ga,Ga (Af43),,6,0,#N/A
+Af46,xd226,Bakwe,Bakwe (Af46),,5,-7,#N/A
+Af48,xd228,Kru,Kru (Af48),Krao,5,-9,#N/A
+Af50,xd231,Dan,Dan (Af50),,8,8,#N/A
+Af53,xd234,Tura,Tura (Af53),Wen,8,-7,#N/A
+Af56,xd237,Ngere,Ngere (Af56),Guere,7,-8,#N/A
+Af57,xd238,Temne,Temne (Af57),Time,8.46,-12.64,#N/A
+Af58,xd239,Vai,Vai (Af58),Gallina,6.89,-11.2,#N/A
+Ag13,xd248,Kasena,Kasena (Ag13),"Kasem, Kasuna",11,-1,#N/A
+Ag17,xd252,Biafada,Biafada (Ag17),,12,-15,#N/A
+Ag24,xd260,Koranko,Koranko (Ag24),,9,-11,#N/A
+Ag26,xd262,Susu,Susu (Ag26),Soso,15,-13,#N/A
+Ag27,xd263,Diula,Diula (Ag27),Dyoura,9,-4,#N/A
+Ag28,xd264,Nononke,Nono (Ag28),"Nono, Marka, Marka-Dafing, Dafi",14,-4,#N/A
+Ag29,xd265,Samo,Samo (Ag29),Samako,13,-3,#N/A
+Ag33,xd270,Dyan,Dian (Ag33),"Dian, Dya",11,-3,#N/A
+Ag36,xd273,Lowiili,Lowiili (Ag36),,11,-3,#N/A
+Ag41,xd279,Kusasi,Kusasi (Ag41),Kusal,11,0,#N/A
+Ag42,xd280,Nunuma,Nunuma (Ag42),Gurunsi,12,-3,#N/A
+Ag43,xd281,Vagala,Vagala (Ag43),Siti,8,-2,#N/A
+Ag44,xd282,Dagomba,Dagomba (Ag44),Dagbamba,9,0,#N/A
+Ag46,xd284,Manprusi,Manprusi (Ag46),Mampelle,10,-1,#N/A
+Ag5,xd288,Birifor,Birifor (Ag5),Birifon,10,-3,#N/A
+Ag52,xd291,Tem,Tem (Ag52),"Chancho, Kotokoli",11,1,#N/A
+Ag53,xd292,Bisa,Bisa (Ag53),Busanse,12,0,#N/A
+Ah11,xd300,Basa,Basa (Ah11),Bassa,8,8,#N/A
+Ah12,xd301,Basakomo,Basakomo (Ah12),Bassa-Komo,8,7,#N/A
+Ah15,xd304,Reshe,Reshe (Ah15),"Bareshe, Gungawa, Yauri",11,5,#N/A
+Ah17,xd306,Birom,Birom (Ah17),"Burum, Kibo",10,9,#N/A
+Ah18,xd307,Burmawa,Borrom (Ah18),Borrom,10,10,#N/A
+Ah21,xd311,Kurama,Kurama (Ah21),,10,9,#N/A
+Ah23,xd313,Jibu,Jibu (Ah23),Jubu,8,11,#N/A
+Ah27,xd317,Zuande,Zuande (Ah27),"Bitare, Yukutare",7,11,#N/A
+Ah30,xd321,Longuda,Longuda (Ah30),Nunguda,10,12,#N/A
+Ah34,xd325,Bata,Bata (Ah34),,10,13,#N/A
+Ah35,xd326,Bura,Bura (Ah35),,10,12,#N/A
+Ah36,xd327,Gude,Gude (Ah36),Cheke,10,13,#N/A
+Ah37,xd328,Hwana,Hona (Ah37),Hona,10,13,#N/A
+Ai14,xd342,Mbum,Mbum (Ai14),,7,14,#N/A
+Ai15,xd343,Mundang,Mundang (Ai15),Moundan,10,14,#N/A
+Ai16,xd344,Namshi,Namshi (Ai16),Doayo,9,13,#N/A
+Ai17,xd345,Gisiga,Gisiga (Ai17),Guissiga,10,14,#N/A
+Ai18,xd346,Kotoko,Kotoko (Ai18),"Logone, Makari",12,15,#N/A
+Ai19,xd347,Musgu,Musgu (Ai19),Muzuk,11,15,#N/A
+Ai20,xd349,Tupuri,Tuburi (Ai20),"Tuburi, Toupouri",10,15,#N/A
+Ai21,xd350,Bagirmi,Bagirmi (Ai21),,11,17,#N/A
+Ai27,xd356,Abarambo,Abarambo (Ai27),,4,27,#N/A
+Ai29,xd358,Lendu,Lendu (Ai29),"Bale, Walega, Walendu",2,30,#N/A
+Ai30,xd360,Lese,Lese (Ai30),"Balese, Walese",2,29,#N/A
+Ai33,xd363,Madi,Madi (Ai33),,4,32,#N/A
+Ai34,xd364,Moru,Moru (Ai34),,5,30,#N/A
+Ai38,xd368,Korongo,Korongo (Ai38),,10,30,#N/A
+Ai4,xd370,Ingassana,Ingassana (Ai4),"Engassana, Metabe, Tabi",11,34,#N/A
+Ai44,xd375,Anuak,Anuak (Ai44),Yambo,8,34,#N/A
+Ai45,xd376,Meban,Meban (Ai45),"Gura, Maban",10,34,#N/A
+Ai47,xd378,Mao,Mao (Ai47),,9,35,#N/A
+Ai9,xd383,Masa,Masa (Ai9),Massa,10,16,#N/A
+Aj13,xd388,Pojulu,Fajulu (Aj13),Fajulu,4,31,#N/A
+Aj14,xd389,Kakwa,Kakwa (Aj14),Kakuak,4,31,#N/A
+Aj18,xd393,Bodi,Bodi (Aj18),,5,35,#N/A
+Aj19,xd394,Didinga,Didinga (Aj19),"Birra, Karoko, Toi",4,34,#N/A
+Aj20,xd396,Suri,Suri (Aj20),"Churi, Kichepo, Thauk, Thuri",6,35,#N/A
+Aj22,xd398,Labwor,Labwor (Aj22),,3,34,#N/A
+Aj24,xd400,Toposa,Topotha (Aj24),"Topotha, Dabosa",5,34,#N/A
+Aj26,xd402,Hill Suk,Hill Suk (Aj26),Pokot,1,36,#N/A
+Aj27,xd403,Sapei,Sapei (Aj27),Sabei,1,35,#N/A
+Aj29,xd405,Samburu,Samburu (Aj29),"Lokop, Loikop",1,37,#N/A
+Aj30,xd407,Karamojong,Karamojong (Aj30),,2,34,#N/A
+Aj31,xd408,Pari,Pari (Aj31),"Jo-Pari, Beri, Fori",5,33,#N/A
+Ca13,xd419,Macha,Macha (Ca13),Mecca,9,37,#N/A
+Ca15,xd421,Darasa,Darasa (Ca15),,6,38,#N/A
+Ca16,xd422,Sidama,Sidamo (Ca16),Sidamo,7,38,#N/A
+Ca17,xd423,Tsamai,Tsamai (Ca17),Tsamako,5,37,#N/A
+Ca18,xd424,Arbore,Arbore (Ca18),Harbora,5,37,#N/A
+Ca19,xd425,Banna,Banna (Ca19),Bunna,6,36,#N/A
+Ca20,xd427,Galab,Galab (Ca20),"Darthanaic, Geleba, Reshiat",5,36,#N/A
+Ca21,xd428,Hamar,Hammar (Ca21),"Hammar, Amar, Amarcocche, Hamarkoke",5,36,#N/A
+Ca22,xd429,Male,Male (Ca22),Maale,6,37,#N/A
+Ca23,xd430,Bako,Bako (Ca23),"Ari, Baka",6,37,#N/A
+Ca24,xd431,Dime,Dime (Ca24),,6,36,#N/A
+Ca25,xd432,Shangama,Shangama (Ca25),,6,37,#N/A
+Ca26,xd433,Ubamer,Ubamer (Ca26),Wubahamer,6,37,#N/A
+Ca27,xd434,Anfillo,Anfillo (Ca27),Southern Mao,9,35,#N/A
+Ca28,xd435,Basketo,Basketo (Ca28),,6,37,#N/A
+Ca34,xd442,Ababda,Ababda (Ca34),,24,34,#N/A
+Ca35,xd443,Amarar,Amarar (Ca35),,20,36,#N/A
+Ca36,xd444,Beni-Amer,Beni Amer (Ca36),Beni Amer,18,38,#N/A
+Ca37,xd445,Blin,Bogo (Ca37),"Bogo, Belen, Bilin",16,36,#N/A
+Ca38,xd446,Tigre,Tigre (Ca38),,17,39,#N/A
+Ca4,xd448,Iraqw,Iraqw (Ca4),"Erokh, Mbulu, Wambulu",-4,35,#N/A
+Ca43,xd452,Hadendowa,Hadendowa (Ca43),Hendawa,18,36,#N/A
+Ca5,xd453,Bisharin,Bisharin (Ca5),,20,35,#N/A
+Ca8,xd456,Gurage,Gurage (Ca8),,8,38,#N/A
+Ca9,xd457,Goroa,Goroa (Ca9),"Fiome, Guruma",-4,36,#N/A
+Cb11,xd460,Midobi,Midobi (Cb11),Meidob,16,27,#N/A
+Cb12,xd461,Gimma,Gimma (Cb12),Gimaa,13,32,#N/A
+Cb13,xd462,Habbaniya,Habbania (Cb13),Habbania,11,25,#N/A
+Cb14,xd463,Hemat,Hemat (Cb14),"Baggara, Heimad",11,20,#N/A
+Cb16,xd465,Shuwa,Shuwa (Cb16),"Chiwa, Shoa",13,15,#N/A
+Cb20,xd470,Zerma,Zerma (Cb20),Dyerma,13,3,#N/A
+Cb24,xd474,Wodaabe Fulani,Wodaabe Fulani (Cb24),"Pastoral Fulani, Wodaabe",12,12,#N/A
+Cb27,xd477,Bachama,Bachama (Cb27),,10,12,#N/A
+Cb28,xd478,Dera,Dera (Cb28),Kanakuru,10,12,#N/A
+Cb29,xd479,Ngizim,Ngizim (Cb29),,12,10,#N/A
+Cb4,xd481,Hasania,Hasania (Cb4),Hassanyeh,14,32,#N/A
+Cb8,xd485,Bororo Fulani,Bororo Fulani (Cb8),"Fulbe, Fuel",13,5,#N/A
+Cc11,xd489,Azjer,Azjer (Cc11),Adjeur,25,10,#N/A
+Cc13,xd491,Udalan Tuareg,Udalan (Cc13),Udalan,16,0,#N/A
+Cc3,xd500,Siwans,Siwans (Cc3),,29,26,#N/A
+Cc6,xd503,Kababish,Kababish (Cc6),Kubbabish,17,31,#N/A
+Cd1,xd507,Barabra,Barabra (Cd1),Kenuzi Nubians,23,33,#N/A
+Cd10,xd508,Zekara,Zekara (Cd10),Zkara,34,-2,#N/A
+Cd13,xd511,Hamama,Hamama (Cd13),,30,9,#N/A
+Cd14,xd512,Hamyan,Hamyan (Cd14),Hamian,35,2,#N/A
+Cd15,xd513,Jebala,Jebala (Cd15),Djebala,35,-5,#N/A
+Cd17,xd515,Nail,Nail (Cd17),Ulad Nail,35,5,#N/A
+Cd18,xd516,Saadi,Saadi (Cd18),,30,28,#N/A
+Cd19,xd517,Sahel,Sahel (Cd19),Eastern Tunisians (Sahel Region),35,10.94,#N/A
+Cd20,xd519,Sanusi,Sanusi (Cd20),Cyrenaican Bedouin,31,22,#N/A
+Cd21,xd520,Tunisians,Tunisians (Cd21),,37,10,#N/A
+Cd4,xd522,Kabyle,Kabyle (Cd4),,36,4,#N/A
+Cd6,xd524,Ancient Egyptians,Ancient Egypt (Cd6),Ancient Egypt,30,31,#N/A
+Cd7,xd525,Beraber,Beraber (Cd7),,33,-7,#N/A
+Cd8,xd526,Shawiya,Shawiya (Cd8),Chaouia,36,7,#N/A
+Cd9,xd527,Tekna,Tekna (Cd9),Tekena,28,-11,#N/A
+Ce1,xd528,Gheg,Gheg (Ce1),Albanians,42,20,#N/A
+Ce6,xd533,Spaniards,Spaniards (Ce6),,37,-6,#N/A
+Ch10,xd547,Romanians,Romanians (Ch10),,45,26,#N/A
+Ch6,xd570,Byelorussians,Byelorussians (Ch6),White Russians,55,28,#N/A
+Ci1,xd574,Kalmyk,Kalmyk (Ci1),Kalmuck,46,46,#N/A
+Ci3,xd579,Kumyk,Kumyk (Ci3),Kumuk,42,48,#N/A
+Ci6,xd582,Ossetians,Osset (Ci6),"Osset, Ossete",43,44,#N/A
+Ci7,xd583,Chechen,Chechen (Ci7),,43,46,#N/A
+Ci8,xd584,Georgians,Georgians (Ci8),"Kartvelebi, Grusians, Kartveli",42,45,#N/A
+Ci9,xd585,Svan,Svan (Ci9),Mushüan,43,43,#N/A
+Cj1,xd586,Syrians,Syrians (Cj1),,36,36,#N/A
+Cj5,xd591,Mutair,Mutair (Cj5),,28,47,#N/A
+Cj6,xd592,Jordanians,Jordanians (Cj6),,32,36,#N/A
+Ea1,xd596,Sindhi,Sindhi (Ea1),Hindu Sindhi,25,68,#N/A
+Ea12,xd599,Qashqui,Quahgai (Ea12),"Quahgai, Qashgai",30,52,#N/A
+Ea4,xd603,Kohistani,Kohistani (Ea4),"Kohistei, Mayan",35,73,#N/A
+Ea7,xd606,Moghol,Moghol (Ea7),Mongols of Afghanistan,34,63,#N/A
+Ea8,xd607,Bakhtiari,Bakhtiari (Ea8),,33,48,#N/A
+Ea9,xd608,Iranians,Iranians (Ea9),,36,52,#N/A
+Eb2,xd610,Tu,Monguor (Eb2),Monguor,39,100,#N/A
+Eb5,xd613,Turkmen,Turkmen (Eb5),,38,62,#N/A
+Eb6,xd614,Buryat,Buryat (Eb6),,52,107,#N/A
+Eb8,xd616,Uzbek,Uzbek (Eb8),,43,60,#N/A
+Ed10,xd639,Shantung,Shantung (Ed10),,37,118,#N/A
+Ed13,xd640,Ishigakians,Ishigakians (Ed13),,24.46,124.14,#N/A
+Ed14,xd641,Man,Man (Ed14),Yao,22,105,#N/A
+Ed15a,xd642,Miyakans,Miyakans (Ed15a),,24.79,125.32,#N/A
+Ed16,xd644,Cantonese,Cantonese (Ed16),,23,113,#N/A
+Ed2,xd645,Lolo,Lolo (Ed2),"Yi, Nosu",29,103,#N/A
+Ed9,xd652,Li,Li (Ed9),"Sai, Hlai, Lai, Loi",19,109,#N/A
+Ee2,xd654,Burusho,Burusho (Ee2),,37,75,#N/A
+Ee3,xd655,Lepcha,Lepcha (Ee3),Rong,28,89,#N/A
+Ee4,xd656,Central Tibetans,Tibetans (Ee4),,30,91,#N/A
+Ee7,xd659,Kachari,Kachari (Ee7),Bodo,27,90,#N/A
+Ef10,xd662,Bihari,Bihari (Ef10),"Bihar, Behari",25,86,#N/A
+Ef3,xd665,Indo-Iranian,Aryans (Ef3),"Aryans, Indo-Aryans",30,75,#N/A
+Ef4,xd666,Ho,Ho (Ef4),,22,85,#N/A
+Ef6,xd668,Kurukh,Oraon (Ef6),Oraon,23,85,#N/A
+Ef8,xd670,Kashmiri,Kashmir (Ef8),"Kashmir, Kashmiri, Pandit, Sarasvati Brahmans",34,75,#N/A
+Ef9,xd671,Gujarati,Gujarati (Ef9),,20,77,#N/A
+Eg11,xd674,Koya,Koya (Eg11),Koitur,19,78,#N/A
+Eg12,xd675,Khond,Khond (Eg12),,18,82,#N/A
+Eg14,xd677,Reddi,Reddi (Eg14),,18,82,#N/A
+Eg7,xd683,Hill Bhuiya,Hill Bhuiya (Eg7),Pauri,21,85,#N/A
+Eg8,xd684,Kol,Kol (Eg8),,22,85,#N/A
+Eh10,xd687,Betsileo,Betsileo (Eh10),,-22,47,#N/A
+Ei10,xd697,Chakma,Chakma (Ei10),Chuckmah,23,92,#N/A
+Ei15,xd702,Rengma,Rengama (Ei15),"Rengama, Rengma Naga",26,94,#N/A
+Ei17,xd704,Karbi,Mikir (Ei17),"Arleng, Mikir",26,94,#N/A
+Ei18,xd705,Palaung,Palaung (Ei18),,23,97,#N/A
+Ei20,xd708,Kuki,Kuki (Ei20),"Chin, Mizo, Kuki",23,92,#N/A
+Ei6,xd712,Purum,Purum (Ei6),,25,94,#N/A
+Ei9,xd715,Mogh,Mogh (Ei9),"Marma, Morma, Mog, Magh",20.49,92.64,#N/A
+Ej11,xd718,Cham,Cham (Ej11),,11,108,#N/A
+Ej12,xd719,Lawa,Lawa (Ej12),Lua,18,98,#N/A
+Ia10,xd733,Bunun,Bunun (Ia10),,24,121,#N/A
+Ia11,xd734,Puyuma,Puyuma (Ia11),,23,121,#N/A
+Ia17,xd740,Bilaan,Bilaan (Ia17),,6,125,#N/A
+Ia18,xd741,Bisayan,Bisayan (Ia18),Visayan,10,123,#N/A
+Ia9,xd749,Ami,Ami (Ia9),Pangcah,22.7,121.05,#N/A
+Ib9,xd758,Punan,Punan (Ib9),,3,115,#N/A
+Ic13,xd763,Kodi,Kodi (Ic13),West Sumbanese,-9.66,119.07,#N/A
+Id7,xd782,Murriny Patha,Murinbata (Id7),"Murriny Patha, Murinbata",-14,130,#N/A
+Ie34,xd812,Bgu,Bgu (Ie34),,-2.34,139.6,#N/A
+Ie36,xd814,Samarokena,Samarokena (Ie36),,-3,140,#N/A
+Ie37,xd815,Star Mountain,Star Mountain (Ie37),Star Mountain Papuans,-5,141,#N/A
+If10,xd825,Nomoians,Nomoians (If10),Mortlock Islanders,6.89,152.74,#N/A
+Ig15,xd847,Bakovi,Bakovi (Ig15),,-5.42,150.05,#N/A
+Ig16,xd848,Bwaidoga,Bwaidoga (Ig16),,-9.44,150.33,#N/A
+Ig17,xd849,Kombe,Koobe (Ig17),Koobe,-4.67,149.53,#N/A
+Ig18,xd850,Kwaio,Kwaio (Ig18),,-9,161,#N/A
+Ig19,xd851,Molima,Molima (Ig19),,-10,151,#N/A
+Ig20,xd853,Kaoka,Kaoka (Ig20),Kaukau,-9.49,159.82,#N/A
+Ig8,xd860,Simboese,Simboese (Ig8),Eddystone Islanders,-8,157,#N/A
+Ih11,xd864,Epi,Epi (Ih11),,-16.61,168.17,#N/A
+Ih12,xd865,Eromangans,Eromangans (Ih12),,-18.85,169.16,#N/A
+Ih13,xd866,Ranon,Ranon (Ih13),,-16.18,168.15,#N/A
+Ij10,xd890,Tongarevans,Tongarevans (Ij10),Penrhyn Islanders,-9.02,-158.03,#N/A
+Na11,xd1028,Sivokakmeit,Sivokakmeit (Na11),St. Lawrence Island Inuit,63.34,-170.3,#N/A
+Na42,xd1059,Potawatomi,Potawatomi (Na42),Neshnabé,44,-85,#N/A
+Nb37,xd1098,Lassik,Lassik (Nb37),,40,-123,#N/A
+Nb38,xd1099,Mattole-Bear River,Mattole (Nb38),"Mattole, Bear River",40.35,-123.47,#N/A
+Nc17,xd1115,Northern Pomo,Northern Pomo (Nc17),,39,-123,#N/A
+Nc20,xd1119,Wappo,Wappo (Nc20),,38.22,-122.56,#N/A
+Ne10,xd1209,Arikara,Arikara (Ne10),"Sahnish, Ree",46,-101,#N/A
+Ne21,xd1221,Coahuilteco,Coahuilteco (Ne21),,29,-99,#N/A
+Nf14,xd1234,Caddo,Caddo (Nf14),Kadohadacho,33,-93,#N/A
+Nf15,xd1235,Kickapoo,Kickapoo (Nf15),Kiikaapoi,43,-90,#N/A
+Ng13,xd1248,Abenaki,Abnaki (Ng13),Abnaki,46,-70,#N/A
+Ng14,xd1249,Chickasaw,Chickasaw (Ng14),,35,-85,#N/A
+Ng15,xd1250,Chitimacha,Chitimacha (Ng15),,30,-90,#N/A
+Ng7,xd1256,Natchez,Natchez (Ng7),,32,-91,#N/A
+Ng8,xd1257,Timucua,Timucua (Ng8),,27,-82,#N/A
+Nh20,xd1271,Kamia,Kamia (Nh20),,33,-115,#N/A
+Nh22,xd1273,Quechan,Yuma (Nh22),Yuma,33,-114,#N/A
+Nh26,xd1277,Santa Clara,Santa Clara (Nh26),,36,-106,#N/A
+Nh27,xd1278,Kewa,Santo Domingo (Nh27),"Santo Domingo, Santo Domingo Pueblo",36,-105,#N/A
+Ni8,xd1293,Opata,Opata (Ni8),,30,-110,#N/A
+Ni9,xd1294,Tepehuán,Tepehuan (Ni9),Tepehuan,27,-107,#N/A
+Nj1,xd1295,Chinantec,Chinantec (Nj1),,18,-96,#N/A
+Nj10,xd1296,Zapotec,Zapotec (Nj10),,17,-96,#N/A
+Nj11,xd1297,Huastec,Huastec (Nj11),,22,-99,#N/A
+Nj12,xd1298,Mixtec,Mixtec (Nj12),,18,-98,#N/A
+Nj13,xd1299,Otomí,Otomi (Nj13),Otomi,20,-99,#N/A
+Nj14,xd1300,Tequistlatec,Tequistlatec (Nj14),,16,-96,#N/A
+Nj4,xd1303,Totonac,Totonac (Nj4),,20,-97,#N/A
+Nj5,xd1304,Mazateco,Mazateco (Nj5),,18,-97,#N/A
+Nj7,xd1306,Mixe,Mixe (Nj7),,17,-95,#N/A
+Nj8,xd1307,Tarasco,Tarasco (Nj8),,19,-101,#N/A
+Sa14,xd1314,Ngäbe,Guaymi (Sa14),Guaymi,8,-81,#N/A
+Sa15,xd1315,Jakaltek,Jacaltec (Sa15),Jacaltec,14,-90,#N/A
+Sa16,xd1316,Tolupan,Jicaque (Sa16),"Jicaque, Xicaque",15,-87,#N/A
+Sa17,xd1317,Poqomam,Pokomam (Sa17),Pokomam,15,-91,#N/A
+Sa2,xd1318,Tzeltal,Tzeltal (Sa2),,17,-92,#N/A
+Sb3,xd1328,Barí (Motilon),Motilon (Sb3),"Bari, Motilon, Yuko, Motilones, Barí",9,-72,#N/A
+Sc11,xd1337,Camaracoto,Camaracoto (Sc11),Pemon,6,-63,#N/A
+Sc12,xd1338,Macushi,Macusi (Sc12),Macusi,4,-59,#N/A
+Sc14,xd1340,Rucuyen,Rucuyen (Sc14),,3,-55,#N/A
+Se12,xd1365,Tucano,Tucano (Se12),Tukano,0,-70,#N/A
+Sf4,xd1377,U'wa,Tunebo (Sf4),"Tunebo, Tabe",7,-72,#N/A
+Sf5,xd1378,Páez,Paez (Sf5),Paez,3,-76,#N/A
+Sf8,xd1381,Piro,Piro (Sf8),Nomole,-12,-73,#N/A
+Sf9,xd1382,Uru,Uru (Sf9),,-16,-69,#N/A
+Sh7,xd1394,Guaraní,Chiriguano (Sh7),"Chiriguano, Guarani",-20,-63,#N/A
+Si9,xd1406,Aweti,Aueto (Si9),"Aueto, Aueti",-12,-54,#N/A
+Sj10,xd1408,Cayua,Cayua (Sj10),"Abá, Cayua, Caingua, Guaraní, Guarani",-26,-54,#N/A
