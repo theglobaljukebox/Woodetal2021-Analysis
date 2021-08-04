@@ -8,3 +8,7 @@ token.pickle
 global-jukebox.Rproj
 .Rhistory
 .Rapp.history
+writing/
+phylogenetic_analysis/
+*.pdf
+*.html

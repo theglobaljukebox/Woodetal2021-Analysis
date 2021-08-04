@@ -1,8 +1,8 @@
 # This script creates the codings for Carol Ember's recoding of Lomax's Subsistience
 # Categories from Social Strain
 
-library(dplyr)
-library(tidyr)
+suppressMessages(library(dplyr))
+suppressMessages(library(tidyr))
 
 ea = read.csv('https://raw.githubusercontent.com/D-PLACE/dplace-data/master/datasets/EA/data.csv')
 ea_w = pivot_wider(ea[,c("var_id", "code", "soc_id", "year")], 
@@ -34,7 +34,7 @@ code_1 = ea_w$EA004 < 4 &
           ((ea_w$EA001 >= 4 & ea_w$EA001 >= ea_w$EA002 & ea_w$EA003 - ea_w$EA001 <= 1) |
           (ea_w$EA001 < 4 & ea_w$EA001 > ea_w$EA002 & ea_w$EA001 > ea_w$EA003))
 
-table(code_1)
+# table(code_1)
 
 # add test case
 idx = which(coded_data$soc_id == "Aa4")
@@ -57,7 +57,7 @@ code_2 = ea_w$EA004 < 4 &
   apply(ea_w[,c("EA001", "EA002", "EA003")], 1, max) > apply(ea_w[,c("EA004", "EA005")], 1, max) &
   code_1 != TRUE
 
-table(code_2)
+# table(code_2)
 
 idx = which(coded_data$soc_id == "Aa2")
 if(code_2[idx]){
@@ -83,7 +83,7 @@ code_3 = (ea_w$EA040 %in% 1:3 &
              ea_w$EA003 < 3 & 
              ea_w$EA028 == 4)
 
-table(code_3)
+# table(code_3)
 
 idx = which(coded_data$soc_id == "Ab16")
 if(code_3[idx]){
@@ -105,7 +105,7 @@ code_4 = ea_w$EA040 > 2 &
              ea_w$EA028 == 3 | 
              (ea_w$EA028 == 4 & ea_w$EA003 < 3))
   
-table(code_4)
+# table(code_4)
 
 idx = which(coded_data$soc_id == "Aa6")
 if(code_4[idx]){
@@ -138,7 +138,7 @@ code_6 = ea_w$EA040 > 1 &
           ea_w$EA028 == 4 & 
           ea_w$EA005 > 4
 
-table(code_6)
+# table(code_6)
 
 idx = which(coded_data$soc_id == "Ie14")
 if(code_6[idx]){
@@ -158,7 +158,7 @@ code_7 = ea_w$EA028 == 5 &
           ea_w$EA040 %in% c(3,7) & 
           ea_w$EA005 > 4
 
-table(code_7)
+# table(code_7)
 
 idx = which(coded_data$soc_id == "Ca12")
 if(code_7[idx]){
@@ -178,7 +178,7 @@ code_8 = ea_w$EA028 == 6 &
   ea_w$EA040 %in% c(3,7) & 
   ea_w$EA005 > 4
 
-table(code_8)
+# table(code_8)
 
 idx = which(coded_data$soc_id == "Cd12")
 if(code_8[idx]){
@@ -202,7 +202,7 @@ ea_variables = data.frame(
 
 coded_data = cbind(coded_data, ea_variables)
 
-table(coded_data$categories, useNA = "always")
+# table(coded_data$categories, useNA = "always")
 
 write.csv(coded_data, "data/ember_subsistence.csv")
 
