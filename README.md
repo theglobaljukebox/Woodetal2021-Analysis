@@ -33,6 +33,16 @@ If all is well until now, you may proceed to install dependencies
 
 `pip install -r requirements.txt`
 
+If you are on linux and run into issues installing cartopy, ensure you have the following packages installed first:
+
+```
+sudo apt-get install libproj-dev proj-data proj-bin  
+sudo apt-get install libgeos-dev  
+sudo pip install cython  
+sudo pip install cartopy  
+```
+
 After that's taken care of, launch the jupyter notebook by issuing the command:
+
 
 `jupyter notebook`
