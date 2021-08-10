@@ -2,6 +2,7 @@ suppressMessages(library(dplyr))
 suppressMessages(library(tidyr))
 library(googlesheets4)
 library(assertthat)
+library(psych)
 
 source("phylogenetic_analysis/helper.R")
 
@@ -10,11 +11,12 @@ cantometrics_modal = read.csv("output/modal_profiles.csv")
 cantometrics_modal$soc_id = as.numeric(cantometrics_modal$soc_id)
 
 cantometrics_metadata = read_sheet("https://docs.google.com/spreadsheets/d/1tb3Nip43e4LaJbglaXzcCTP2CiMyrgwIsU2egk3tfNM/edit#gid=1190601304")
+
 cantometrics_metadata$EA_code = cantometrics_metadata$`EA_cu# UPDATE` 
 cantometrics = left_join(cantometrics_modal, cantometrics_metadata, by = c("soc_id" = "society_id"))
 
 cantometrics = cantometrics %>% 
-  dplyr::select(soc_id, EA_code, line_3, line_10, line_21, line_23, line_37, 
+  dplyr::select(soc_id, EA_code, line_7, line_10, line_21, line_23, line_37, 
                 Society_latitude, Society_longitude, Glottocode, 
                 Language_family, Region, Division)
 
@@ -57,7 +59,7 @@ assert_that(all(table(model_data$society) == 1),
 
 
 # standardize musical variables convert to 0-1 scale
-model_data$line_3 = musical_conversion(model_data$line_3, c(1, 13))
+model_data$line_7 = musical_conversion(model_data$line_7, c(1, 13))
 model_data$line_10 = musical_conversion(model_data$line_10, c(1, 13))
 model_data$line_12 = musical_conversion(model_data$line_21, c(1, 13))
 model_data$line_23 = musical_conversion(model_data$line_23, c(1, 13))
@@ -65,7 +67,6 @@ model_data$line_37 = musical_conversion(model_data$line_37, c(1, 13))
 
 # Reverse code embellishment
 model_data$line_23 = 1 - model_data$line_23
-
 
 ## Standardize EA variables
 model_data$std_subsistence = model_data$subsistence / max(model_data$subsistence, na.rm = TRUE)
@@ -78,19 +79,27 @@ model_data$std_EA031 = model_data$EA031 / max(model_data$EA031, na.rm = TRUE)
 #### PCA ####
 ## Make PCA variables
 musical_complete = model_data %>% 
-  dplyr::select(soc_id, line_3, line_10, line_21, line_23, line_37) %>% 
+  dplyr::select(soc_id, line_7, line_10, line_21, line_23, line_37) %>% 
   filter(complete.cases(.))
 
 
 assert_that(sum(is.na(musical_complete[,2:6])) == 0)
 
-musical_pca = psych::principal(musical_complete[,2:6], rotate="varimax", scores = TRUE)
+jpeg('figs/musical_scree.jpeg')
+psych::scree(musical_complete[,2:6], factors = FALSE)
+dev.off()
+
+musical_pca = psych::principal(musical_complete[,2:6], rotate="varimax", scores = TRUE, nfactors = 2)
 musical_complete$musical_pc1 = musical_pca$scores[,1]
 
 social_complete = model_data %>% 
   dplyr::select(soc_id, std_subsistence, std_caste, std_slavery, std_class, 
                 std_EA033, std_EA031) %>% 
   filter(complete.cases(.))
+
+jpeg('figs/social_scree.jpeg')
+psych::scree(social_complete[,2:7], factors = FALSE)
+dev.off()
 
 social_pca = psych::principal(social_complete[,2:7], rotate = "varimax", scores = TRUE)
 social_complete$social_pc1 = social_pca$scores[,1]
