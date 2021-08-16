@@ -11,4 +11,5 @@ global-jukebox.Rproj
 writing/
 phylogenetic_analysis/
 *.pdf
-*.htmlnot_git/
+*.html
+not_git/
