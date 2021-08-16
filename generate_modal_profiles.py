@@ -5,24 +5,7 @@ import numpy as np
 from collections import *
 import math
 from statistics import mode
-
-def get_basic_modal_profiles():
-    canto_data = pd.read_csv('./data/full_cantometrics.csv').drop(columns=['Unnamed: 0'])
-    # canto_data = pd.read_csv('./output/full_cantometrics.csv')
-    features = ['line_'+str(i+1)for i in range(37)]
-    cultures = canto_data['Preferred_name'].unique()
-    columns = ['Preferred_name', 'soc_id']
-    for feature in features:
-        columns.append(feature)
-        
-    final_df = pd.DataFrame(columns = columns)
-    for culture in cultures:
-        modal_profile = dict(canto_data[canto_data['Preferred_name']==culture][features].mode().loc[0])
-        modal_profile['Preferred_name'] = culture
-        soc_id = canto_data[canto_data['Preferred_name']==culture]['society_id'].reset_index()['society_id'][0]
-        modal_profile['soc_id'] = soc_id
-        final_df = final_df.append(modal_profile, ignore_index=True)
-    final_df.to_csv('./output/basic_modal_profiles.csv')
+from progress.bar import Bar
 
 def encode(line, binary):
     with open('./data/conversion_guide.json') as f:
@@ -36,6 +19,8 @@ def encode(line, binary):
             return [code for code in codes if code]
 
 def get_single_modal_profiles():
+    
+    print("Generating Modal Profiles")
     downloaded_data = pd.read_csv('./data/downloaded_data.csv')
     
     df = downloaded_data.drop(columns=['orv_1', 'orv_2', 'ensemble_value_id',
@@ -44,7 +29,7 @@ def get_single_modal_profiles():
 
     feature_cols = ["line_"+str(i+1) for i in range(37)]
     grouped = df.groupby('society_id')
-    
+    bar = Bar('Processing', max=(len(grouped)))
     final_cols = ['soc_id', 'lat','lng', 'Preferred_name','line_1', 'line_2', 'line_3',
         'line_4', 'line_5', 'line_6', 'line_7', 'line_8', 'line_9', 'line_10',
         'line_11', 'line_12', 'line_13', 'line_14', 'line_15', 'line_16',
@@ -54,12 +39,13 @@ def get_single_modal_profiles():
         'line_35', 'line_36', 'line_37']
         
     final_df = pd.DataFrame(columns=final_cols)
+    i = 0
     for name, group in grouped:
+        i+=1
         modes = {}
         for line in feature_cols:
             line_encodings = []
             for item in group[line]:
-                print(item)
                 codes = []
                 codes = encode(line, item)
                 line_encodings.extend(codes)
@@ -71,6 +57,8 @@ def get_single_modal_profiles():
         modes["soc_id"] = name
         modes["Preferred_name"] = mode(group["Preferred_name"])
         final_df = final_df.append(modes, ignore_index=True)
+        bar.next()
+    bar.finish()
     metadata = pd.read_csv('./data/metadata.csv')
     for i, row in final_df.iterrows():
         culture = row['Preferred_name']
@@ -81,8 +69,9 @@ def get_single_modal_profiles():
             final_df.drop([i])
         final_df.loc[i, ['lat']] = lat
         final_df.loc[i, ['lng']] = lng
+    print("Saving Data")
     final_df.to_csv('./output/modal_profiles.csv')
+    print("Modal Profile saved in output/modal_profiles.csv")
     
 if __name__ == '__main__':
-    get_basic_modal_profiles()
     get_single_modal_profiles()
