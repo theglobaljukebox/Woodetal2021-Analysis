@@ -2,12 +2,9 @@ import csv
 import pandas as pd
 import json
 import numpy as np
-import matplotlib.pyplot as plt
-from collections import Counter
 from collections import *
 import math
 from statistics import mode
-
 
 def get_basic_modal_profiles():
     canto_data = pd.read_csv('./data/full_cantometrics.csv').drop(columns=['Unnamed: 0'])
@@ -62,6 +59,7 @@ def get_single_modal_profiles():
         for line in feature_cols:
             line_encodings = []
             for item in group[line]:
+                print(item)
                 codes = []
                 codes = encode(line, item)
                 line_encodings.extend(codes)
@@ -85,6 +83,6 @@ def get_single_modal_profiles():
         final_df.loc[i, ['lng']] = lng
     final_df.to_csv('./output/modal_profiles.csv')
     
-    if __name__ == '__main__':
-        get_basic_modal_profiles()
-        get_single_modal_profiles()
+if __name__ == '__main__':
+    get_basic_modal_profiles()
+    get_single_modal_profiles()

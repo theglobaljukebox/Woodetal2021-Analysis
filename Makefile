@@ -1,6 +1,8 @@
+get_data:
+	python3 download_and_format.py
+	python3 generate_modal_profiles.py
 
-
-analysis:
+analysis: data/full_cantometrics.csv
 	@echo Making data...
 	RScript correlations/make_embersubsistence.R
 	RScript correlations/make_modeldata.R
@@ -13,3 +15,6 @@ analysis:
 	RScript correlations/pca_models.R
 	@echo Making model summary table...
 	RScript correlations/model_table.R
+	
+plots: 
+	python3 plot_maps.py

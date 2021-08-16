@@ -1,3 +1,4 @@
+from __future__ import print_function
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,7 +8,6 @@ from collections import Counter
 from collections import *
 import math
 import json
-from __future__ import print_function
 import pickle
 import os.path
 from googleapiclient.discovery import build
@@ -65,7 +65,7 @@ def download_and_save():
     downloaded_data.to_csv('./data/downloaded_data.csv')
 
 
-def convert_row(input_matrix, i, feature_cols, df):
+def convert_row(input_matrix, i, df, feature_cols):
     for col, row in input_matrix.items():
         if col in feature_cols:
             for item in conversion_guide[col]:
@@ -80,7 +80,8 @@ def convert_data():
         'instrument_value_label','Unnamed: 0'])
     feature_cols = ["line_"+str(i+1) for i in range(37)]
     for i in range(len(df2)):
-        print("Converting row:", i)
+        if(i % 50 == 0):
+            print("Converting row:", i)
         convert_row(df2[i:(i+1)],i, df,feature_cols)
 
 if __name__ == '__main__':
