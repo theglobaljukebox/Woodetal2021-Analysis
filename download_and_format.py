@@ -10,6 +10,7 @@ import math
 import json
 import pickle
 import os.path
+from progress.bar import Bar
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -61,8 +62,9 @@ def download_and_save():
         if(downloaded_data.loc[0, 'canto_coding_id'] == 'song_id'):
             downloaded_data = downloaded_data.drop([0])
     except:
-        print("no error")
+        print("Downloaded data")
     downloaded_data.to_csv('./data/downloaded_data.csv')
+    print("Data saved in /data/downloaded_data.csv")
 
 
 def convert_row(input_matrix, i, df, feature_cols):
@@ -72,6 +74,7 @@ def convert_row(input_matrix, i, df, feature_cols):
                 if int(item["code"])==int(row[i]):
                     soc_id = input_matrix.loc[i, "society_id"]
                     df.loc[i,col] = item["display_code"]
+    return df
 
 def convert_data():
     df = pd.read_csv('./data/downloaded_data.csv')
@@ -79,10 +82,12 @@ def convert_data():
         'ensemble_value_label', 'instrument_value_id',
         'instrument_value_label','Unnamed: 0'])
     feature_cols = ["line_"+str(i+1) for i in range(37)]
+    bar = Bar('Converting', max=(len(df2)))
     for i in range(len(df2)):
-        if(i % 50 == 0):
-            print("Converting row:", i)
-        convert_row(df2[i:(i+1)],i, df,feature_cols)
+        df2 =  convert_row(df2[i:(i+1)],i, df2,feature_cols)
+        bar.next()
+    df2.to_csv('./data/converted_data.csv')
+    bar.finish()
 
 if __name__ == '__main__':
     download_and_save()
