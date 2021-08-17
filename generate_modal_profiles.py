@@ -48,7 +48,10 @@ def get_single_modal_profiles():
             for item in group[line]:
                 codes = []
                 codes = encode(line, item)
-                line_encodings.extend(codes)
+                try:
+                    line_encodings.extend(codes)
+                except:
+                    print("ERROR: on Cantometrics line %s in item %s in society %s" %(line, item, name))
                 try:
                     line_mode = pow(2, mode(line_encodings))
                 except:
