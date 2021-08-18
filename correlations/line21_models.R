@@ -2,7 +2,11 @@
 
 suppressMessages(library(tidyr))
 suppressMessages(library(lmerTest))
+suppressMessages(library(spaMM))
 suppressMessages(library(dplyr))
+suppressMessages(library(ape))
+suppressMessages(library(geiger))
+suppressMessages(library(phylolm))
 library(ggplot2)
 source("correlations/helper.R")
 
@@ -30,6 +34,59 @@ out_line = model_output(list(fit.21.1.3, fit.21.2.3, fit.21.3.3), "std_EA031", "
 
 write.csv(out_line, "correlations/results/line21.csv")
 
+### More complex models
+## Linguistic model
+tree = read.tree('data/super_tree.nwk')
+data.21LF = data.21[!duplicated(data.21$Glottocode),]
+rownames(data.21LF) = data.21LF$Glottocode
+pruned = treedata(phy = tree, data = data.21LF)
+pruned_data = data.frame(pruned$data)
+pruned_data$line_21 = as.numeric(pruned_data$line_21)
+pruned_data$std_EA031 = as.numeric(pruned_data$std_EA031)
+pruned_data$Society_latitude = as.numeric(pruned_data$Society_latitude)
+pruned_data$Society_longitude = as.numeric(pruned_data$Society_longitude)
+pruned_tree = pruned$phy
+
+# Standardize branch lengths
+pruned_tree$edge.length = pruned_tree$edge.length / max(pruned_tree$edge.length)
+
+phylo_model = phylolm(formula = line_21 ~ std_EA031, 
+                      data = pruned_data, 
+                      phy = pruned_tree, 
+                      model = "lambda")
+phylo_summary = summary(phylo_model)
+
+## Spatial model
+spatial_model = fitme(
+  line_21 ~ std_EA031 + Matern(1 | Society_longitude + Society_latitude),
+  data = pruned_data,
+  fixed = list(nu = 0.5), 
+  method="REML")
+
+spatial_summary = summary(spatial_model)
+
+sp_aic = AIC(spatial_model)
+
+spatial_line = c(
+  "line_21 ~ std_EA031",
+  round(fixef(spatial_model),2), 
+  round(pt(spatial_summary$beta_table[,3], nrow(data.21) - 5, lower.tail = FALSE)),
+  sp_aic[1])
+names(spatial_line) = c("model", "Intercept", "Beta", 
+                        "intercept-p", "beta-p",
+                        "AIC")
+
+phylo_line = c(
+  "line_21 ~ std_EA031",
+  round(phylo_summary$coefficients[,1],2), 
+  phylo_summary$coefficients[,4],
+  AIC(phylo_model)
+)
+names(phylo_line) = c("model", "Intercept", "Beta", 
+                      "intercept-p", "beta-p",
+                      "AIC")
+
+write.csv(rbind(spatial_line, phylo_line), file = "correlations/results/complex_line21.csv")
 
 # plot of effect
 data.21$fit <- predict(fit.21.3.3)   

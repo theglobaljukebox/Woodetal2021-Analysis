@@ -2,7 +2,11 @@
 
 suppressMessages(library(lmerTest))
 suppressMessages(library(tidyr))
+suppressMessages(library(spaMM))
 suppressMessages(library(dplyr))
+suppressMessages(library(ape))
+suppressMessages(library(geiger))
+suppressMessages(library(phylolm))
 library(ggplot2)
 source("correlations/helper.R")
 
@@ -30,6 +34,60 @@ out_line = model_output(list(fit.23.1.3, fit.23.2.3, fit.23.3.3),
                         "CV23 ~ Class + Caste + Slavery")
 
 write.csv(out_line, "correlations/results/line23.csv")
+
+### More complex models
+## Linguistic model
+tree = read.tree('data/super_tree.nwk')
+data.23LF = data.23[!duplicated(data.23$Glottocode),]
+rownames(data.23LF) = data.23LF$Glottocode
+pruned = treedata(phy = tree, data = data.23LF)
+pruned_data = data.frame(pruned$data)
+pruned_data$line_23 = as.numeric(pruned_data$line_23)
+pruned_data$std_class = as.numeric(pruned_data$std_class)
+pruned_data$std_caste = as.numeric(pruned_data$std_caste)
+pruned_data$std_slavery = as.numeric(pruned_data$std_slavery)
+pruned_data$Society_latitude = as.numeric(pruned_data$Society_latitude)
+pruned_data$Society_longitude = as.numeric(pruned_data$Society_longitude)
+pruned_tree = pruned$phy
+
+# Standardize branch lengths
+pruned_tree$edge.length = pruned_tree$edge.length / max(pruned_tree$edge.length)
+
+phylo_model = phylolm(formula = line_23 ~ std_class + std_caste + std_slavery, 
+                      data = pruned_data, 
+                      phy = pruned_tree, 
+                      model = "lambda")
+phylo_summary = summary(phylo_model)
+
+## Spatial model
+spatial_model = fitme(
+  line_23 ~ std_class + std_caste + std_slavery + Matern(1 | Society_longitude + Society_latitude),
+  data = pruned_data,
+  fixed = list(nu = 0.5), 
+  method="REML")
+
+spatial_summary = summary(spatial_model)
+
+sp_aic = AIC(spatial_model)
+
+# DF for p values are difficult w Random effects.
+# Here we calculate df as n data points - n fixed effects - 4
+spatial_line = c(
+  "line_23 ~ std_class + std_caste + std_slavery",
+  round(fixef(spatial_model),2), 
+  round(pt(spatial_summary$beta_table[,3], nrow(data.23) - 7, lower.tail = FALSE)),
+  sp_aic[1])
+names(spatial_line) = c("model", "Intercept", "class", "caste", "slavery", "intercept-p", "class-p", "caste-p", "slavery-p", "AIC")
+
+phylo_line = c(
+  "line_23 ~ std_class + std_caste + std_slavery",
+  round(phylo_summary$coefficients[,1],2), 
+  phylo_summary$coefficients[,4],
+  AIC(phylo_model)
+)
+names(phylo_line) = c("model", "Intercept", "class", "caste", "slavery", "intercept-p", "class-p", "caste-p", "slavery-p", "AIC")
+
+write.csv(rbind(spatial_line, phylo_line), file = "correlations/results/complex_line23.csv")
 
 # plot of effect
 data.23$fit <- predict(fit.23.3.3) # Add model fits to dataframe

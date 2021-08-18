@@ -1,10 +1,15 @@
 ## This file contains the modelling for the PCA variables
 
-suppressMessages(library(dplyr))
+suppressMessages(library(tidyr))
 suppressMessages(library(lmerTest))
+suppressMessages(library(spaMM))
+suppressMessages(library(dplyr))
+suppressMessages(library(ape))
+suppressMessages(library(geiger))
+suppressMessages(library(phylolm))
 library(ggplot2)
-library(grid)
-source('correlations/helper.R')
+source("correlations/helper.R")
+
 
 model_df = read.csv(file = "data/cantometrics_ethnographicatlas.csv")
 
@@ -17,7 +22,7 @@ model_df = model_df[model_df$Language_family %in% names(tt)[tt_idx],]
 # n_distinct(model_df$Division)
 
 model_pca = model_df %>% 
-  dplyr::select(musical_pc1, social_pc1, Language_family, Division, EA_code, EA031) %>% 
+  dplyr::select(musical_pc1, social_pc1, Language_family, Division, EA_code, EA031, Glottocode, Society_latitude, Society_longitude) %>% 
   na.omit()
   
 fit.1 = lm(musical_pc1 ~ 1, data = model_pca)
@@ -43,6 +48,60 @@ out_line = model_output(list(fit.2, fit.3, fit.4),
 
 
 write.csv(out_line, "correlations/results/pca.csv")
+
+### More complex models
+## Linguistic model
+tree = read.tree('data/super_tree.nwk')
+model_pcaLF = model_pca[!duplicated(model_pca$Glottocode),]
+rownames(model_pcaLF) = model_pcaLF$Glottocode
+pruned = treedata(phy = tree, data = model_pcaLF)
+pruned_data = data.frame(pruned$data)
+pruned_data$musical_pc1 = as.numeric(pruned_data$musical_pc1)
+pruned_data$social_pc1 = as.numeric(pruned_data$social_pc1)
+pruned_data$Society_latitude = as.numeric(pruned_data$Society_latitude)
+pruned_data$Society_longitude = as.numeric(pruned_data$Society_longitude)
+pruned_tree = pruned$phy
+
+# Standardize branch lengths
+pruned_tree$edge.length = pruned_tree$edge.length / max(pruned_tree$edge.length)
+
+phylo_model = phylolm(formula = musical_pc1 ~ social_pc1, 
+                      data = pruned_data, 
+                      phy = pruned_tree, 
+                      model = "lambda")
+phylo_summary = summary(phylo_model)
+
+## Spatial model
+spatial_model = fitme(
+  musical_pc1 ~ social_pc1 + Matern(1 | Society_longitude + Society_latitude),
+  data = pruned_data,
+  fixed = list(nu = 0.5), 
+  method="REML")
+
+spatial_summary = summary(spatial_model)
+
+sp_aic = AIC(spatial_model)
+
+spatial_line = c(
+  "musical_pc1 ~ social_pc1",
+  round(fixef(spatial_model),2), 
+  round(pt(spatial_summary$beta_table[,3], nrow(model_pca) - 5, lower.tail = FALSE)),
+  sp_aic[1])
+names(spatial_line) = c("model", "Intercept", "Beta", 
+                        "intercept-p", "beta-p",
+                        "AIC")
+
+phylo_line = c(
+  "line_21 ~ std_EA031",
+  round(phylo_summary$coefficients[,1],2), 
+  phylo_summary$coefficients[,4],
+  AIC(phylo_model)
+)
+names(phylo_line) = c("model", "Intercept", "Beta", 
+                      "intercept-p", "beta-p",
+                      "AIC")
+
+write.csv(rbind(spatial_line, phylo_line), file = "correlations/results/complex_line21.csv")
 
 # Random slopes plot
 new_data = model_pca %>% 
