@@ -27,12 +27,12 @@ data.21 = big_languagefamilies %>%
 #### Continuous + RE ####
 
 fit.21.1.3 = lm(line_21 ~ std_EA031, data = data.21)
-fit.21.2.3 = lmer(line_21 ~ std_EA031 + (1|Language_family), data = data.21)
-fit.21.3.3 = lmer(line_21 ~ std_EA031 + (1|Division), data = data.21)
 
-out_line = model_output(list(fit.21.1.3, fit.21.2.3, fit.21.3.3), "std_EA031", "CV21 ~ EA031")
-
-write.csv(out_line, "correlations/results/line21.csv")
+bivariate_line = c(
+  "line_21 ~ std_EA031",
+  round(coef(fit.21.1.3),2), 
+  summary(fit.21.1.3)$coefficients[,4],
+  round(AIC(fit.21.1.3), 2))
 
 ### More complex models
 ## Linguistic model
@@ -86,7 +86,8 @@ names(phylo_line) = c("model", "Intercept", "Beta",
                       "intercept-p", "beta-p",
                       "AIC")
 
-write.csv(rbind(spatial_line, phylo_line), file = "correlations/results/complex_line21.csv")
+write.csv(rbind(bivariate_line, spatial_line, phylo_line), 
+          file = "correlations/results/complex_line21.csv")
 
 # plot of effect
 data.21$fit <- predict(fit.21.3.3)   

@@ -19,15 +19,15 @@ big_languagefamilies = model_df[model_df$Language_family %in% names(tt)[tt_idx],
 data.7 = big_languagefamilies %>% 
   drop_na(line_7, std_EA033)
 
-#### Continuous + RE ####
+#### Models ####
 
 fit.4.0 = lm(line_7 ~ std_EA033, data = data.7)
-fit.4.1 = lmer(line_7 ~ std_EA033 + (1|Language_family), data = data.7)
-fit.4.2 = lmer(line_7 ~ std_EA033 + (1|Division), data = data.7)
 
-out_line = model_output(list(fit.4.0, fit.4.1, fit.4.2), "std_EA033", "CV7 ~ EA033")
-
-write.csv(out_line, "correlations/results/line7.csv")
+bivariate_line = c(
+  "line_7 ~ std_EA033",
+  round(coef(fit.4.0),2), 
+  summary(fit.4.0)$coefficients[,4],
+  round(AIC(fit.4.0), 2))
 
 ### More complex models
 ## Linguistic model
@@ -80,7 +80,10 @@ phylo_line = c(
 names(phylo_line) = c("model", "Intercept", "Beta", 
                       "intercept-p", "beta-p",
                       "AIC")
-write.csv(rbind(spatial_line, phylo_line), file = "correlations/results/complex_line7.csv")
+
+
+write.csv(rbind(bivariate_line, spatial_line, phylo_line), file = "correlations/results/complex_line7.csv")
+
 
 # plot of effect
 data.7$fit <- predict(fit.4.2)   

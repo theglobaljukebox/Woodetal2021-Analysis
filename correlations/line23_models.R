@@ -26,14 +26,12 @@ data.23 = big_languagefamilies %>%
 
 #### Continuous + RE ####
 fit.23.1.3 = lm(line_23 ~ std_class + std_caste + std_slavery, data = data.23)
-fit.23.2.3 = lmer(line_23 ~ std_class + std_caste + std_slavery + (1|Language_family), data = data.23)
-fit.23.3.3 = lmer(line_23 ~ std_class + std_caste + std_slavery + (1|Division), data = data.23)
 
-out_line = model_output(list(fit.23.1.3, fit.23.2.3, fit.23.3.3),
-                        c("std_class", "std_caste", "std_slavery"),
-                        "CV23 ~ Class + Caste + Slavery")
-
-write.csv(out_line, "correlations/results/line23.csv")
+bivariate_line = c(
+  "line_23 ~ std_class + std_caste + std_slavery",
+  round(coef(fit.23.1.3),2), 
+  summary(fit.23.1.3)$coefficients[,4],
+  round(AIC(fit.23.1.3), 2))
 
 ### More complex models
 ## Linguistic model
@@ -87,7 +85,8 @@ phylo_line = c(
 )
 names(phylo_line) = c("model", "Intercept", "class", "caste", "slavery", "intercept-p", "class-p", "caste-p", "slavery-p", "AIC")
 
-write.csv(rbind(spatial_line, phylo_line), file = "correlations/results/complex_line23.csv")
+write.csv(rbind(bivariate_line, spatial_line, phylo_line), 
+          file = "correlations/results/complex_line23.csv")
 
 # plot of effect
 data.23$fit <- predict(fit.23.3.3) # Add model fits to dataframe
