@@ -83,42 +83,35 @@ model_data$std_EA031 = model_data$EA031 / max(model_data$EA031, na.rm = TRUE)
 
 #### PCA ####
 ## Make PCA variables
-musical_complete = model_data %>% 
-  dplyr::select(soc_id, line_7, line_10, line_21, line_23, line_37) %>% 
-  filter(complete.cases(.))
-
-
-assert_that(sum(is.na(musical_complete[,2:6])) == 0)
-
-jpeg('figs/musical_scree.jpeg')
-psych::scree(musical_complete[,2:6], factors = FALSE)
-dev.off()
-
-musical_pca = psych::principal(musical_complete[,2:6], rotate="varimax", scores = TRUE, nfactors = 1)
-musical_complete$musical_pc1 = musical_pca$scores[,1]
-
-social_complete = model_data %>% 
-  dplyr::select(soc_id, std_subsistence, std_caste, std_slavery, std_class, 
+pca_data = model_data %>% 
+  dplyr::select(soc_id, line_7, line_10, line_21, line_23, line_37,
+                std_subsistence, std_caste, std_slavery, std_class,
                 std_EA033, std_EA031) %>% 
   filter(complete.cases(.))
 
-jpeg('figs/social_scree.jpeg')
-psych::scree(social_complete[,2:7], factors = FALSE)
+
+assert_that(sum(is.na(pca_data[,2:6])) == 0)
+
+jpeg('figs/musical_scree.jpeg')
+psych::scree(pca_data[,2:6], factors = FALSE)
 dev.off()
 
-social_pca = psych::principal(social_complete[,2:7], rotate = "varimax", scores = TRUE, nfactors = 2)
-social_complete$social_pc1 = social_pca$scores[,1]
+musical_pca = psych::principal(pca_data[,2:6], rotate="varimax", scores = TRUE, nfactors = 1)
+pca_data$musical_pc1 = musical_pca$scores[,1]
 
-all(table(musical_complete$soc_id) == 1)
-all(table(social_complete$soc_id) == 1)
+jpeg('figs/social_scree.jpeg')
+psych::scree(pca_data[,2:7], factors = FALSE)
+dev.off()
 
-model_data = left_join(model_data, musical_complete[,c("soc_id", "musical_pc1")], by = "soc_id") %>% 
-  left_join(., social_complete[,c("soc_id", "social_pc1")], by = "soc_id")
+social_pca = psych::principal(pca_data[,2:7], rotate = "varimax", scores = TRUE, nfactors = 1)
+pca_data$social_pc1 = social_pca$scores[,1]
+
+all(table(pca_data$soc_id) == 1)
+all(table(pca_data$soc_id) == 1)
+
+model_data = left_join(model_data, pca_data[,c("soc_id", "musical_pc1", "social_pc1")], by = "soc_id") 
 
 assert_that(all(table(model_data$soc_id) == 1), 
             msg = "All societies should only occur once")
-
-# Reverse the scale of the Musical PCA 
-model_data$musical_pc1 = model_data$musical_pc1 * -1
 
 write.csv(model_data, "data/cantometrics_ethnographicatlas.csv")
