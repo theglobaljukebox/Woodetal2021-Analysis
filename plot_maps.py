@@ -197,5 +197,5 @@ def plot_ea_data(line_title, color_name, vname):
 if __name__ == '__main__':
     plot_pca_data('musical_pc1', 'Musical PC1')
     plot_pca_data('social_pc1', 'Social PC1')
-    plot_cantometrics_data(23, "Embellishment")
-    plot_ea_data("Social Layering","stratification_col", "Social Factors")
+    # plot_cantometrics_data(23, "Embellishment")
+    # plot_ea_data("Social Layering","stratification_col", "Social Factors")
