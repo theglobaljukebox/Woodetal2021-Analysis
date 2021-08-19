@@ -8,6 +8,7 @@ suppressMessages(library(ape))
 suppressMessages(library(geiger))
 suppressMessages(library(phylolm))
 library(ggplot2)
+library(grid)
 source("correlations/helper.R")
 
 
@@ -25,29 +26,6 @@ model_pca = model_df %>%
   dplyr::select(musical_pc1, social_pc1, Language_family, Division, EA_code, EA031, Glottocode, Society_latitude, Society_longitude) %>% 
   na.omit()
   
-fit.1 = lm(musical_pc1 ~ 1, data = model_pca)
-
-fit.2 = lm(musical_pc1 ~ social_pc1, data = model_pca)
-
-fit.3 = lmer(musical_pc1 ~ social_pc1 + (1|Language_family), data = model_pca)
-
-fit.4 = lmer(musical_pc1 ~ social_pc1 + (1|Division), data = model_pca)
-
-fit.5 = lmer(musical_pc1 ~ social_pc1 + (1|Division) + 
-               (social_pc1|Division), data = model_pca)
-
-
-# AIC(fit.1, fit.2, fit.3, fit.4, fit.5)
-
-# summary(fit.4)
-
-## output
-out_line = model_output(list(fit.2, fit.3, fit.4),
-                        "social_pc1",
-                        "Musical PC1 ~ Social PC1")
-
-
-write.csv(out_line, "correlations/results/pca.csv")
 
 ### More complex models
 ## Linguistic model
@@ -82,6 +60,15 @@ spatial_summary = summary(spatial_model)
 
 sp_aic = AIC(spatial_model)
 
+# bivariate model
+fit.2 = lm(musical_pc1 ~ social_pc1, data = pruned_data)
+
+bivariate_line = c(
+  "musical_pc1 ~ social_pc1",
+  round(coef(fit.2),2), 
+  summary(fit.2)$coefficients[,4],
+  round(AIC(fit.2), 2))
+
 spatial_line = c(
   "musical_pc1 ~ social_pc1",
   round(fixef(spatial_model),2), 
@@ -101,14 +88,17 @@ names(phylo_line) = c("model", "Intercept", "Beta",
                       "intercept-p", "beta-p",
                       "AIC")
 
-write.csv(rbind(spatial_line, phylo_line), file = "correlations/results/complex_line21.csv")
+
+output = data.frame(rbind(bivariate_line, spatial_line, phylo_line))
+output$n = nrow(pruned_data)
+write.csv(output, file = "correlations/results/complex_pca.csv")
 
 # Random slopes plot
 new_data = model_pca %>% 
   filter(Division %in% c("East Africa", "Melanesia", "Southern Europe", "Island S E Asia",
                          "United States"))
 
-new_data$fit = predict(fit.5, new_data)
+new_data$fit = predict(fit.2, new_data)
 
 plot_1 = ggplot(model_pca,  aes(y = musical_pc1, x = social_pc1)) + 
   theme(legend.position = "bottom",

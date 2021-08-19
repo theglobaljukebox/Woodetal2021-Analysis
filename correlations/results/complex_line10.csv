@@ -1,0 +1,4 @@
+"","V1","X.Intercept.","std_subsistence","X.Intercept..1","std_subsistence.1","V6","n"
+"bivariate_line","line_10 ~ std_subsistence","0.74","-0.49","6.84047336387698e-37","2.31146809740087e-10","104.82",231
+"spatial_line","line_10 ~ std_subsistence","0.68","-0.4","0","1","94.7511325809751",231
+"phylo_line","line_10 ~ std_subsistence","0.73","-0.43","2.09495153202861e-32","3.24879404561988e-07","100.306712616164",231

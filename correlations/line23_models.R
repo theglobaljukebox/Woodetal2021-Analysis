@@ -25,14 +25,6 @@ data.23 = big_languagefamilies %>%
   drop_na(line_23, std_class, std_caste, std_slavery)
 
 #### Continuous + RE ####
-fit.23.1.3 = lm(line_23 ~ std_class + std_caste + std_slavery, data = data.23)
-
-bivariate_line = c(
-  "line_23 ~ std_class + std_caste + std_slavery",
-  round(coef(fit.23.1.3),2), 
-  summary(fit.23.1.3)$coefficients[,4],
-  round(AIC(fit.23.1.3), 2))
-
 ### More complex models
 ## Linguistic model
 tree = read.tree('data/super_tree.nwk')
@@ -68,6 +60,15 @@ spatial_summary = summary(spatial_model)
 
 sp_aic = AIC(spatial_model)
 
+# Bivariate model
+fit.23.1.3 = lm(line_23 ~ std_class + std_caste + std_slavery, data = pruned_data)
+
+bivariate_line = c(
+  "line_23 ~ std_class + std_caste + std_slavery",
+  round(coef(fit.23.1.3),2), 
+  summary(fit.23.1.3)$coefficients[,4],
+  round(AIC(fit.23.1.3), 2))
+
 # DF for p values are difficult w Random effects.
 # Here we calculate df as n data points - n fixed effects - 4
 spatial_line = c(
@@ -85,107 +86,78 @@ phylo_line = c(
 )
 names(phylo_line) = c("model", "Intercept", "class", "caste", "slavery", "intercept-p", "class-p", "caste-p", "slavery-p", "AIC")
 
-write.csv(rbind(bivariate_line, spatial_line, phylo_line), 
+output = data.frame(rbind(bivariate_line, spatial_line, phylo_line))
+output$n = nrow(pruned_data)
+
+write.csv(output, 
           file = "correlations/results/complex_line23.csv")
 
 # plot of effect
-data.23$fit <- predict(fit.23.3.3) # Add model fits to dataframe
 
-intercept_data = data.frame(std_class = 0,
-                            std_caste = 0,
-                            std_slavery = 0,
-                            Division = unique(data.23$Division))
-
-intercept_data$intercept = predict(fit.23.3.3, intercept_data)
-
-# Line data
-# vector of high medium and low settings for all variables
-# 
-# Class plot
-new_data = data.frame(std_class = rep(seq(0, 1, length.out = 25), 4),
-                      std_caste = rep(c(0, 1, 0, 1), 25),
-                      std_slavery = rep(c(0, 0, 1, 1), 25),
-                      Division = rep("East Africa", 100))
-
-rankings = data.frame(std_caste = c(0, 1, 0, 1),
-                      std_slavery = c(0, 0, 1, 1),
-                      label = c("Low-Low", "High-Low", "Low-High", 
-                      "High-High"))
-
-new_data = left_join(new_data, rankings, 
-                     by = c("std_caste", "std_slavery"))
-
-new_data$fit = predict(fit.23.3.3, new_data)
-
-plot_1 = ggplot(data.23,  aes(y = line_23, x = std_class)) + 
-  geom_point(aes(y=fit, x = -0.05, group = Language_family), 
-             size=3, alpha = 0.5, pch = "_", col = "#CF4520") +
+plot_1 = ggplot(pruned_data, aes(y = line_23, 
+                                 x = std_class)) + 
   geom_jitter(alpha = 0.3, width = 0.02, height = 0.02) + 
-  geom_line(aes(y = fit, col = label), data = new_data) + 
-  scale_color_discrete(name = "Caste - Slavery") +
+  ## high-high
+  geom_abline(aes(intercept=0.1 + 0.25 + 0.07,slope=0.18, col = "High-High")) +
+  ## High-low
+  geom_abline(aes(intercept=0.1 + 0.25,slope=0.18, col = "High-Low")) +
+  ## Low-High
+  geom_abline(aes(intercept=0.1 + 0.07,slope=0.18, col = "Low-High")) +
+  ## low-low
+  geom_abline(aes(intercept=0.1,slope=0.18, col = "Low-Low")) +
   theme(legend.position = "bottom") + 
+  scale_color_manual(values = c("#E41A1C", "#377EB8", 
+                                "#4DAF4A", "#984EA3"),
+                     name = "Caste - Slavery") + 
   xlab("EA066: Maximum standardized") + 
   ylab("CV23: Maximum standardized") + 
-  ggtitle("Embellishment (CV23) vs Class (EA066)",
-          "Division:East Africa regression line")
+  ggtitle("Embellishment (CV23) vs Class (EA066)")
 
-ggsave('figs/line23class_modelplot.png', plot_1)
-
-# Caste plot
-new_data = data.frame(std_caste = rep(seq(0, 1, length.out = 25), 4),
-                      std_class = rep(c(0, 1, 0, 1), 25),
-                      std_slavery = rep(c(0, 0, 1, 1), 25),
-                      Division = rep("East Africa", 100))
-
-rankings = data.frame(std_class= c(0, 1, 0, 1),
-                      std_slavery = c(0, 0, 1, 1),
-                      label = c("Low-Low", "High-Low", "Low-High", 
-                                "High-High"))
-
-new_data = left_join(new_data, rankings, 
-                     by = c("std_class", "std_slavery"))
-
-new_data$fit = predict(fit.23.3.3, new_data)
-
-plot_2 = ggplot(data.23,  aes(y = line_23, x = std_caste)) + 
-  geom_point(aes(y=fit, x = -0.05, group = Language_family), 
-             size=3, alpha = 0.5, pch = "_", col = "#CF4520") +
+plot_2 = ggplot(pruned_data, aes(y = line_23, 
+                                 x = std_caste)) + 
   geom_jitter(alpha = 0.3, width = 0.02, height = 0.02) + 
-  geom_line(aes(y = fit, col = label), data = new_data) + 
-  scale_color_discrete(name = "Class - Slavery") + 
+  ## high-high
+  geom_abline(aes(intercept=0.1 + 0.18 + 0.07,slope=0.25, col = "High-High")) +
+  ## High-low
+  geom_abline(aes(intercept=0.1 + 0.18,slope=0.25, col = "High-Low")) +
+  ## Low-High
+  geom_abline(aes(intercept=0.1 + 0.07,slope=0.25, col = "Low-High")) +
+  ## low-low
+  geom_abline(aes(intercept=0.1,slope=0.25, col = "Low-Low")) +
   theme(legend.position = "bottom") + 
+  scale_color_manual(values = c("#E41A1C", "#377EB8", 
+                                "#4DAF4A", "#984EA3"),
+                     name = "Class - Slavery") + 
   xlab("EA068: Maximum standardized") + 
   ylab("CV23: Maximum standardized") + 
   ggtitle("Embellishment (CV23) vs Caste (EA068)")
 
-ggsave('figs/line23caste_modelplot.png', plot_2)
-
-## Slavery
-new_data = data.frame(std_slavery = rep(seq(0, 1, length.out = 25), 4),
-                      std_class = rep(c(0, 1, 0, 1), 25),
-                      std_caste = rep(c(0, 0, 1, 1), 25),
-                      Division = rep("East Africa", 100))
-
-rankings = data.frame(std_class= c(0, 1, 0, 1),
-                      std_caste = c(0, 0, 1, 1),
-                      label = c("Low-Low", "High-Low", "Low-High", 
-                                "High-High"))
-
-new_data = left_join(new_data, rankings, 
-                     by = c("std_class", "std_caste"))
-
-new_data$fit = predict(fit.23.3.3, new_data)
-
-plot_3 = ggplot(data.23,  aes(y = line_23, x = std_slavery)) + 
-  geom_point(aes(y=fit, x = -0.05, group = Language_family), 
-             size=3, alpha = 0.5, pch = "_", col = "#CF4520") +
+plot_3 = ggplot(pruned_data, aes(y = line_23, 
+                                 x = std_slavery)) + 
   geom_jitter(alpha = 0.3, width = 0.02, height = 0.02) + 
-  geom_line(aes(y = fit, col = label), data = new_data) + 
-  scale_color_discrete(name = "Class - Caste") + 
+  ## high-high
+  geom_abline(aes(intercept=0.1 + 0.18 + 0.25,slope=0.07, col = "High-High")) +
+  ## High-low
+  geom_abline(aes(intercept=0.1 + 0.18,slope=0.07, col = "High-Low")) +
+  ## Low-High
+  geom_abline(aes(intercept=0.1 + 0.25,slope=0.07, col = "Low-High")) +
+  ## low-low
+  geom_abline(aes(intercept=0.1,slope=0.07, col = "Low-Low")) +
   theme(legend.position = "bottom") + 
+  scale_color_manual(values = c("#E41A1C", "#377EB8", 
+                                "#4DAF4A", "#984EA3"),
+                     name = "Class - Slavery") + 
   xlab("EA070: Maximum standardized") + 
   ylab("CV23: Maximum standardized") + 
   ggtitle("Embellishment (CV23) vs Slavery (EA070)")
 
 
+ggsave('figs/line23class_modelplot.png', plot_1)
+
+
+ggsave('figs/line23caste_modelplot.png', plot_2)
+
+
 ggsave('figs/line23slavery_modelplot.png', plot_3)
+
+pt(spatial_summary$beta_table[,3], nrow(data.23) - 7, lower.tail = FALSE)

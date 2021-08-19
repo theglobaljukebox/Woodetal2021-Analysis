@@ -18,3 +18,4 @@ analysis: data/full_cantometrics.csv
 	
 plots: 
 	python3 plot_maps.py
+	RScript supplementary_maps.R

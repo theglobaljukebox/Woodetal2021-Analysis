@@ -93,17 +93,26 @@ pca_data = model_data %>%
 assert_that(sum(is.na(pca_data[,2:6])) == 0)
 
 jpeg('figs/musical_scree.jpeg')
-psych::scree(pca_data[,2:6], factors = FALSE)
+psych::scree(pca_data[,c("line_7", "line_10", "line_21", 
+                         "line_23", "line_37")], factors = FALSE)
 dev.off()
 
-musical_pca = psych::principal(pca_data[,2:6], rotate="varimax", scores = TRUE, nfactors = 1)
+musical_pca = psych::principal(pca_data[,c("line_7", "line_10", "line_21", 
+                                           "line_23", "line_37")], 
+                               rotate="varimax", 
+                               scores = TRUE, 
+                               nfactors = 1)
 pca_data$musical_pc1 = musical_pca$scores[,1]
 
 jpeg('figs/social_scree.jpeg')
-psych::scree(pca_data[,2:7], factors = FALSE)
+psych::scree(pca_data[,c("std_subsistence", "std_caste", 
+                         "std_slavery", "std_class",
+                         "std_EA033", "std_EA031")], factors = FALSE)
 dev.off()
 
-social_pca = psych::principal(pca_data[,2:7], rotate = "varimax", scores = TRUE, nfactors = 1)
+social_pca = psych::principal(pca_data[,c("std_subsistence", "std_caste", 
+                                          "std_slavery", "std_class",
+                                          "std_EA033", "std_EA031")], rotate = "varimax", scores = TRUE, nfactors = 1)
 pca_data$social_pc1 = social_pca$scores[,1]
 
 all(table(pca_data$soc_id) == 1)

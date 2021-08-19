@@ -14,12 +14,8 @@ get_stats = function(object, var, rr = 3){
   
   bp[,2] = stars
   
-  # if(is.matrix(bp)){
-    l = paste(signif(as.numeric(bp[,1]), rr), bp[,2], sep = "")  
-    l = paste(l, collapse = "; ")
-  # } else {
-  #   l = paste(signif(bp[1], rr), " (", signif(bp[2], rr), ")", sep = "")
-  # }
+  l = paste(signif(as.numeric(bp[,1]), rr), bp[,2], sep = "")  
+  l = paste(l, collapse = "; ")
   l
 }
 
@@ -82,7 +78,6 @@ editGlottologTipLabels = function(X, nodeLabelsBy="glottoid"){
     }))
   
 }
-
 
 bind.tip<-function(tree,tip.label,edge.length=NULL,where=NULL){
   if(is.null(where)) where<-length(tree$tip)+1

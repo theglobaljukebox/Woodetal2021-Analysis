@@ -21,13 +21,6 @@ data.7 = big_languagefamilies %>%
 
 #### Models ####
 
-fit.4.0 = lm(line_7 ~ std_EA033, data = data.7)
-
-bivariate_line = c(
-  "line_7 ~ std_EA033",
-  round(coef(fit.4.0),2), 
-  summary(fit.4.0)$coefficients[,4],
-  round(AIC(fit.4.0), 2))
 
 ### More complex models
 ## Linguistic model
@@ -62,10 +55,21 @@ spatial_summary = summary(spatial_model)
 
 sp_aic = AIC(spatial_model)
 
+#### Bivariate
+fit.4.0 = lm(line_7 ~ std_EA033, data = pruned_data)
+
+bivariate_line = c(
+  "line_7 ~ std_EA033",
+  round(coef(fit.4.0),2), 
+  summary(fit.4.0)$coefficients[,4],
+  round(AIC(fit.4.0), 2))
+
+
+
 spatial_line = c(
   "line_7 ~ std_EA033",
   round(fixef(spatial_model),2), 
-  round(pt(spatial_summary$beta_table[,3], nrow(data.7) - 5, lower.tail = FALSE)),
+  round(pt(spatial_summary$beta_table[,3], nrow(pruned_data) - 5, lower.tail = FALSE)),
   sp_aic[1])
 names(spatial_line) = c("model", "Intercept", "Beta", 
                         "intercept-p", "beta-p",
@@ -81,40 +85,20 @@ names(phylo_line) = c("model", "Intercept", "Beta",
                       "intercept-p", "beta-p",
                       "AIC")
 
-
-write.csv(rbind(bivariate_line, spatial_line, phylo_line), file = "correlations/results/complex_line7.csv")
+output = data.frame(rbind(bivariate_line, spatial_line, phylo_line))
+output$n = nrow(pruned_data)
+write.csv(output, file = "correlations/results/complex_line7.csv")
 
 
 # plot of effect
-data.7$fit <- predict(fit.4.2)   
-# Add model fits to dataframe
-
-intercept_data = data.frame(std_EA033 = 0,
-                            Division = unique(data.7$Division))
-
-intercept_data$intercept = predict(fit.4.2, intercept_data)
-
-new_data = data.frame(std_EA033 = 
-                        seq(from = 0, to = 1, 
-                            length.out = 100),
-                      Division = "East Africa")
-
-new_data$fit = predict(fit.4.2, new_data)
-
-plot_1 = ggplot(data.7, aes(y = line_7, 
-                             x = std_EA033)) + 
-  geom_point(aes(y=intercept, x = 0, group = Division), 
-             size=3, alpha = 0.5, pch = "_", 
-             data = intercept_data,
-             col = "#CF4520") + 
-  ylim(c(0,1)) +
-  geom_line(aes(y = fit), data = new_data) +
+plot_1 = ggplot(pruned_data, aes(y = line_7, 
+                        x = std_EA033)) + 
   geom_jitter(alpha = 0.3, width = 0.02, height = 0.02) + 
+  geom_abline(aes(intercept=0.19,slope=0.14)) + 
   theme(legend.position = "none") + 
   xlab("EA033: Maximum standardized") + 
   ylab("CV7: Maximum standardized") + 
-  ggtitle("Musical organization of the orchestra (CV7) vs Jurisdictional hierarchy (EA033)",
-          "Division:East Africa regression line")
+  ggtitle("Musical organization of the orchestra (CV7) vs Jurisdictional hierarchy (EA033)")
 
 ggsave(filename = 'figs/line7_modelplot.png', plot = plot_1)
 

@@ -25,14 +25,6 @@ data.10 = big_languagefamilies %>%
 
 #### Continuous + RE ####
 
-fit.10.1.3 = lm(line_10 ~ std_subsistence, data = data.10)
-
-bivariate_line = c(
-  "line_10 ~ std_subsistence",
-  round(coef(fit.10.1.3),2), 
-  summary(fit.10.1.3)$coefficients[,4],
-  round(AIC(fit.10.1.3), 2))
-
 ### More complex models
 ## Linguistic model
 tree = read.tree('data/super_tree.nwk')
@@ -66,6 +58,16 @@ spatial_summary = summary(spatial_model)
 
 sp_aic = AIC(spatial_model)
 
+# Bivariate model
+
+fit.10.1.3 = lm(line_10 ~ std_subsistence, data = pruned_data)
+
+bivariate_line = c(
+  "line_10 ~ std_subsistence",
+  round(coef(fit.10.1.3),2), 
+  summary(fit.10.1.3)$coefficients[,4],
+  round(AIC(fit.10.1.3), 2))
+
 spatial_line = c(
   "line_10 ~ std_subsistence",
   round(fixef(spatial_model),2), 
@@ -85,33 +87,16 @@ names(phylo_line) = c("model", "Intercept", "Beta",
                       "intercept-p", "beta-p",
                       "AIC")
 
-write.csv(rbind(bivariate_line, spatial_line, phylo_line), file = "correlations/results/complex_line10.csv")
+output = data.frame(rbind(bivariate_line, spatial_line, phylo_line))
+output$n = nrow(pruned_data)
+write.csv(output, file = "correlations/results/complex_line10.csv")
 
 # plot of effect
-data.10$fit <- predict(fit.10.3.3)   
-# Add model fits to dataframe
 
-# intercept_data = data.frame(std_subsistence = 0,
-#                           Division = unique(data.10$Division))
-# 
-# intercept_data$intercept = predict(fit.10.3.3, intercept_data)
-
-new_data = data.frame(std_subsistence = 
-                        seq(from = 0, to = 1, 
-                            length.out = 100),
-                      Division = "East Africa")
-
-new_data$fit = predict(fit.10.1.3, new_data)
-
-plot_1 = ggplot(data.10, aes(y = line_10, 
-                              x = std_subsistence)) + 
-  # geom_point(aes(y=intercept, x = 0, group = Division), 
-  #            size = 3, alpha = 0.5, pch = "_", 
-  #            data = intercept_data, 
-  #            col = "#CF4520") + 
-  ylim(c(0,1)) +
-  geom_line(aes(y = fit), data = new_data) +
+plot_1 = ggplot(pruned_data, aes(y = line_10, 
+                                 x = std_subsistence)) + 
   geom_jitter(alpha = 0.3, width = 0.02, height = 0.02) + 
+  geom_abline(aes(intercept=0.68,slope=-0.4)) + 
   theme(legend.position = "none") + 
   xlab("Subsistence: Maximum standardized") + 
   ylab("CV10: Maximum standardized") + 

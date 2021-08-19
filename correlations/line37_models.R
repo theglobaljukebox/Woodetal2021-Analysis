@@ -25,14 +25,6 @@ data.37 = big_languagefamilies %>%
 
 #### Continuous + RE ####
 
-fit.37.1.3 = lm(line_37 ~ std_EA033, data = data.37)
-
-bivariate_line = c(
-  "line_37 ~ std_EA033",
-  round(coef(fit.37.1.3),2), 
-  summary(fit.37.1.3)$coefficients[,4],
-  round(AIC(fit.37.1.3), 2))
-
 ### More complex models
 ## Linguistic model
 tree = read.tree('data/super_tree.nwk')
@@ -66,6 +58,16 @@ spatial_summary = summary(spatial_model)
 
 sp_aic = AIC(spatial_model)
 
+
+# Bivariate 
+fit.37.1.3 = lm(line_37 ~ std_EA033, data = pruned_data)
+
+bivariate_line = c(
+  "line_37 ~ std_EA033",
+  round(coef(fit.37.1.3),2), 
+  summary(fit.37.1.3)$coefficients[,4],
+  round(AIC(fit.37.1.3), 2))
+
 spatial_line = c(
   "line_37 ~ std_EA033",
   round(fixef(spatial_model),2), 
@@ -85,41 +87,22 @@ names(phylo_line) = c("model", "Intercept", "Beta",
                       "intercept-p", "beta-p",
                       "AIC")
 
-write.csv(rbind(bivariate_line, spatial_line, phylo_line), 
+output = data.frame(rbind(bivariate_line, spatial_line, phylo_line))
+output$n = nrow(pruned_data)
+
+write.csv(output, 
           file = "correlations/results/complex_line37.csv")
 
 
 # plot of effect
-data.37$fit <- predict(fit.37.2.3)   
-# Add model fits to dataframe
 
-intercept_data = data.frame(std_EA033 = 0,
-                            Language_family = 
-                              unique(data.37$Language_family))
-
-intercept_data$intercept = predict(fit.37.2.3, intercept_data)
-
-new_data = data.frame(std_EA033 = 
-                        seq(from = 0, to = 1, 
-                            length.out = 100),
-                      Language_family = "Indo-European")
-
-new_data$fit = predict(fit.37.2.3, new_data)
-
-plot_1 = ggplot(data.37, aes(y = line_37, 
-                             x = std_EA033)) + 
-  geom_point(aes(y=intercept, x = 0, 
-                 group = Language_family), 
-             size = 3, alpha = 0.5, pch = "_", 
-             data = intercept_data, 
-             col = "#CF4520") + 
-  ylim(c(0,1)) +
-  geom_line(aes(y = fit), data = new_data) +
+plot_1 = ggplot(pruned_data, aes(y = line_37, 
+                                 x = std_EA033)) + 
   geom_jitter(alpha = 0.3, width = 0.02, height = 0.02) + 
+  geom_abline(aes(intercept=0.37,slope=0.18)) + 
   theme(legend.position = "none") + 
   xlab("EA033: Maximum standardized") + 
   ylab("CV37: Maximum standardized") + 
-  ggtitle("Enunciation (CV37) vs Jurisdictional hierarchy (EA033)",
-          "Language family:Indo-European regression line")
+  ggtitle("Enunciation (CV37) vs Jurisdictional hierarchy (EA033)")
 
 ggsave(filename = 'figs/line37_modelplot.png', plot = plot_1)

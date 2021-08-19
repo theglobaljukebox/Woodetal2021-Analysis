@@ -26,14 +26,6 @@ data.21 = big_languagefamilies %>%
 
 #### Continuous + RE ####
 
-fit.21.1.3 = lm(line_21 ~ std_EA031, data = data.21)
-
-bivariate_line = c(
-  "line_21 ~ std_EA031",
-  round(coef(fit.21.1.3),2), 
-  summary(fit.21.1.3)$coefficients[,4],
-  round(AIC(fit.21.1.3), 2))
-
 ### More complex models
 ## Linguistic model
 tree = read.tree('data/super_tree.nwk')
@@ -67,6 +59,15 @@ spatial_summary = summary(spatial_model)
 
 sp_aic = AIC(spatial_model)
 
+# Bivariate data
+fit.21.1.3 = lm(line_21 ~ std_EA031, data = pruned_data)
+
+bivariate_line = c(
+  "line_21 ~ std_EA031",
+  round(coef(fit.21.1.3),2), 
+  summary(fit.21.1.3)$coefficients[,4],
+  round(AIC(fit.21.1.3), 2))
+
 spatial_line = c(
   "line_21 ~ std_EA031",
   round(fixef(spatial_model),2), 
@@ -86,38 +87,21 @@ names(phylo_line) = c("model", "Intercept", "Beta",
                       "intercept-p", "beta-p",
                       "AIC")
 
-write.csv(rbind(bivariate_line, spatial_line, phylo_line), 
+output = data.frame(rbind(bivariate_line, spatial_line, phylo_line))
+output$n = nrow(pruned_data)
+
+write.csv(output, 
           file = "correlations/results/complex_line21.csv")
 
 # plot of effect
-data.21$fit <- predict(fit.21.3.3)   
-# Add model fits to dataframe
-
-intercept_data = data.frame(std_EA031 = 0,
-                            Division = unique(data.21$Division))
-
-intercept_data$intercept = predict(fit.21.3.3, intercept_data)
-
-new_data = data.frame(std_EA031 = 
-                        seq(from = 0, to = 1, 
-                            length.out = 100),
-                      Division = "East Africa")
-
-new_data$fit = predict(fit.21.3.3, new_data)
-
-plot_1 = ggplot(data.21, aes(y = line_21, 
-                            x = std_EA031)) + 
-  geom_point(aes(y=intercept, x = 0, group = Division), 
-             size=3, alpha = 0.5, pch = "_", 
-             data = intercept_data, col = "#CF4520") + 
-  ylim(c(0,1)) +
-  geom_line(aes(y = fit), data = new_data) +
+plot_1 = ggplot(pruned_data, aes(y = line_21, 
+                        x = std_EA031)) + 
   geom_jitter(alpha = 0.3, width = 0.02, height = 0.02) + 
+  geom_abline(aes(intercept=0.64,slope=-0.14)) + 
   theme(legend.position = "none") + 
   xlab("EA031: Maximum standardized") + 
   ylab("CV21: Maximum standardized") + 
-  ggtitle("Melodic interval size (CV21) vs Community Size (EA031)",
-          "Division:East Africa regression line")
+  ggtitle("Melodic interval size (CV21) vs Community Size (EA031)")
 
 ggsave(filename = 'figs/line21_modelplot.png', plot = plot_1)
 
