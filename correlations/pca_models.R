@@ -100,35 +100,36 @@ new_data = model_pca %>%
 
 new_data$fit = predict(fit.2, new_data)
 
-plot_1 = ggplot(model_pca,  aes(y = musical_pc1, x = social_pc1)) + 
-  theme(legend.position = "bottom",
-        plot.margin = unit(c(1,1,2,2), "lines")) + 
+plot_1 = ggplot(model_pca,  aes(y = musical_pc1, x = social_pc1))  + 
   xlab("Social complexity PC1 (~58% of variance in Ethnographic Atlas variables)") + 
-  ylab("Song style PC1 (~41% of variance in Cantometrics variables)") +
+  ylab("Song style PC1 (~45% of variance in Cantometrics variables)") +
   annotation_custom(
     grob = textGrob(label = "Low social complexity", 
                     gp = gpar(cex = 0.8)), 
     xmin = -1, xmax = -1, 
-    ymin = -2.9, ymax = -2.9) +
+    ymin = -2.8, ymax = -2.8) +
   annotation_custom(
     grob = textGrob(label = "High social complexity", 
                     gp = gpar(cex = 0.8)), 
     xmin = 1.9, xmax = 1.9, 
-    ymin = -2.9, ymax = -2.9) +
+    ymin = -2.8, ymax = -2.8) +
   annotation_custom(
     grob = textGrob(label = "High musical complexity", 
-                    gp = gpar(cex = 0.8), rot = 90), 
-    xmin = -1.8, xmax = -1.8, 
-    ymin = 2.0, ymax = 2.0) +
+                    gp = gpar(fontsize = 14), rot = 90), 
+    xmin = -1.7, xmax = -1.7, 
+    ymin = 1.8, ymax = 1.8) +
   annotation_custom(
     grob = textGrob(label = "Low musical complexity", 
-                    gp = gpar(cex = 0.8), rot = 90), 
-    xmin = -1.8, xmax = -1.8, 
+                    gp = gpar(fontsize = 14), rot = 90), 
+    xmin = -1.7, xmax = -1.7, 
     ymin = -1.5, ymax = -1.5) + 
-  geom_point(alpha = 0.3)
+  geom_point(alpha = 0.3) +
+  theme(legend.position = "bottom",
+        plot.margin = unit(c(1,1,2,2), "lines"),
+        text = element_text(size=18))
 
 gt <- ggplot_gtable(ggplot_build(plot_1))
 gt$layout$clip[gt$layout$name == "panel"] <- "off"
 grid.draw(gt)
 
-ggsave("figs/pca_randomslopesmodelplot_nolines.png", gt)
+ggsave("figs/pca_plot.png", gt, width = 10, height = 8)

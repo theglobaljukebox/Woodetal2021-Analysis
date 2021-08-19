@@ -23,9 +23,9 @@ correlations: data/full_cantometrics.csv
 interrater:
 	RScript Inter-rater reliability/GJBIRRPreReg.R
 	
-validation:
-	python  validation/src/automatic_screening.py
-	python  validation/src/interrater_agreement.py
+validate:
+	python3  validation/src/automatic_screening.py
+	python3  validation/src/interrater_agreement.py
 	
 plots: data/full_cantometrics.csv
 	python3 plot_maps.py

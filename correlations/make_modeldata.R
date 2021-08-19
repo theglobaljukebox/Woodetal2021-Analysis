@@ -62,11 +62,11 @@ assert_that(all(table(model_data$society) == 1),
 
 
 # standardize musical variables convert to 0-1 scale
-model_data$line_7 = musical_conversion(model_data$line_7, c(1, 13))
-model_data$line_10 = musical_conversion(model_data$line_10, c(1, 13))
-model_data$line_21 = musical_conversion(model_data$line_21, c(1, 13))
-model_data$line_23 = musical_conversion(model_data$line_23, c(1, 13))
-model_data$line_37 = musical_conversion(model_data$line_37, c(1, 13))
+model_data$line_7 = musical_conversion(model_data$line_7, c(1, 4, 7, 10, 13))
+model_data$line_10 = musical_conversion(model_data$line_10, c(1, 4, 7, 10, 13))
+model_data$line_21 = musical_conversion(model_data$line_21, c(1, 4, 7, 10, 13))
+model_data$line_23 = musical_conversion(model_data$line_23, c(1, 4, 7, 10, 13))
+model_data$line_37 = musical_conversion(model_data$line_37, c(1, 4, 7, 10, 13))
 
 # Reverse code embellishment
 model_data$line_23 = 1 - model_data$line_23

@@ -32,19 +32,22 @@ model_output = function(objects, var, model_label){
   out
 }
 
-musical_conversion = function(x, line_range){
-  original_values = sapply(1:max(line_range), function(z) 2^z)
-  coded_values = 1:max(line_range)
+musical_conversion = function(x, line_set){
+  original_values = sapply(line_set, function(z) 2^z)
+  coded_values = line_set
+  
   
   matched_df = data.frame(coded_values = coded_values, 
                           original_values = original_values)
+  matched_df$linear = 1:nrow(matched_df)
   
   x_df = data.frame(original_values = x)
   
   paired = dplyr::left_join(x_df, matched_df)
   
-  (paired$coded_values - 1) / (max(line_range) - 1)
+  (paired$linear - 1) / (max(paired$linear) - 1)
 }
+
 
 #' Convert glottolog tip labels
 #'

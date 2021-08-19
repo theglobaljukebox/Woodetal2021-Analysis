@@ -23,14 +23,11 @@ import pandas as pd
 
 import val_utils as utils
 
-PATH_BASE = [p for p in Path.cwd().parents if p.name == 'global-jukebox'][0]
+PATH_BASE = Path("./")
 PATH_VAL = PATH_BASE.joinpath("validation")
 PATH_DATA = PATH_VAL.joinpath("data")
 PATH_SRC = PATH_VAL.joinpath("src")
 PATH_OUT = PATH_VAL.joinpath("automatic_screening")
-
-PATH_GLOBJUK = Path("/home/johnmcbride/projects/cantometrics")
-
 
 def load_codings():
 #   df = pd.read_csv(PATH_GLOBJUK.joinpath("raw", "data.csv"))
