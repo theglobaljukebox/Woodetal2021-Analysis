@@ -1,11 +1,6 @@
 """
 Contains code for:
-    Comparing Cantometrics codings with computational analyses
-    Checking Cantometrics codings for consistency
-
-Requires:
-    f0 estimation using pYIN to be saved in numpy binary files (.npy)
-    Excel table containing cantometrics codings by two raters and their consensus ratings
+    Checking Cantometrics codings for inter-rater agreement and accuracy
 
  John M. McBride 03/2021
 
@@ -18,9 +13,8 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import numpy as np
 import pandas as pd
-import seaborn as sns
 from scipy.stats import entropy, pearsonr
-from sklearn.metrics import confusion_matrix
+import seaborn as sns
 
 from val_io import PATH_BASE, PATH_DATA, PATH_OUT
 import val_io

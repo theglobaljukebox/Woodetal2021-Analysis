@@ -3,9 +3,6 @@ Contains code for:
     Comparing Cantometrics codings with computational analyses
     Checking Cantometrics codings for consistency
 
-Requires:
-    f0 estimation using pYIN to be saved in numpy binary files (.npy)
-
  John M. McBride 02/2021
 
 """

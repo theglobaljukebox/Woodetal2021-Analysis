@@ -29,15 +29,14 @@ PATH_DATA = PATH_VAL.joinpath("data")
 PATH_SRC = PATH_VAL.joinpath("src")
 PATH_OUT = PATH_VAL.joinpath("automatic_screening")
 
-PATH_GLOBJUK = Path("/home/johnmcbride/projects/cantometrics")
 
-
+# Load full set of Cantometrics codings
 def load_codings():
-#   df = pd.read_csv(PATH_GLOBJUK.joinpath("raw", "data.csv"))
     df = pd.read_csv(PATH_BASE.joinpath("Inter-rater reliability", "canto_codings.csv"))
     return df
 
 
+# Process the data so that necessary information is easily accessible
 def process_codings(df):
     for i in range(1, 38):
         df[f"CV_{i}"] = df[f"line_{i}"].apply(utils.int_to_bin_vec)
@@ -50,10 +49,15 @@ def process_codings(df):
     return df
     
 
+# Load class segmentation data using the algorithm
+# provided by Marolt et al. 2019,
+# https://doi.org/10.3390/app9030439
 def load_segment_classes():
     return pd.read_csv(PATH_DATA.joinpath("marolt_average_segment_classes.csv"))
 
 
+# Load the melodic ranges extracted using pYIN
+# https://code.soundsoftware.ac.uk/projects/pyin
 def load_melodic_range():
     return pd.read_csv(PATH_DATA.joinpath("pYIN_melodic_range.csv"))
 
