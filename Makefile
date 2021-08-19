@@ -1,8 +1,12 @@
-get_data:
+install:
+	pip install -r requirements.txt
+	pip install -r validataion/requirements.txt
+	
+get_data: install
 	python3 download_and_format.py
 	python3 generate_modal_profiles.py
 
-analysis: data/full_cantometrics.csv
+correlations: data/full_cantometrics.csv
 	@echo Making data...
 	RScript correlations/make_embersubsistence.R
 	RScript correlations/make_modeldata.R
@@ -16,6 +20,13 @@ analysis: data/full_cantometrics.csv
 	@echo Making model summary table...
 	RScript correlations/model_table.R
 	
-plots: 
+interrater:
+	RScript Inter-rater reliability/GJBIRRPreReg.R
+	
+validation:
+	python  validation/src/automatic_screening.py
+	python  validation/src/interrater_agreement.py
+	
+plots: data/full_cantometrics.csv
 	python3 plot_maps.py
 	RScript supplementary_maps.R
