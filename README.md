@@ -1,5 +1,6 @@
-# global-jukebox
-Code/data for Wood et al. (in prep) Global Jukebox/Cantometrics launch
+# Code and Data for Wood et al. (2021)
+
+This repository contains the data and code used to create the analysis and figures in Wood et al. (2021). 
 
 GJBIRRPreReg.R contains all code for exploratory analyses used to prepare the pregistered inter-rater reliability analyses, including power analysis and prepared code for the eventual confirmatory analysis. This code reads data directly from a password-protected Google Sheet, but an Excel version of that spreadsheet as of 2020-09-04 was downloaded and uploaded for those without password access.
 
