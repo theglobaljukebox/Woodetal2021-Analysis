@@ -13,3 +13,5 @@ phylogenetic_analysis/
 *.pdf
 *.html
 not_git/
+__pycache__/
+.idea/
