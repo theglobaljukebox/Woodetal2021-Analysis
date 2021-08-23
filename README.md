@@ -1,19 +1,32 @@
 # Code and Data for Wood et al. (2021)
 
 This repository contains the data and code used to create the analysis and figures in Wood et al. (2021). 
+Data for the Global Jukebox acn be found at https://github.com/theglobaljukebox. 
 
-GJBIRRPreReg.R contains all code for exploratory analyses used to prepare the pregistered inter-rater reliability analyses, including power analysis and prepared code for the eventual confirmatory analysis. This code reads data directly from a password-protected Google Sheet, but an Excel version of that spreadsheet as of 2020-09-04 was downloaded and uploaded for those without password access.
+This repository contains code on the three analytical sections of Wood et al. (2021).
 
+1. The correlational analysis in the main text. Code under correlations/
+2. The inter-rater reliability scores in Supplementary section 5.1. Code under 'Inter-rater reliability'/
+3. The computational coding validataion in Supplementary section 6.0. Code under /validation
 
-## Running this cantometrics codebook
+Analyses can be run using the `Makefile`
 
-Before running this codebook you will need access to the Google Spreadsheets that have all the canto coding data and metadata.
+To update the data for these analyses, you will need access to the Google Spreadsheets that have all the canto coding data and metadata.
+If you have access, these can be downloaded via  `make install`
 
-Addititionally you will need to place a credentials.json that can be created using the google sheets API. This will allow you to read data from the Canto Coding Google Sheet.
+The data used for this analyses are archvied in this repository. 
 
-Place this in root of this directory, in the same level as the python notebook.
+To run the correlation analyses run `make correlations` 
+
+To run the Inter-rater reliability analyses run `make interrater`
+
+The analyses for Inter-rater reliability score relies on `GJBIRRPreReg.R`. This file contains all code for exploratory analyses used to prepare the pregistered inter-rater reliability analyses, including power analysis and prepared code for the eventual confirmatory analysis. This code reads data directly from a password-protected Google Sheet, but an Excel version of that spreadsheet as of 2020-09-04 was downloaded and uploaded for those without password access.
+
+To run the computational coding validation run `make validate`
 
 ### Installation Guide/Dependencies
+
+The analyses here is performed on a combination of python and R. Below is some notes to guide reproducing the analyses. 
 
 #### Python Version 3.4
 
@@ -42,8 +55,3 @@ sudo apt-get install libgeos-dev
 sudo pip install cython  
 sudo pip install cartopy  
 ```
-
-After that's taken care of, launch the jupyter notebook by issuing the command:
-
-
-`jupyter notebook`
