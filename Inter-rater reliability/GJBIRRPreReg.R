@@ -1,17 +1,5 @@
 #This code performs inter-rater reliability analyses for Cantometric training codings from CompMusic Lab students and with Global Jukebox codings
 
-setwd("~/Documents/Research/Publications/Unpublished/Wood et al Global Jukebox/global-jukebox")
-
-
-#This code requires installing and loading the following packages:
-#Install:
-install.packages("irr")
-install.packages("psych")
-install.packages("googlesheets4")
-install.packages("lsr")
-install.packages("pwr")
-
-
 #Load:
 library(irr)
 library(psych)
