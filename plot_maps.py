@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 import numpy as np
 import matplotlib.font_manager as font_manager
 import matplotlib.patches as mpatches
@@ -14,7 +15,6 @@ line_metadata = line_metadata.drop(columns='linenum')
 # Load conversion guide
 with open('./data/conversion_guide.json') as f:
   conversion_guide = json.load(f)
-ea = pd.read_csv('./data/ea_cantomtericsmodalprofiles_socialstrain.csv', index_col=0, na_values='NaN', keep_default_na=True).dropna()
 
 modal_profiles = pd.read_csv('./data/cantometrics_ethnographicatlas.csv', index_col=0)
 
@@ -40,7 +40,7 @@ def plot_pca_data(column_name, vname):
         else:
             x.append((float(row)+200)-345)
             
-    fig = plt.figure(figsize=(30,10))
+    fig = plt.figure(figsize=(25,10))
     projection=ccrs.PlateCarree(central_longitude=CENTRAL_LONGITUDE)
     ax = fig.add_subplot(1,1,1,projection=projection)
     ax.coastlines(alpha=.5, color="#B4B4B4")
@@ -56,7 +56,15 @@ def plot_pca_data(column_name, vname):
             sizes=(150,150))
 
     ax.add_feature(cfeature.OCEAN, alpha=.6, color="#EFEFEF") 
-    plt.colorbar(scatter)
+    axins = inset_axes(ax,
+                    width="2.5%",  
+                    height="100%",
+                    loc='right',
+                    borderpad=-1
+                   )
+    cbar = plt.colorbar(scatter, cax=axins, orientation="vertical")
+    for t in cbar.ax.get_yticklabels():
+     t.set_fontsize(20)
     plt.rcParams['legend.title_fontsize'] = 'x-large'
     plt.rc('font',family=font_family, weight='regular')
     plt.savefig(filename, bbox_inches = 'tight',pad_inches = 0)
@@ -128,70 +136,6 @@ def plot_cantometrics_data(linenum,vname):
 
     plt.rcParams['legend.title_fontsize'] = 'x-large'
     plt.rc('font',family=font_family, weight='regular')
-    plt.savefig(filename, bbox_inches = 'tight',pad_inches = 0)
-
-def plot_ea_data(line_title, color_name, vname):
-    ## Drop instances where there is no reading
-    stratification = ea
-
-    ## Map parameters
-    CENTRAL_LONGITUDE = 160.0
-    variable_name = vname
-    filename = './figs/'+vname.lower().replace(" ", "_")+'_social_strain.png'
-    font_family = "Roboto"
-    weight =  'normal'
-    alpha = 0.7
-
-    ## Project to co-ordinates
-    x,y = ([] for i in range(2))
-    for i, row in stratification['Society_latitude'].iteritems():
-        y.append(float(row))
-    for i, row in stratification['Society_longitude'].iteritems():
-        if float(row)+200 < 345:
-            x.append(float(row)+200)
-        else:
-            x.append((float(row)+200)-345)
-            
-    fig = plt.figure(figsize=(30,15))
-    projection=ccrs.PlateCarree(central_longitude=CENTRAL_LONGITUDE)
-    ax = fig.add_subplot(1,1,1,projection=projection)
-    ax.coastlines(alpha=.5, color="#B4B4B4")
-    ax.set_global()
-    ax.text(-175, -70, variable_name, fontsize=42, fontfamily=font_family, color="Black")
-    ax.text(-175, -78, line_title, fontsize=28, fontfamily=font_family, color="Black")
-
-    scatter = ax.scatter(x,  y,
-            c=stratification[color_name], 
-            alpha=alpha,
-            marker='o',
-            sizes = (150,150))
-
-    label_names = ['No slavery, class, or caste distinctions', 'Social layering score of one', 
-                'Social layering score of two','Social layering score of three to four','Social layering score of five to six']
-
-    colors = list(ea.stratification_col.unique())
-    order = [0, 4, 1, 3, 2]
-    colors = [colors[i] for i in order]
-
-    patch_1 = mpatches.Circle((0,0), radius=50, fc=colors[0], label=label_names[0])
-    patch_2 = mpatches.Circle((0,0), radius=50, fc=colors[1], label=label_names[1])
-    patch_3 = mpatches.Circle((0,0), radius=50, fc=colors[2], label=label_names[2])
-    patch_4 = mpatches.Circle((0,0), radius=50, fc=colors[3], label=label_names[3])
-    patch_5 = mpatches.Circle((0,0), radius=50, fc=colors[4], label=label_names[4])
-
-    plt.legend(handles=[patch_1, patch_2, patch_3, patch_4, patch_5],
-                        loc="lower right", 
-                        borderpad = 1,
-                        framealpha = 0.6,
-                        fontsize=15,
-                        title="Social Factors")
-
-
-    ax.add_feature(cfeature.OCEAN, alpha=.6, color="#EFEFEF") 
-
-    plt.rcParams['legend.title_fontsize'] = 'x-large'
-    plt.rc('font',family=font_family, weight=weight)
-    plt.savefig(filename, bbox_inches = 'tight',pad_inches = 0)
 
 if __name__ == '__main__':
     plot_pca_data('musical_pc1', 'Musical PC1')
