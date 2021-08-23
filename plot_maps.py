@@ -9,7 +9,6 @@ import json
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 
-modal_profiles = pd.read_csv('./output/single_modal_profile.csv', index_col=0)
 line_metadata =  pd.read_csv('./data/line_metadata.csv')
 line_metadata = line_metadata.drop(columns='linenum')
 # Load conversion guide
