@@ -12,9 +12,9 @@ This repository contains code on the three analytical sections of Wood et al. (2
 Analyses can be run using the `Makefile`
 
 To update the data for these analyses, you will need access to the Google Spreadsheets that have all the canto coding data and metadata.
-If you have access, these can be downloaded via  `make install`
+If you have access, these can be downloaded via  `make get_data`
 
-The data used for this analyses are archvied in this repository. 
+The data used for this analyses are archived in this repository. 
 
 To run the correlation analyses run `make correlations` 
 
@@ -27,6 +27,13 @@ To run the computational coding validation run `make validate`
 ### Installation Guide/Dependencies
 
 The analyses here is performed on a combination of python and R. Below is some notes to guide reproducing the analyses. 
+All package requirements for R and Python are installed with `make install`
+
+#### R version 4.1 
+
+This analyses was performed on R 4.1. To check the R version you are running, type `sessionInfo()` into the R terminal. 
+
+R Packages used are listed in `requirements.R`. 
 
 #### Python Version 3.4
 
