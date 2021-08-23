@@ -1,6 +1,7 @@
 install:
 	pip install -r requirements.txt
-	pip install -r validataion/requirements.txt
+	pip install -r validation/requirements.txt
+	RScript requirements.R
 	
 get_data: install
 	python3 download_and_format.py
