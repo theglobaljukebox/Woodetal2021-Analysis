@@ -1,6 +1,6 @@
 install:
-	pip install -r requirements.txt
-	pip install -r validation/requirements.txt
+	pip3 install -r requirements.txt
+	pip3 install -r validation/requirements.txt
 	RScript requirements.R
 	
 get_data: install

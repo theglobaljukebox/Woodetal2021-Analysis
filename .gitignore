@@ -15,3 +15,4 @@ phylogenetic_analysis/
 not_git/
 __pycache__/
 .idea/
+*.Rproj
