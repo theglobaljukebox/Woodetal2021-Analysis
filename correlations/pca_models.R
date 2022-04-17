@@ -1,37 +1,33 @@
 ## This file contains the modelling for the PCA variables
+suppressPackageStartupMessages({
+  library(lmerTest)
+  library(tidyr)
+  library(spaMM)
+  library(phylolm)
+  library(ape)
+  library(geiger)
+  library(ggplot2)
+  library(grid)
+})
 
-suppressMessages(library(tidyr))
-suppressMessages(library(lmerTest))
-suppressMessages(library(spaMM))
-suppressMessages(library(dplyr))
-suppressMessages(library(ape))
-suppressMessages(library(geiger))
-suppressMessages(library(phylolm))
-library(ggplot2)
-library(grid)
 source("correlations/helper.R")
-
 
 model_df = read.csv(file = "data/cantometrics_ethnographicatlas.csv")
 
 # remove all language families with <2 languages
-tt = table(model_df$Language_family)
+tt = table(model_df$FamilyLevGlottocode)
 tt_idx = tt >= 2
-model_df = model_df[model_df$Language_family %in% names(tt)[tt_idx],]
-
-# n_distinct(model_df$Language_family)
-# n_distinct(model_df$Division)
+model_df = model_df[model_df$FamilyLevGlottocode %in% names(tt)[tt_idx],]
 
 model_pca = model_df %>% 
-  dplyr::select(musical_pc1, social_pc1, Language_family, Division, EA_code, EA031, Glottocode, Society_latitude, Society_longitude) %>% 
+  dplyr::select(musical_pc1, social_pc1, FamilyLevGlottocode, Division, EA_code, EA031, GlottoID, Society_latitude, Society_longitude) %>% 
   na.omit()
   
-
 ### More complex models
 ## Linguistic model
 tree = read.tree('data/super_tree.nwk')
-model_pcaLF = model_pca[!duplicated(model_pca$Glottocode),]
-rownames(model_pcaLF) = model_pcaLF$Glottocode
+model_pcaLF = model_pca[!duplicated(model_pca$GlottoID),]
+rownames(model_pcaLF) = model_pcaLF$GlottoID
 pruned = treedata(phy = tree, data = model_pcaLF)
 pruned_data = data.frame(pruned$data)
 pruned_data$musical_pc1 = as.numeric(pruned_data$musical_pc1)
@@ -95,7 +91,7 @@ write.csv(output, file = "correlations/results/complex_pca.csv")
 
 # Random slopes plot
 new_data = model_pca %>% 
-  filter(Division %in% c("East Africa", "Melanesia", "Southern Europe", "Island S E Asia",
+  dplyr::filter(Division %in% c("East Africa", "Melanesia", "Southern Europe", "Island S E Asia",
                          "United States"))
 
 new_data$fit = predict(fit.2, new_data)

@@ -7,9 +7,10 @@ get_data: install
 	python3 download_and_format.py
 	python3 generate_modal_profiles.py
 
-correlations: data/full_cantometrics.csv
+correlations: 
 	@echo Making data...
 	RScript correlations/make_embersubsistence.R
+	RScript correlations/make_embersociallayering.R
 	RScript correlations/make_modeldata.R
 	@echo Building models...
 	RScript correlations/line7_models.R

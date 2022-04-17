@@ -45,7 +45,7 @@ musical_conversion = function(x, line_set){
   
   paired = dplyr::left_join(x_df, matched_df)
   
-  (paired$linear - 1) / (max(paired$linear) - 1)
+  (paired$linear - 1) / (max(paired$linear, na.rm = TRUE) - 1)
 }
 
 

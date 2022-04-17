@@ -1,23 +1,24 @@
 # Line 10 models
-suppressMessages(library(tidyr))
-suppressMessages(library(lmerTest))
-suppressMessages(library(dplyr))
-suppressMessages(library(spaMM))
-suppressMessages(library(ape))
-suppressMessages(library(geiger))
-suppressMessages(library(phylolm))
-library(ggplot2)
+suppressPackageStartupMessages({
+  library(lmerTest)
+  library(tidyr)
+  library(spaMM)
+  library(phylolm)
+  library(ape)
+  library(geiger)
+  library(ggplot2)
+})
 source("correlations/helper.R")
 
 model_df = read.csv(file = "data/cantometrics_ethnographicatlas.csv")
 
 # remove all language families with <5 languages
-tt = table(model_df$Language_family)
+tt = table(model_df$FamilyLevGlottocode)
 tt_idx = tt >= 2
-big_languagefamilies = model_df[model_df$Language_family %in% names(tt)[tt_idx],]
+big_languagefamilies = model_df[model_df$FamilyLevGlottocode %in% names(tt)[tt_idx],]
 
 # N language families vs N Divisions
-# n_distinct(big_languagefamilies$Language_family)
+# n_distinct(big_languagefamilies$FamilyLevGlottocode)
 # n_distinct(big_languagefamilies$Division)
 
 data.10 = big_languagefamilies %>% 
@@ -28,8 +29,8 @@ data.10 = big_languagefamilies %>%
 ### More complex models
 ## Linguistic model
 tree = read.tree('data/super_tree.nwk')
-data.10LF = data.10[!duplicated(data.10$Glottocode),]
-rownames(data.10LF) = data.10LF$Glottocode
+data.10LF = data.10[!duplicated(data.10$GlottoID),]
+rownames(data.10LF) = data.10LF$GlottoID
 pruned = treedata(phy = tree, data = data.10LF)
 pruned_data = data.frame(pruned$data)
 pruned_data$line_10 = as.numeric(pruned_data$line_10)
