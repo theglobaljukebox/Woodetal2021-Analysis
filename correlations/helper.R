@@ -126,6 +126,7 @@ downloadTree <- function(glottoid){
 #' phy <- getGlottologTree("atla1278","glottoid")
 
 getGlottologTree <- function(glottoid, nodeLabelsBy="glottoid", langNodesToTips=F){
+  fix_names = TRUE
   if(grepl("^[a-z][a-z][a-z][a-z][0-9][0-9][0-9][0-9]$",glottoid)){
     tx = downloadTree(glottoid)
   } else{
@@ -136,13 +137,28 @@ getGlottologTree <- function(glottoid, nodeLabelsBy="glottoid", langNodesToTips=
   if(substr(tx,nchar(tx),nchar(tx))!=";"){
     tx = paste(tx,";",sep='')
   }
-  phy<-phytools::read.newick(text=tx)
-  phy$tip.label = editGlottologTipLabels(phy$tip.label,nodeLabelsBy)
-  phy$node.label = editGlottologTipLabels(phy$node.label,nodeLabelsBy)
+  # phy<-phytools::read.newick(text=tx)
+
+  if(str_count(tx, ":") < 2){
+    phy = drop.tip(pbtree(n=1, scale = 1), tip = "t1")
+    phy$tip.label = str_extract(tx, "\\[(.*?)\\]") %>% 
+      str_remove("\\[") %>% 
+      str_remove("\\]")
+    tx = write.tree(phy)
+    fix_names = FALSE
+  }
+  
+  
+  phy = ape::read.tree(text = tx) 
+  if(fix_names){
+    phy$tip.label = editGlottologTipLabels(phy$tip.label,nodeLabelsBy)
+    phy$node.label = editGlottologTipLabels(phy$node.label,nodeLabelsBy)
+  }
+  
   
   if(langNodesToTips){
     phy = nodesToTips(phy)
   }
-  
+
   return(phy)
 }

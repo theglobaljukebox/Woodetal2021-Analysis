@@ -113,7 +113,10 @@ dev.off()
 
 social_pca = psych::principal(pca_data[,c("std_subsistence", "std_caste", 
                                           "std_slavery", "std_class",
-                                          "std_EA033", "std_EA031")], rotate = "varimax", scores = TRUE, nfactors = 1)
+                                          "std_EA033", "std_EA031")], 
+                              rotate = "varimax", 
+                              scores = TRUE, 
+                              nfactors = 1)
 pca_data$social_pc1 = social_pca$scores[,1]
 
 all(table(pca_data$soc_id) == 1)

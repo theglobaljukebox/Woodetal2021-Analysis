@@ -1,15 +1,16 @@
 # Tree built from Glottolog and following:
 # Roberts, S. G., Winters, J., & Chen, K. (2015). Future Tense and Economic Decisions: Controlling for Cultural Evolution. PLOS ONE, 10(7), e0132145. https://doi.org/10.1371/journal.pone.0132145
 
-
-library(dplyr)
-library(ape)
-library(phytools)
-library(phangorn)
-library(readxl)
-library(stringr)
-library(geiger)
-library(assertthat)
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(ape)
+  library(phytools)
+  library(phangorn)
+  library(readxl)
+  library(stringr)
+  library(geiger)
+  library(assertthat)
+})
 
 source('correlations/helper.R')
 
@@ -24,33 +25,36 @@ glottolog = read.csv("https://raw.githubusercontent.com/D-PLACE/dplace-data/mast
 ## Manual adjustments
 ## Currently: "Bulgarian: bulg1262; Macedonian: mace1250"
 ## Pick bulg1262
-data$Glottocode[data$soc_id == 12739] = "bulg1262"
+data$GlottoID[data$soc_id == 12739] = "bulg1262"
 # Currently: "Mal: mall1246; Prai: phai1238"
 # Pick mall1246
-data$Glottocode[data$soc_id == 20109] = "mall1246"
+data$GlottoID[data$soc_id == 20109] = "mall1246"
 # Currently: "Moksha: moks1248; Erzya: erzy1239"
 # Pick moks1248
-data$Glottocode[data$soc_id == 21704] = "moks1248"
+data$GlottoID[data$soc_id == 21704] = "moks1248"
 # Currently: panj1259 (which is not a glottocode)
 # Preferred name is: Punjabi
 # Glottolog has panj1256 (for eastern Punjabi) & west2386 (for Western Punjabi)
 # Choose panj1256, since this was likely a typo in glottocode recording. 
-data$Glottocode[data$soc_id == 24014] = "panj1256"
+data$GlottoID[data$soc_id == 24014] = "panj1256"
 
-languages = left_join(data, glottolog, by = c("Glottocode" = "id"))
+languages = left_join(data, glottolog, by = c("GlottoID" = "id"))
 
 #### Family changes
 # Family was jodi1234; part of the Jodi-Saliban LF.
 # The Glottocode piar1243 is shown to be in the Saliban family now
 # Change code to sali1297
-languages$family_id[languages$Glottocode == "piar1243"] = "sali1297"
+languages$FamilyLevGlottocode[languages$GlottoID == "piar1243"] = "sali1297"
 
-assertthat::assert_that(sum(is.na(languages$Glottocode)) == 0)
+languages = languages[!is.na(languages$GlottoID),]
 
-unq_languages = unique(languages$Glottocode)
+assertthat::assert_that(sum(is.na(languages$GlottoID)) == 0)
 
-families = unique(languages$family_id)
+unq_languages = unique(languages$GlottoID)
+
+families = unique(languages$FamilyLevGlottocode)
 families = families[families != ""]
+families = str_remove(families, "ISOLATE_")
 dir.create('correlations/glottolog_trees')
 isolate = c()
 for(f in families){
@@ -83,7 +87,6 @@ for(f in families){
   if(length(all_keeps) == 1){
     isolate = c(isolate, all_keeps)
   }
-  
   
   if(save){
     if(length(tre$tip.label) == 1){
@@ -119,7 +122,6 @@ close(fileConn)
 
 # Check tree is valid
 tree = read.tree('data/super_tree.nwk')
-
 
 ## Delete temporary tree files
 system('rm -r correlations/glottolog_trees')
