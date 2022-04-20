@@ -36,7 +36,7 @@ pruned_data$std_EA033 = as.numeric(pruned_data$std_EA033)
 pruned_data$Society_latitude = as.numeric(pruned_data$Society_latitude)
 pruned_data$Society_longitude = as.numeric(pruned_data$Society_longitude)
 pruned_tree = pruned$phy
-data.7$soc_id
+
 # Standardize branch lengths
 pruned_tree$edge.length = pruned_tree$edge.length / max(pruned_tree$edge.length)
 

@@ -1,4 +1,4 @@
 "","V1","X.Intercept.","std_subsistence","X.Intercept..1","std_subsistence.1","V6","n"
-"bivariate_line","line_10 ~ std_subsistence","0.77","-0.56","4.13931989846278e-31","6.03419598089606e-11","40.11",160
-"spatial_line","line_10 ~ std_subsistence","0.72","-0.5","0","1","37.0504322605838",160
-"phylo_line","line_10 ~ std_subsistence","0.76","-0.54","2.90063868804413e-29","1.42904966597129e-09","41.6411173941862",160
+"bivariate_line","line_10 ~ std_subsistence","0.74","-0.47","1.09488147686379e-40","1.48777425555884e-10","110.71",252
+"spatial_line","line_10 ~ std_subsistence","0.69","-0.4","0","1","98.3751600446777",252
+"phylo_line","line_10 ~ std_subsistence","0.73","-0.4","3.63559227796851e-34","7.43207496819571e-07","112.253512629349",252
