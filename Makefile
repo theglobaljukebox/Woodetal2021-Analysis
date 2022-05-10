@@ -5,6 +5,7 @@ install:
 	
 get_data: install
 	python3 download_and_format.py
+	python3 create_conversion_guide.py
 	python3 generate_modal_profiles.py
 
 correlations: 
