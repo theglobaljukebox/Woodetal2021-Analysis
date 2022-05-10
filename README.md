@@ -54,6 +54,9 @@ If all is well until now, you may proceed to install dependencies
 
 `pip install -r requirements.txt`
 
+In order to update the data to it's most recent state run the script:
+`python3 generate_modal_profiles.py`
+
 If you are on linux and run into issues installing cartopy, ensure you have the following packages installed first:
 
 ```
