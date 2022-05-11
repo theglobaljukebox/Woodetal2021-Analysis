@@ -17,27 +17,23 @@ tt = table(model_df$FamilyLevGlottocode)
 tt_idx = tt >= 2
 big_languagefamilies = model_df[model_df$FamilyLevGlottocode %in% names(tt)[tt_idx],]
 
-# N language families vs N Divisions
-# n_distinct(big_languagefamilies$FamilyLevGlottocode)
-# n_distinct(big_languagefamilies$Division)
-
 data.37 = big_languagefamilies %>% 
   drop_na(line_37, std_EA033)
 
 #### Continuous + RE ####
-
-### More complex models
 ## Linguistic model
 tree = read.tree('data/super_tree.nwk')
 data.37LF = data.37[!duplicated(data.37$GlottoID),]
 rownames(data.37LF) = data.37LF$GlottoID
-pruned = treedata(phy = tree, data = data.37LF)
+pruned = suppressWarnings(treedata(phy = tree, data = data.37LF))
 pruned_data = data.frame(pruned$data)
 pruned_data$line_37 = as.numeric(pruned_data$line_37)
 pruned_data$std_EA033 = as.numeric(pruned_data$std_EA033)
 pruned_data$Society_latitude = as.numeric(pruned_data$Society_latitude)
 pruned_data$Society_longitude = as.numeric(pruned_data$Society_longitude)
 pruned_tree = pruned$phy
+
+x = assertthat::assert_that(nrow(pruned_data) == 330)
 
 # Standardize branch lengths
 pruned_tree$edge.length = pruned_tree$edge.length / max(pruned_tree$edge.length)
@@ -55,9 +51,9 @@ spatial_model = fitme(
   fixed = list(nu = 0.5), 
   method="REML")
 
-spatial_summary = summary(spatial_model)
+spatial_summary = summary(spatial_model, verbose = FALSE)
 
-sp_aic = AIC(spatial_model)
+sp_aic = AIC(spatial_model, verbose = FALSE)
 
 
 # Bivariate 
