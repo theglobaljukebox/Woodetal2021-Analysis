@@ -1,5 +1,4 @@
 # Line 23 models
-
 suppressPackageStartupMessages({
   library(lmerTest)
   library(tidyr)
@@ -18,20 +17,15 @@ tt = table(model_df$FamilyLevGlottocode)
 tt_idx = tt >= 2
 big_languagefamilies = model_df[model_df$FamilyLevGlottocode %in% names(tt)[tt_idx],]
 
-# N language families vs N Divisions
-# n_distinct(big_languagefamilies$FamilyLevGlottocode)
-# n_distinct(big_languagefamilies$Division)
-
 data.23 = big_languagefamilies %>% 
   drop_na(line_23, std_class, std_caste, std_slavery)
 
 #### Continuous + RE ####
-### More complex models
 ## Linguistic model
 tree = read.tree('data/super_tree.nwk')
 data.23LF = data.23[!duplicated(data.23$GlottoID),]
 rownames(data.23LF) = data.23LF$GlottoID
-pruned = treedata(phy = tree, data = data.23LF)
+pruned = suppressWarnings(treedata(phy = tree, data = data.23LF))
 pruned_data = data.frame(pruned$data)
 pruned_data$line_23 = as.numeric(pruned_data$line_23)
 pruned_data$std_class = as.numeric(pruned_data$std_class)
@@ -40,6 +34,8 @@ pruned_data$std_slavery = as.numeric(pruned_data$std_slavery)
 pruned_data$Society_latitude = as.numeric(pruned_data$Society_latitude)
 pruned_data$Society_longitude = as.numeric(pruned_data$Society_longitude)
 pruned_tree = pruned$phy
+
+x = assertthat::assert_that(nrow(pruned_data) == 295)
 
 # Standardize branch lengths
 pruned_tree$edge.length = pruned_tree$edge.length / max(pruned_tree$edge.length)
@@ -57,9 +53,9 @@ spatial_model = fitme(
   fixed = list(nu = 0.5), 
   method="REML")
 
-spatial_summary = summary(spatial_model)
+spatial_summary = summary(spatial_model, verbose = FALSE)
 
-sp_aic = AIC(spatial_model)
+sp_aic = AIC(spatial_model, verbose = FALSE)
 
 # Bivariate model
 fit.23.1.3 = lm(line_23 ~ std_class + std_caste + std_slavery, data = pruned_data)
