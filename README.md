@@ -1,7 +1,10 @@
-# Code and Data for Wood et al. (2021)
+# Code and Data for The Global Jukebox: A Public Database of Performing Arts and Culture; Wood et al. (2022)
+
+[![DOI](https://zenodo.org/badge/267221085.svg)](https://zenodo.org/badge/latestdoi/267221085)
 
 This repository contains the data and code used to create the analysis and figures in Wood et al. (2021). 
-Data for the Global Jukebox acn be found at https://github.com/theglobaljukebox. 
+A Preprint of this article is availalb at https://psyarxiv.com/4z97j/.
+Data for the Global Jukebox can be found at https://github.com/theglobaljukebox. 
 
 This repository contains code on the three analytical sections of Wood et al. (2021).
 
