@@ -66,8 +66,8 @@
         "name": "Patrick E Savage"
       }
     ],
-    "title": "The Global Jukebox: Cantometrics",
-    "description": "<p>The data repository for the Cantometrics dataset </p>",
+    "title": "Analysis code for The Global Jukebox: A Public Database of Performing Arts and Culture",
+    "description": "<p>The repository for the Wood Et al. analysis </p>",
     "license": {
         "id": "CC-BY-NC-4.0"
     }
