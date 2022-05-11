@@ -8,11 +8,11 @@ get_data: install
 	python3 create_conversion_guide.py
 	python3 generate_modal_profiles.py
 
-correlations: 
+correlate: 
 	@echo Making data...
-	RScript correlations/make_embersubsistence.R
-	RScript correlations/make_embersociallayering.R
-	RScript correlations/make_modeldata.R
+	RScript correlations/make_embersubsistence.R #
+	RScript correlations/make_embersociallayering.R #
+	RScript correlations/make_modeldata.R #
 	RScript correlations/make_trees.R
 	@echo Building models...
 	RScript correlations/line7_models.R
