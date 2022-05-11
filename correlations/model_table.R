@@ -1,3 +1,5 @@
+cat("Making model tables... \n")
+
 ## Get model output
 line7  = read.csv('correlations/results/complex_line7.csv')
 line10 = read.csv('correlations/results/complex_line10.csv')

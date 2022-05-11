@@ -1,4 +1,6 @@
 # Line 23 models
+cat("Running Line 23 correlations .... \n")
+
 suppressPackageStartupMessages({
   library(lmerTest)
   library(tidyr)
