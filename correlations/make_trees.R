@@ -48,7 +48,7 @@ languages$FamilyLevGlottocode[languages$GlottoID == "piar1243"] = "sali1297"
 
 languages = languages[!is.na(languages$GlottoID),]
 
-assertthat::assert_that(sum(is.na(languages$GlottoID)) == 0)
+x = assertthat::assert_that(sum(is.na(languages$GlottoID)) == 0)
 
 unq_languages = unique(languages$GlottoID)
 
@@ -92,7 +92,8 @@ for(f in families){
     if(length(tre$tip.label) == 1){
       tre$edge.length = years
     } else{
-      tre = compute.brlen(tre, method = 'Grafen', power = 1) # Grafen is default, with power = 1
+      tre = compute.brlen(tre, method = 'Grafen', power = 1) 
+      # Grafen is default, with power = 1
       tre = rescale(tre, "depth", years)  
     }
   }
@@ -125,3 +126,4 @@ tree = read.tree('data/super_tree.nwk')
 
 ## Delete temporary tree files
 system('rm -r correlations/glottolog_trees')
+

@@ -1,4 +1,6 @@
 ## This file contains the modelling for the PCA variables
+cat("Running PCA correlations .... \n")
+
 suppressPackageStartupMessages({
   library(lmerTest)
   library(tidyr)
@@ -22,19 +24,21 @@ model_df = model_df[model_df$FamilyLevGlottocode %in% names(tt)[tt_idx],]
 model_pca = model_df %>% 
   dplyr::select(musical_pc1, social_pc1, FamilyLevGlottocode, Division, EA_code, EA031, GlottoID, Society_latitude, Society_longitude) %>% 
   na.omit()
-  
-### More complex models
+
+## Models ##  
 ## Linguistic model
 tree = read.tree('data/super_tree.nwk')
 model_pcaLF = model_pca[!duplicated(model_pca$GlottoID),]
 rownames(model_pcaLF) = model_pcaLF$GlottoID
-pruned = treedata(phy = tree, data = model_pcaLF)
+pruned = suppressWarnings(treedata(phy = tree, data = model_pcaLF))
 pruned_data = data.frame(pruned$data)
 pruned_data$musical_pc1 = as.numeric(pruned_data$musical_pc1)
 pruned_data$social_pc1 = as.numeric(pruned_data$social_pc1)
 pruned_data$Society_latitude = as.numeric(pruned_data$Society_latitude)
 pruned_data$Society_longitude = as.numeric(pruned_data$Society_longitude)
 pruned_tree = pruned$phy
+
+x = assertthat::assert_that(nrow(pruned_data) == 147)
 
 # Standardize branch lengths
 pruned_tree$edge.length = pruned_tree$edge.length / max(pruned_tree$edge.length)
@@ -52,9 +56,9 @@ spatial_model = fitme(
   fixed = list(nu = 0.5), 
   method="REML")
 
-spatial_summary = summary(spatial_model)
+spatial_summary = summary(spatial_model, verbose = FALSE)
 
-sp_aic = AIC(spatial_model)
+sp_aic = AIC(spatial_model, verbose = FALSE)
 
 # bivariate model
 fit.2 = lm(musical_pc1 ~ social_pc1, data = pruned_data)

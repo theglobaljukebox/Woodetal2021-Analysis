@@ -22,20 +22,21 @@ data.7 = big_languagefamilies %>%
   drop_na(line_7, std_EA033)
 
 #### Models ####
-
-
-### More complex models
 ## Linguistic model
 tree = read.tree('data/super_tree.nwk')
 data.7LF = data.7[!duplicated(data.7$GlottoID),]
 rownames(data.7LF) = data.7LF$GlottoID
-pruned = treedata(phy = tree, data = data.7LF)
+# treedata loudly tells us what languages are dropped.
+# I supress this information for cleanliness. 
+pruned = suppressWarnings(treedata(phy = tree, data = data.7LF))
 pruned_data = data.frame(pruned$data)
 pruned_data$line_7 = as.numeric(pruned_data$line_7)
 pruned_data$std_EA033 = as.numeric(pruned_data$std_EA033)
 pruned_data$Society_latitude = as.numeric(pruned_data$Society_latitude)
 pruned_data$Society_longitude = as.numeric(pruned_data$Society_longitude)
 pruned_tree = pruned$phy
+
+x = assertthat::assert_that(nrow(pruned_data) == 330)
 
 # Standardize branch lengths
 pruned_tree$edge.length = pruned_tree$edge.length / max(pruned_tree$edge.length)
@@ -53,9 +54,9 @@ spatial_model = fitme(
   fixed = list(nu = 0.5), 
   method="REML")
 
-spatial_summary = summary(spatial_model)
+spatial_summary = summary(spatial_model, verbose = FALSE)
 
-sp_aic = AIC(spatial_model)
+sp_aic = AIC(spatial_model, verbose = FALSE)
 
 #### Bivariate
 fit.4.0 = lm(line_7 ~ std_EA033, data = pruned_data)
