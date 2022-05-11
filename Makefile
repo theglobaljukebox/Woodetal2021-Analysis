@@ -13,10 +13,10 @@ correlate:
 	RScript correlations/make_embersubsistence.R #
 	RScript correlations/make_embersociallayering.R #
 	RScript correlations/make_modeldata.R #
-	RScript correlations/make_trees.R
+	RScript correlations/make_trees.R #
 	@echo Building models...
-	RScript correlations/line7_models.R
-	RScript correlations/line10_models.R
+	RScript correlations/line7_models.R # 
+	RScript correlations/line10_models.R # 
 	RScript correlations/line21_models.R
 	RScript correlations/line23_models.R
 	RScript correlations/line37_models.R
